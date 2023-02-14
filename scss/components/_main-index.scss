@@ -1,0 +1,362 @@
+main {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .primeraSeccion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .textoQueEsComoEnCasa {
+            h2 {
+                font-family: $font-principal;
+                font-size: nth($font-size, 4);
+                font-weight: bold;
+                color: nth($color-palette, 1);
+                padding-left: 10px;
+            }
+
+            p {
+                font-family: $font-principal;
+                font-size: nth($font-size, 6);
+                padding-left: 10px;
+                padding-right: 15px;
+                margin-top: 25px;
+            }
+        }
+    }
+
+    .segundaSeccion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .textoComoFunciona {
+            h2 {
+                font-family: $font-principal;
+                font-size: nth($font-size, 4);
+                font-weight: bold;
+                color: nth($color-palette, 1);
+                padding-right: 10px;
+                padding-top: 15px;
+                text-align: right;
+            }
+
+            p {
+                font-family: $font-principal;
+                font-size: nth($font-size, 6);
+                padding-left: 10px;
+                padding-right: 15px;
+                margin-top: 25px;
+                text-align: right;
+            }
+
+            .botonesComoFunciona {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+
+
+                .btn-outline-warning {
+                    text-align: center;
+                    margin-left: 15px;
+                    margin-right: 15px;
+
+                    a {
+                        text-decoration: none;
+                        color: nth($color-palette, 1);
+
+                        &:hover {
+                            color: nth($color-palette, 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .terceraSeccion {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .imagenIngredientes-1 {
+            width: 100%;
+            height: 150px;
+            background-image: url(../img/platos-siete.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .imagenIngredientes-2 {
+            width: 100%;
+            height: 150px;
+            background-image: url(../img/platos-siete.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .textoIngredientes {
+            height: 280px;
+            h2 {
+                font-family: $font-principal;
+                font-size: nth($font-size, 4);
+                font-weight: bold;
+                color: nth($color-palette, 1);
+                text-align: center;
+            }
+
+            p {
+                font-family: $font-principal;
+                font-size: nth($font-size, 6);
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-top: 15px;
+                text-align: left;
+            }
+
+            /*.formIngredientes {
+                form {
+                    div {
+                        .row {
+                            .col {
+                                input {
+                                    width: 190px;
+                                    margin-bottom: 30px;
+                                }
+                            }
+                        }
+                    }
+
+                    .textareaIngredientes {
+                        .form-floating {
+                            .form-control {
+                                width: 220px;
+                                height: 150px;
+                                margin-bottom: 10px;
+
+                                label {
+                                    color: gray;
+                                }
+                            }
+                        }
+                    }
+
+                    .modalIngredientes {
+                        button {
+                            margin-bottom: 10px;
+                        }
+
+                        .modal {
+                            .modal-dialog {
+                                .modal-content {
+                                    .modal-header {
+                                        font-family: $font-principal;
+                                    }
+
+                                    .modal-body {
+                                        font-family: $font-principal;
+                                    }
+
+                                    .modal-footer {
+                                        .btn {
+                                            color: nth($color-palette, 1);
+
+                                            &:hover {
+
+                                                color: nth($color-palette, 2);
+                                            }
+
+                                            a {
+                                                text-decoration: none;
+                                                color: nth($color-palette, 1);
+
+                                                &:hover {
+
+                                                    color: nth($color-palette, 2);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }*/
+        }
+    }
+
+    .cuartaSeccion {
+        display: flex;
+        flex-direction: row;
+        align-items: normal;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .imagenCalorias-1 {
+            width: 500px;
+            height: 570px;
+            background-image: url(../img/platos-cuatro.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .imagenCalorias-2 {
+            width: 500px;
+            height: 570px;
+            background-image: url(../img/platos-cuatro.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .textoCalorias {
+            h2 {
+                font-family: $font-principal;
+                font-size: nth($font-size, 4);
+                font-weight: bold;
+                color: nth($color-palette, 1);
+                text-align: center;
+            }
+
+            p {
+                font-family: $font-principal;
+                font-size: nth($font-size, 6);
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-top: 15px;
+                text-align: center;
+            }
+        }
+
+        /*.formCalorias {
+            form {
+                text-align: center;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    .row {
+                        .col {
+                            text-align: center;
+
+                            input {
+                                width: 250px;
+                                margin-bottom: 30px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .textareaCalorias {
+                    .form-floating {
+                        .form-control {
+                            width: 220px;
+                            height: 150px;
+                            margin-bottom: 10px;
+
+                            label {
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+
+                .botonCalorias {
+                    margin-bottom: 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: nth($color-palette, 1);
+
+                        &:hover {
+                            color: nth($color-palette, 2);
+                        }
+                    }
+                }
+            }
+        }*/
+    }
+
+    .quintaSeccion {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .textoRecomendaciones {
+            h2 {
+                font-family: $font-principal;
+                font-size: nth($font-size, 4);
+                font-weight: bold;
+                color: nth($color-palette, 1);
+                text-align: center;
+            }
+
+            p {
+                font-family: $font-principal;
+                font-size: nth($font-size, 6);
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-top: 15px;
+                text-align: center;
+            }
+        }
+
+        .tarjetasRecomendaciones {
+            .card-group {
+                .card {
+                    .card-body {
+                        .card-title {
+                            font-family: $font-principal;
+                            font-size: nth($font-size, 5);
+                            font-weight: bold;
+                            color: nth($color-palette, 1)
+                        }
+
+                        .card-text {
+                            font-family: $font-principal;
+                            color: nth($color-palette, 2)
+                        }
+                    }
+
+                    .card-footer {
+                        font-family: $font-principal;
+                        color: nth($color-palette, 2);
+                        font-weight: bold;
+                        font-size: nth($font-size, 6);
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        color: nth($color-palette, 1);
+    }
+}
