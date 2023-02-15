@@ -63,35 +63,3 @@ function recetasCalificacion () {
 }
 
 recetasCalificacion ();
-
-
-/*function recetasCalorias (caloriasDeclaradas, ingredienteDeclarado) {
-    let calorias = Number(prompt("Ingrese el máximo de calorías que desea que tuviese la receta recomendada")) 
-  
-    if ((caloriasDeclaradas == "") || (caloriasDeclaradas == null)) {
-      console.log("Ha decidido que no le recomendemos recetas según la cantidad de calorías.");
-    } else if (caloriasDeclaradas <= 200) {
-      console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 200 calorías: ...")
-    } else if (caloriasDeclaradas <= 400) {
-      console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 400 calorías: ...")
-    } else if (caloriasDeclaradas <= 600) {
-      console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 600 calorías: ...")
-    } else if (caloriasDeclaradas <= 800) {
-      console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 800 calorías: ...")
-    } else if (caloriasDeclaradas <= 1000) {
-      console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 1000 calorías: ...")
-    } else  {
-      console.log ("Si bien no es recomendable consumir platos con más de 1000 calorías, le enviamos por email la siguiente receta que contiene más de 1000 calorías.")
-    }
-  
-    let ingrediente = prompt("Ingrese un ingrediente que desea que tuviese la receta recomendada")
-    if ((ingredienteDeclarado == "") || (ingredienteDeclarado == null)) {
-      console.log("Ha decidido que no le recomendemos recetas según la cantidad de calorías.");
-    } else  {
-        console.log ("Si bien no es recomendable consumir platos con más de 1000 calorías, le enviamos por email la siguiente receta que contiene más de 1000 calorías.")
-      }
-  
-    return calorias, ingrediente
-  }
-  
-  recetasCalorias ();*/
