@@ -1,4 +1,6 @@
-function bienvenidaNombre () {
+
+
+/*function bienvenidaNombre () {
 
   let nombre = prompt ("Hola. Ingrese su nombre para poder darle un atención personalizada")
 
@@ -20,6 +22,39 @@ function Contactos (email,telefono) {
 let aclaracion = alert("Las búsquedas proporcionadas a continuación serán enviadas a los contactos declarados al hacerse usuario en el sitio")
 let resultado = Contactos ("mnparolari@gmail.com","1134629639")
 console.log (resultado)
+*/
+
+/*
+class DatosPersonales {
+  constructor (nombre, apellido, pais, email, telefono) {
+    this.nombre = nombre.toUpperCase();
+    this.apellido = apellido.toUpperCase();
+    this.pais = pais.toUpperCase();
+    this.email = email.toUpperCase();
+    this.telefono = telefono;
+  }
+
+  detalle(){
+    return "Nombre: "+this.nombre+"\nApellido: "+this.apellido+"\nPaís: "+this.pais+"\nEmail: "+this.email+"\nTeléfono: "+this.telefono
+  }
+}
+
+const usuario = new DatosPersonales (prompt("Ingrese su nombre"), prompt("Ingrese su apellido"), prompt("Ingrese país de residencia"), prompt("Ingrese su email"), prompt("Ingrese su teléfono"))
+
+let respuesta = "Si"
+
+do {
+    let respuesta = prompt(usuario.nombre+", los datos ingresados son: \n"+usuario.detalle()+ "\n¿Sus datos son correctos?")
+
+      if (respuesta == "No") {
+        alert ("Por favor, vuelva a ingresarlos")
+      } else if (respuesta == "Si") {
+        alert ("Muchas gracias por confirmarnos tus datos.")
+      } else {
+        alert ("Ocurrió un error y no hemos podido guardar sus datos. Intente nuevamente más tarde.")
+      }
+
+} while (respuesta != "Si") 
 
 
 function recetasCalorias () {
@@ -63,3 +98,26 @@ function recetasCalificacion () {
 }
 
 recetasCalificacion ();
+
+
+let bucle = 2;
+
+class RecetasIngredientes {
+  constructor (tipocomida, tipoalimento, tiposabor) {
+    this.tipocomida = tipocomida;
+    this.tipoalimento = tipoalimento;
+    this.tiposabor = tiposabor;
+  }
+}
+
+const recetasIngredientesIngresadas = [];
+do {
+  recetasIngredientesIngresadas.push (new RecetasIngredientes(prompt("Ingrese el tipo de comida"), prompt("Ingrese el tipo de alimento"),prompt("Ingrese el tipo de sabor")))
+  console.log (recetasIngredientesIngresadas)
+} while (recetasIngredientesIngresadas.length != bucle)
+
+
+/*
+const tipoComida = ["Desayuno", "Almuerzo", "Merienda", "Cena", "Brunch"]
+const tipoAlimento = ["Frutas", "Verduras", "Lácteos", "Granos", "Proteinas"]
+const tipoSabor = ["Dulce", "Salado", "Agridulce"]*/

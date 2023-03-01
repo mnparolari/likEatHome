@@ -6,42 +6,101 @@ header {
     /*position: -webkit-sticky;
     position: sticky;
     top: 0;*/
+    .encabezado-1 {
+        width: 100%;
+        height: 150px;
+        background-image: url(../img/1.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
 
-    nav {
+    .indexLogo {
+        background-image: url(../img/platos-cuatro.jpg);
+        background-size: cover;
+        background-position:center;
+        opacity: 0.9;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            img {
+                margin-top: 70px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .bajada {
         background-color: nth($color-palette, 1);
-        height: 80px;
+        font-family: $font-principal;
+        height: 170px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
 
-        .container-fluid {
-            .navbar-collapse {
-                padding-left: 5px;
-                padding-right: 5px;
+        h2 {
+            color: nth($color-palette, 2);
+            font-weight: bold;
+        }
 
-                .navbar-nav {
-                    padding-right: 10px;
+        p{
+            font-family: $font-principal;
+                font-weight: bold;
+                margin-bottom: 20px;
+                margin-left: 180px;
+                margin-right: 180px;
+        }
+    }
 
-                    .nav-link {
-                        padding-right: 99px;
-                        padding-left: 17px;
-                        color: nth($color-palette, 2);
-                        font-family: $font-principal;
-                        font-weight: bold;
-                    }
+    .redes {
+        padding-left: 10px;
+
+        a {
+            img {
+                height: 30px;
+                width: 30px;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.5);
                 }
+            }
+        }
+    }
+    .encabezado-2 {
+        width: 100%;
+        height: 150px;
+        background-image: url(../img/2-platos-cuatro.jpg);
+        background-size: cover;
+        background-position:center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
 
-                .redes {
-                    padding-left: 10px;
+        .btn {
+            background-color: nth($color-palette,2);
+            border-color: nth($color-palette,2);
+            text-align: center; 
+            font-weight: bold;
 
-                    a {
-                        img {
-                            height: 30px;
-                            width: 30px;
-                            transition: 1s;
+            &:hover {
+                background-color: nth($color-palette,1);
+                border-color: nth($color-palette,1);
+            }
 
-                            &:hover {
-                                transform: scale(1.5);
-                            }
-                        }
-                    }
+            a {
+                text-decoration: none;
+                color: nth($color-palette,1);
+                font-weight: bold;
+
+                &:hover {
+                    color: nth($color-palette,2);
                 }
             }
         }

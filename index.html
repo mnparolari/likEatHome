@@ -9,6 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -16,482 +17,883 @@
 </head>
 
 <body>
-    <header>
-        <div class="indexLogo">
-            <a href="./index.html"><img src="./img/logo-fondoblanco.png" alt="Logo Central"></a>
+    <!--MODAL BIENVENIDA
+    <div class="modal" id="modalBievenida" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bienvenida/o a <strong>Como en Casa</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <div class="nombre">
+                        <p>Por favor, ingrese su nombre:</p>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                        </div>
+                    </div>
+                    <div class="email">
+                        <p>Para recibir el resultado de sus búsquedas es necesario que ingrese su email:</p>
+                        <div>
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="comoencasa@comoencasa.com">
+                        </div>
+                    </div>
+                    <div class="telefono">
+                        <p>También, puede recibir su resultado mediante Whatsapp. En ese caso, debe indicarnos el número:</p>
+                        <div class="row">
+                            <div class="col">
+                            <input type="number" class="form-control" placeholder="Teléfono" aria-label="phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="#linkeoSegundaSeccion">COMO FUNCIONA</a>
-                        <a class="nav-link" href="#linkeoTerceraSeccion">RECETAS POR INGREDIENTES</a>
-                        <a class="nav-link" href="#linkeoCuartaSeccion">RECETAS POR CALORÍAS</a>
-                        <a class="nav-link" href="#linkeoQuintaSeccion">RECOMENDACIONES</a>
-                    </div>
-                    <div class="redes">
-                        <a href="#" target="_blank"><img src="./img/instagram.png" alt="Instagram Presente"></a>
-                        <a href="#" target="_blank"><img src="./img/facebook.png" alt="Facebook Presente"></a>
-                        <a href="#" target="_blank"><img src="./img/twitter.png" alt="Twitter Presente"></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="primeraSeccion">
-            <div class="textoQueEsComoEnCasa">
-                <h2>¿Qué es Como en casa?</h2>
-                <p id="linkeoSegundaSeccion">Como en casa te permite buscar recetas según los ingredientes de que
-                    dispones en tu heladera. lo
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci veniam laborum natus, voluptate
-                    illo at! Laudantium ipsum officiis inventore magni cupiditate distinctio, magnam atque dignissimos,
-                    nam nostrum officia dolore quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                    ratione eos ad magnam, consequuntur quos voluptatum deleniti aut inventore optio hic rem architecto
-                    nulla soluta, laboriosam, possimus consectetur repellat iure. Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Rerum odio quibusdam nobis hic deserunt ab excepturi officiis
-                    temporibus cupiditate odit, beatae perferendis amet aliquid deleniti inventore ex placeat iusto
-                    necessitatibus?</p>
-            </div>
-            <div class="imagenQueEsComoEnCasa">
-                <img src="./img/platos.jpg" alt="Platos de comida">
-            </div>
-        </section>
-        <hr>
-        <section class="segundaSeccion" id="linkeoSegundaSeccion">
-            <div class="imagenComoFunciona">
-                <img src="./img/platos-dos.jpg" alt="Plato de comida">
-            </div>
-            <div class="textoComoFunciona">
-                <h2>¿Cómo funciona Como en casa?</h2>
-                <p>Como en casa te permite buscar recetas según los ingredientes de que dispones en tu heladera.
-                    </br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci veniam laborum natus,
-                    voluptate
-                    illo at! Laudantium ipsum officiis inventore magni cupiditate distinctio, magnam atque dignissimos,
-                    nam nostrum officia dolore quidem? </br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error
-                    ratione eos ad magnam, consequuntur quos voluptatum deleniti aut inventore optio hic rem architecto
-                    nulla soluta, laboriosam, possimus consectetur repellat iure. </br></p>
-                <div class="botonesComoFunciona">
-                    <button type="button" class="btn btn-outline-warning" href=""><a
-                            href="#linkeoTerceraSeccion">Recetas
-                            por ingredientes</a></button>
-                    <button type="button" class="btn btn-outline-warning"><a href="#linkeoCuartaSeccion">Recetas
-                            personalizadas</a></button>
-                </div>
-            </div>
-        </section>
-        <hr id="linkeoTerceraSeccion">
-        <section class="terceraSeccion">
-            <div class="imagenIngredientes-1">
-            </div>
-            <div class="textoIngredientes">
-                <h2>Recetas por ingredientes (En laboratorio)</h2>
-                <p> <strong>En la heladera tengo:</strong> </br>
-                </p>
-                <div class="formIngredientes">
-                    <form action="Formulario">
-                        <!--<div>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Ingrese un ingrediente"
-                                        aria-label="First name">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Teléfono de contacto"
-                                        aria-label="Number">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Email de contacto"
-                                        aria-label="name@example.com">
-                                </div>!
-                            </div>
+    </div>-->
+    <!--MODAL RESULTADO BÚSQUEDA
+        <div class="modalIngredientes">
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Tus recetas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="textareaIngredientes">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here"
-                                    id="floatingTextarea2"></textarea>
-                                <label for="floatingTextarea2">Ingredientes seleccionados</label>
-                            </div>
-                        </div>
-                        <div class="modalIngredientes">
-                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Buscar</button>
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Tus recetas</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>A partir de los ingredientes que tenes en tu heladera, <strong>Como en
-                                                    casa</strong> seleccionó 3 recetas:</p>
-                                            <div class="accordion accordion-flush" id="accordionFlushExample">
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-headingOne">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse"
-                                                            data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                                            aria-controls="flush-collapseOne">
-                                                            Receta #1
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                                        aria-labelledby="flush-headingOne"
-                                                        data-bs-parent="#accordionFlushExample">
-                                                        <div class="accordion-body">
-                                                            <h5>Tallarines chinos</h5>
-                                                            <img src="./img/fotor.jpg" alt="">
-                                                            <p> <strong>Para 4 personas:</strong><br>
-                                                                Tallarines o fideos chinos (tipo udon) - <strong>300
-                                                                    grs</strong><br>
-                                                                Pimiento verde - <strong>1 unidad</strong><br>
-                                                                Pimiento rojo - <strong>1 unidad</strong><br>
-                                                                Tofu firme - <strong>125 grs</strong><br>
-                                                                Diente de ajo - <strong>2 unidades</strong><br>
-                                                                Jengibre fresco
-                                                                Aceite de girasol
-                                                                Salsa de soja - <strong>60 ml</strong><br>
-                                                                Caldo de verduras - <strong>2 lts</strong><br>
-                                                                Semillas de sésamo <strong>(opcional)</strong><br>
-                                                                Brotes de soja frescos - <strong>150 grs</strong><br>
-                                                                Sal <br></p>
-                                                            <hr>
-                                                            <p>Dificultad: Fácil. <br>
-                                                                Tiempo total: 17 minutos <br>
-                                                                Elaboración: 10 minutos <br>
-                                                                Cocción: 7 minutos <br>
-                                                                <br> Comenzamos calentando el caldo de verduras en una
-                                                                olla y
-                                                                preparando todos los tropezones, es decir, los
-                                                                pimientos, el ajo, el jengibre y el tofu, porque cuando
-                                                                el wok esté caliente el proceso irá muy rápido. <br>
+                        <div class="modal-body">
+                            <p>A partir de los ingredientes que tenes en tu heladera, <strong>Como en
+                                    casa</strong> seleccionó 3 recetas:</p>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Receta #1
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <h5>Tallarines chinos</h5>
+                                            <img src="./img/fotor.jpg" alt="">
+                                            <p> <strong>Para 4 personas:</strong><br>
+                                                Tallarines o fideos chinos (tipo udon) - <strong>300
+                                                    grs</strong><br>
+                                                Pimiento verde - <strong>1 unidad</strong><br>
+                                                Pimiento rojo - <strong>1 unidad</strong><br>
+                                                Tofu firme - <strong>125 grs</strong><br>
+                                                Diente de ajo - <strong>2 unidades</strong><br>
+                                                Jengibre fresco
+                                                Aceite de girasol
+                                                Salsa de soja - <strong>60 ml</strong><br>
+                                                Caldo de verduras - <strong>2 lts</strong><br>
+                                                Semillas de sésamo <strong>(opcional)</strong><br>
+                                                Brotes de soja frescos - <strong>150 grs</strong><br>
+                                                Sal <br></p>
+                                            <hr>
+                                            <p>Dificultad: Fácil. <br>
+                                                Tiempo total: 17 minutos <br>
+                                                Elaboración: 10 minutos <br>
+                                                Cocción: 7 minutos <br>
+                                                <br> Comenzamos calentando el caldo de verduras en una
+                                                olla y
+                                                preparando todos los tropezones, es decir, los
+                                                pimientos, el ajo, el jengibre y el tofu, porque cuando
+                                                el wok esté caliente el proceso irá muy rápido. <br>
 
-                                                                <br> Lavamos bien los pimientos, retiramos los
-                                                                pedúnculos y
-                                                                las semillas y los cortamos en pequeños dados.
-                                                                Escurrimos bien el tofu, secándolo con papel absorbente,
-                                                                y lo cortamos en pequeños dados. Rallamos finamente los
-                                                                dientes de ajo y un trozo de jengibre de unos dos o tres
-                                                                centímetros de largo. <br>
+                                                <br> Lavamos bien los pimientos, retiramos los
+                                                pedúnculos y
+                                                las semillas y los cortamos en pequeños dados.
+                                                Escurrimos bien el tofu, secándolo con papel absorbente,
+                                                y lo cortamos en pequeños dados. Rallamos finamente los
+                                                dientes de ajo y un trozo de jengibre de unos dos o tres
+                                                centímetros de largo. <br>
 
-                                                                <br> Calentamos un fondo de aceite en un wok y agregamos
-                                                                los
-                                                                pimientos y el tofu. Agregamos sal al gusto (ojo que más
-                                                                tarde añadiremos salsa de soja y esta lleva mucha sal) y
-                                                                salteamos un par de minutos a fuego fuerte antes de
-                                                                incorporar el ajo, el jengibre y los brotes de soja.
-                                                                Saltear unos cinco minutos más. <br>
+                                                <br> Calentamos un fondo de aceite en un wok y agregamos
+                                                los
+                                                pimientos y el tofu. Agregamos sal al gusto (ojo que más
+                                                tarde añadiremos salsa de soja y esta lleva mucha sal) y
+                                                salteamos un par de minutos a fuego fuerte antes de
+                                                incorporar el ajo, el jengibre y los brotes de soja.
+                                                Saltear unos cinco minutos más. <br>
 
-                                                                <br> Al mismo tiempo cocemos los fideos en el caldo y
-                                                                los
-                                                                dejamos un par de minutos menos del tiempo indicado en
-                                                                el paquete. Los escurrimos y, inmediatamente, los
-                                                                incorporamos al wok junto con la salsa de soja.
-                                                                Salteamos un par de minutos y servimos inmediatamente
-                                                                espolvoreando el conjunto con semillas de sésamo
-                                                                (opcional). <br>
-                                                            </p>
-                                                            <div>
-                                                                <button type="button" class="btn btn-outline-warning"
-                                                                    href="">Recomendar receta</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-headingTwo">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse"
-                                                            data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                                            aria-controls="flush-collapseTwo">
-                                                            Receta #2
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                                        aria-labelledby="flush-headingTwo"
-                                                        data-bs-parent="#accordionFlushExample">
-                                                        <div class="accordion-body">
-                                                            <h5>Tallarines chinos</h5>
-                                                            <img src="./img/fotor.jpg" alt="">
-                                                            <p> <strong>Para 4 personas:</strong><br>
-                                                                Tallarines o fideos chinos (tipo udon) - <strong>300
-                                                                    grs</strong><br>
-                                                                Pimiento verde - <strong>1 unidad</strong><br>
-                                                                Pimiento rojo - <strong>1 unidad</strong><br>
-                                                                Tofu firme - <strong>125 grs</strong><br>
-                                                                Diente de ajo - <strong>2 unidades</strong><br>
-                                                                Jengibre fresco
-                                                                Aceite de girasol
-                                                                Salsa de soja - <strong>60 ml</strong><br>
-                                                                Caldo de verduras - <strong>2 lts</strong><br>
-                                                                Semillas de sésamo <strong>(opcional)</strong><br>
-                                                                Brotes de soja frescos - <strong>150 grs</strong><br>
-                                                                Sal <br></p>
-                                                            <hr>
-                                                            <p>Dificultad: Fácil. <br>
-                                                                Tiempo total: 17 minutos <br>
-                                                                Elaboración: 10 minutos <br>
-                                                                Cocción: 7 minutos <br>
-                                                                <br> Comenzamos calentando el caldo de verduras en una
-                                                                olla y
-                                                                preparando todos los tropezones, es decir, los
-                                                                pimientos, el ajo, el jengibre y el tofu, porque cuando
-                                                                el wok esté caliente el proceso irá muy rápido. <br>
-
-                                                                <br> Lavamos bien los pimientos, retiramos los
-                                                                pedúnculos y
-                                                                las semillas y los cortamos en pequeños dados.
-                                                                Escurrimos bien el tofu, secándolo con papel absorbente,
-                                                                y lo cortamos en pequeños dados. Rallamos finamente los
-                                                                dientes de ajo y un trozo de jengibre de unos dos o tres
-                                                                centímetros de largo. <br>
-
-                                                                <br> Calentamos un fondo de aceite en un wok y agregamos
-                                                                los
-                                                                pimientos y el tofu. Agregamos sal al gusto (ojo que más
-                                                                tarde añadiremos salsa de soja y esta lleva mucha sal) y
-                                                                salteamos un par de minutos a fuego fuerte antes de
-                                                                incorporar el ajo, el jengibre y los brotes de soja.
-                                                                Saltear unos cinco minutos más. <br>
-
-                                                                <br> Al mismo tiempo cocemos los fideos en el caldo y
-                                                                los
-                                                                dejamos un par de minutos menos del tiempo indicado en
-                                                                el paquete. Los escurrimos y, inmediatamente, los
-                                                                incorporamos al wok junto con la salsa de soja.
-                                                                Salteamos un par de minutos y servimos inmediatamente
-                                                                espolvoreando el conjunto con semillas de sésamo
-                                                                (opcional). <br>
-                                                            </p>
-                                                            <div>
-                                                                <button type="button" class="btn btn-outline-warning"
-                                                                    href="">Recomendar receta</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="flush-headingThree">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse"
-                                                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                                            aria-controls="flush-collapseThree">
-                                                            Receta #3
-                                                        </button>
-                                                    </h2>
-                                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                                        aria-labelledby="flush-headingThree"
-                                                        data-bs-parent="#accordionFlushExample">
-                                                        <div class="accordion-body">
-                                                            <h5>Tallarines chinos</h5>
-                                                            <img src="./img/fotor.jpg" alt="">
-                                                            <p> <strong>Para 4 personas:</strong><br>
-                                                                Tallarines o fideos chinos (tipo udon) - <strong>300
-                                                                    grs</strong><br>
-                                                                Pimiento verde - <strong>1 unidad</strong><br>
-                                                                Pimiento rojo - <strong>1 unidad</strong><br>
-                                                                Tofu firme - <strong>125 grs</strong><br>
-                                                                Diente de ajo - <strong>2 unidades</strong><br>
-                                                                Jengibre fresco
-                                                                Aceite de girasol
-                                                                Salsa de soja - <strong>60 ml</strong><br>
-                                                                Caldo de verduras - <strong>2 lts</strong><br>
-                                                                Semillas de sésamo <strong>(opcional)</strong><br>
-                                                                Brotes de soja frescos - <strong>150 grs</strong><br>
-                                                                Sal <br></p>
-                                                            <hr>
-                                                            <p>Dificultad: Fácil. <br>
-                                                                Tiempo total: 17 minutos <br>
-                                                                Elaboración: 10 minutos <br>
-                                                                Cocción: 7 minutos <br>
-                                                                <br> Comenzamos calentando el caldo de verduras en una
-                                                                olla y
-                                                                preparando todos los tropezones, es decir, los
-                                                                pimientos, el ajo, el jengibre y el tofu, porque cuando
-                                                                el wok esté caliente el proceso irá muy rápido. <br>
-
-                                                                <br> Lavamos bien los pimientos, retiramos los
-                                                                pedúnculos y
-                                                                las semillas y los cortamos en pequeños dados.
-                                                                Escurrimos bien el tofu, secándolo con papel absorbente,
-                                                                y lo cortamos en pequeños dados. Rallamos finamente los
-                                                                dientes de ajo y un trozo de jengibre de unos dos o tres
-                                                                centímetros de largo. <br>
-
-                                                                <br> Calentamos un fondo de aceite en un wok y agregamos
-                                                                los
-                                                                pimientos y el tofu. Agregamos sal al gusto (ojo que más
-                                                                tarde añadiremos salsa de soja y esta lleva mucha sal) y
-                                                                salteamos un par de minutos a fuego fuerte antes de
-                                                                incorporar el ajo, el jengibre y los brotes de soja.
-                                                                Saltear unos cinco minutos más. <br>
-
-                                                                <br> Al mismo tiempo cocemos los fideos en el caldo y
-                                                                los
-                                                                dejamos un par de minutos menos del tiempo indicado en
-                                                                el paquete. Los escurrimos y, inmediatamente, los
-                                                                incorporamos al wok junto con la salsa de soja.
-                                                                Salteamos un par de minutos y servimos inmediatamente
-                                                                espolvoreando el conjunto con semillas de sésamo
-                                                                (opcional). <br>
-                                                            </p>
-                                                            <div>
-                                                                <button type="button" class="btn btn-outline-warning"
-                                                                    href="">Recomendar receta</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <br> Al mismo tiempo cocemos los fideos en el caldo y
+                                                los
+                                                dejamos un par de minutos menos del tiempo indicado en
+                                                el paquete. Los escurrimos y, inmediatamente, los
+                                                incorporamos al wok junto con la salsa de soja.
+                                                Salteamos un par de minutos y servimos inmediatamente
+                                                espolvoreando el conjunto con semillas de sésamo
+                                                (opcional). <br>
+                                            </p>
+                                            <div>
+                                                <button type="button" class="btn btn-outline-warning" href="">Recomendar
+                                                    receta</button>
                                             </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline-warning"
-                                                data-bs-dismiss="modal">Cerrar</button>
-                                            <button type="button" class="btn btn-outline-warning"><a href="">Enviar por
-                                                    Whatsapp</a></button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>!-->
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="imagenIngredientes-2">
-            </div>
-        </section>
-        <hr id="linkeoCuartaSeccion">
-        <section class="cuartaSeccion">
-            <div class="imagenCalorias-1">
-            </div>
-            <div class="textoCalorias">
-                <h2>Recetas por calorías (En laboratorio)</h2>
-                <p>Como en casa te permite buscar recetas según los ingredientes de que dispones en tu heladera.</p>
-                <div class="formCalorias">
-                    <form action="Formulario">
-                        <!--<div>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Ingrese ingredientes"
-                                        aria-label="Number">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Receta #2
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <h5>Tallarines chinos</h5>
+                                            <img src="./img/fotor.jpg" alt="">
+                                            <p> <strong>Para 4 personas:</strong><br>
+                                                Tallarines o fideos chinos (tipo udon) - <strong>300
+                                                    grs</strong><br>
+                                                Pimiento verde - <strong>1 unidad</strong><br>
+                                                Pimiento rojo - <strong>1 unidad</strong><br>
+                                                Tofu firme - <strong>125 grs</strong><br>
+                                                Diente de ajo - <strong>2 unidades</strong><br>
+                                                Jengibre fresco
+                                                Aceite de girasol
+                                                Salsa de soja - <strong>60 ml</strong><br>
+                                                Caldo de verduras - <strong>2 lts</strong><br>
+                                                Semillas de sésamo <strong>(opcional)</strong><br>
+                                                Brotes de soja frescos - <strong>150 grs</strong><br>
+                                                Sal <br></p>
+                                            <hr>
+                                            <p>Dificultad: Fácil. <br>
+                                                Tiempo total: 17 minutos <br>
+                                                Elaboración: 10 minutos <br>
+                                                Cocción: 7 minutos <br>
+                                                <br> Comenzamos calentando el caldo de verduras en una
+                                                olla y
+                                                preparando todos los tropezones, es decir, los
+                                                pimientos, el ajo, el jengibre y el tofu, porque cuando
+                                                el wok esté caliente el proceso irá muy rápido. <br>
+
+                                                <br> Lavamos bien los pimientos, retiramos los
+                                                pedúnculos y
+                                                las semillas y los cortamos en pequeños dados.
+                                                Escurrimos bien el tofu, secándolo con papel absorbente,
+                                                y lo cortamos en pequeños dados. Rallamos finamente los
+                                                dientes de ajo y un trozo de jengibre de unos dos o tres
+                                                centímetros de largo. <br>
+
+                                                <br> Calentamos un fondo de aceite en un wok y agregamos
+                                                los
+                                                pimientos y el tofu. Agregamos sal al gusto (ojo que más
+                                                tarde añadiremos salsa de soja y esta lleva mucha sal) y
+                                                salteamos un par de minutos a fuego fuerte antes de
+                                                incorporar el ajo, el jengibre y los brotes de soja.
+                                                Saltear unos cinco minutos más. <br>
+
+                                                <br> Al mismo tiempo cocemos los fideos en el caldo y
+                                                los
+                                                dejamos un par de minutos menos del tiempo indicado en
+                                                el paquete. Los escurrimos y, inmediatamente, los
+                                                incorporamos al wok junto con la salsa de soja.
+                                                Salteamos un par de minutos y servimos inmediatamente
+                                                espolvoreando el conjunto con semillas de sésamo
+                                                (opcional). <br>
+                                            </p>
+                                            <div>
+                                                <button type="button" class="btn btn-outline-warning" href="">Recomendar
+                                                    receta</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Ingrese cantidad de calorías" aria-label="Text">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Receta #3
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <h5>Tallarines chinos</h5>
+                                            <img src="./img/fotor.jpg" alt="">
+                                            <p> <strong>Para 4 personas:</strong><br>
+                                                Tallarines o fideos chinos (tipo udon) - <strong>300
+                                                    grs</strong><br>
+                                                Pimiento verde - <strong>1 unidad</strong><br>
+                                                Pimiento rojo - <strong>1 unidad</strong><br>
+                                                Tofu firme - <strong>125 grs</strong><br>
+                                                Diente de ajo - <strong>2 unidades</strong><br>
+                                                Jengibre fresco
+                                                Aceite de girasol
+                                                Salsa de soja - <strong>60 ml</strong><br>
+                                                Caldo de verduras - <strong>2 lts</strong><br>
+                                                Semillas de sésamo <strong>(opcional)</strong><br>
+                                                Brotes de soja frescos - <strong>150 grs</strong><br>
+                                                Sal <br></p>
+                                            <hr>
+                                            <p>Dificultad: Fácil. <br>
+                                                Tiempo total: 17 minutos <br>
+                                                Elaboración: 10 minutos <br>
+                                                Cocción: 7 minutos <br>
+                                                <br> Comenzamos calentando el caldo de verduras en una
+                                                olla y
+                                                preparando todos los tropezones, es decir, los
+                                                pimientos, el ajo, el jengibre y el tofu, porque cuando
+                                                el wok esté caliente el proceso irá muy rápido. <br>
+
+                                                <br> Lavamos bien los pimientos, retiramos los
+                                                pedúnculos y
+                                                las semillas y los cortamos en pequeños dados.
+                                                Escurrimos bien el tofu, secándolo con papel absorbente,
+                                                y lo cortamos en pequeños dados. Rallamos finamente los
+                                                dientes de ajo y un trozo de jengibre de unos dos o tres
+                                                centímetros de largo. <br>
+
+                                                <br> Calentamos un fondo de aceite en un wok y agregamos
+                                                los
+                                                pimientos y el tofu. Agregamos sal al gusto (ojo que más
+                                                tarde añadiremos salsa de soja y esta lleva mucha sal) y
+                                                salteamos un par de minutos a fuego fuerte antes de
+                                                incorporar el ajo, el jengibre y los brotes de soja.
+                                                Saltear unos cinco minutos más. <br>
+
+                                                <br> Al mismo tiempo cocemos los fideos en el caldo y
+                                                los
+                                                dejamos un par de minutos menos del tiempo indicado en
+                                                el paquete. Los escurrimos y, inmediatamente, los
+                                                incorporamos al wok junto con la salsa de soja.
+                                                Salteamos un par de minutos y servimos inmediatamente
+                                                espolvoreando el conjunto con semillas de sésamo
+                                                (opcional). <br>
+                                            </p>
+                                            <div>
+                                                <button type="button" class="btn btn-outline-warning" href="">Recomendar
+                                                    receta</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Teléfono de contacto"
-                                        aria-label="Number">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Email de contacto"
-                                        aria-label="name@example.com">
-                                </div>!
                             </div>
                         </div>
-                        <div class="textareaCalorias">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here"
-                                    id="floatingTextarea2"></textarea>
-                                <label for="floatingTextarea2">Ingredientes seleccionados</label>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-warning"
+                                data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-outline-warning"><a href="">Enviar por
+                                    Whatsapp</a></button>
                         </div>
-                        <div class="botonCalorias">
-                            <button type="button" class="btn btn-outline-warning"><a href="#">Buscar</a></button>
-                        </div>-->
-                    </form>
+                    </div>
                 </div>
             </div>
-            <div class="imagenCalorias-2">
+        </div>-->
+
+    <header>
+        <div class="indexLogo animate__animated animate__lightSpeedInLeft">
+            <a href="./index.html"><img src="./img/logo-fondoblanco.png" alt="Logo Central"></a>
+        </div>
+        <div class="bajada animate__animated animate__lightSpeedInRight">
+            <h2>E l &nbsp;&nbsp; b u s c a d o r &nbsp;&nbsp; d e &nbsp;&nbsp; r e c e t a s &nbsp;&nbsp; p e r s o
+                n a l i z a d a s</h2>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni reiciendis quasi aut molestiae id
+                tempore eius laborum maxime minima aperiam fugit, a aspernatur sint incidunt optio sequi aliquid.
+                Omnis,
+                nulla.</p>
+            <div class="redes">
+                <a href="#" target="_blank"><img src="./img/instagram.png" alt="Instagram Presente"></a>
+                <a href="#" target="_blank"><img src="./img/facebook.png" alt="Facebook Presente"></a>
+                <a href="#" target="_blank"><img src="./img/twitter.png" alt="Twitter Presente"></a>
             </div>
+        </div>
+        <div class="encabezado-2 animate__animated animate__lightSpeedInLeft">
+            <button type="button" class="btn btn-outline-warning"><a href="#cuestionario">COMENZAR</a></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="cuestionario" id="cuestionario">
+            <div class="grillaPreguntas">
+                <h5 class="titulo-1">Seleccioná que tipo de comida querés realizar: </h5>
+                <div class="tipoComida">
+                    <button>
+                        <img src="./img/icons8-paleo-dieta-100.png" alt="Con carne">
+                        <p>Con carne</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-marca-vegetariana-100.png" alt="Vegetariano">
+                        <p>Vegetariano</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-comida-vegana-100.png" alt="Vegana">
+                        <p>Vegano</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-energía-calórica-100.png" alt="Energía calórica">
+                        <p>Con energía calórica</p>
+                    </button>
+                </div>
+                <h5 class="titulo-2">Seleccioná que tipo de plato queres realizar: </h5>
+                <div class="tipoSabor">
+                    <button>
+                        <img src="./img/icons8-plato-de-sopa-100.png" alt="Sopa">
+                        <p>Sopas</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-ensalada-100.png" alt="Ensalada">
+                        <p>Ensaladas</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-panqueque-100.png" alt="Postre">
+                        <p>Postres</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-tortilla-100.png" alt="Casera">
+                        <p>Casera</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-fast-food-drive-thru-100.png" alt="Fast food">
+                        <p>Fast food</p>
+                    </button>
+                </div>
+                <h5 class="titulo-3">Seleccioná el modo en el que quisieras cocinar tu comida: </h5>
+                <div class="tipoModo">
+                    <button>
+                        <img src="./img/icons8-olla-100.png" alt="Olla">
+                        <p>En olla</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-microondas-100.png" alt="Microondas">
+                        <p>En microondas</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-parrilla-100.png" alt="Parrilla">
+                        <p>En parrilla</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-sartén-100.png" alt="Sartén">
+                        <p>En sartén</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-cocina-100.png" alt="Horno">
+                        <p>En horno</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-ensaladera-100.png" alt="Crudo">
+                        <p>En crudo</p>
+                    </button>
+                </div>
+                <h5 class="titulo-4">Seleccioná que <strong>no debe tener o no querés que tenga</strong> tu comida:
+                </h5>
+                <div class="tipoRestringido">
+                    <button>
+                        <img src="./img/icons8-sin-azúcar-100.png" alt="Sin azúcar">
+                        <p>Azúcar</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-sin-huevos-100.png" alt="Sin huevos">
+                        <p>Huevos</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-sin-leche-100.png" alt="Sin Leche">
+                        <p>Leche</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-sin-pez-100.png" alt="Sin pescado">
+                        <p>Pescado</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-bajo-en-sal-100.png" alt="Sin sal">
+                        <p>Sal</p>
+                    </button>
+                    <button>
+                        <img src="./img/icons8-no-meat-100.png" alt="Sin carne">
+                        <p>Carne</p>
+                    </button>
+                </div>
+                <h5 class="titulo-5">Por último, seleccioná los ingredientes que tengas en tu heladera:</h5>
+                <div class="tipoIngredientes">
+                    <div class="ingredientes">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Frutas
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <button>
+                                            <img src="./img/icons8-manzana-100.png" alt="Manzana">
+                                            <p>Manzana</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-lime-100.png" alt="Lima">
+                                            <p>Lima</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-plátano-100.png" alt="Banana">
+                                            <p>Banana</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-sandía-100.png" alt="Sandía">
+                                            <p>Sandía</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-piña-100.png" alt="Ananá">
+                                            <p>Ananá</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-aguacate-100.png" alt="Palta">
+                                            <p>Palta</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-pera-100.png" alt="Pera">
+                                            <p>Pera</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-melón-100.png" alt="Melón">
+                                            <p>Melón</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-uvas-100.png" alt="Uvas">
+                                            <p>Uva</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-kiwi-100.png" alt="Kiwi">
+                                            <p>Kiwi</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-fresa-100.png" alt="Frutilla">
+                                            <p>Frutilla</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-melocotón-100.png" alt="Durazno">
+                                            <p>Durazno</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Verduras
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <button>
+                                            <img src="./img/icons8-lechuga-100.png" alt="Lechuga">
+                                            <p>Lechuga</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-ajo-100.png" alt="Ajo">
+                                            <p>Ajo</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-berenjena-100.png" alt="Berenjena">
+                                            <p>Berenjena</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-pimenton-100.png" alt="Morrón">
+                                            <p>Morrón</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-cebolla-100.png" alt="Cebolla">
+                                            <p>Cebolla</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-alcachofa-100.png" alt="Alcaucil">
+                                            <p>Alcaucil</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-zanahoria-100.png" alt="Zanahoria">
+                                            <p>Zanahoria</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-maíz-100.png" alt="Choclo">
+                                            <p>Choclo</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-calabaza-100.png" alt="Calabaza">
+                                            <p>Calabaza</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-tomate-100.png" alt="Tomate">
+                                            <p>Tomate</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-remolacha-100.png" alt="Remolacha">
+                                            <p>Remolacha</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-patata-100.png" alt="Papa">
+                                            <p>Papa</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Lácteos
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <button>
+                                            <img src="./img/icons8-cartón-de-leche-100.png" alt="Leche de vaca">
+                                            <p>Leche</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-coconut-milk-100.png" alt="Leche de coco">
+                                            <p>Leche de coco</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-manga-pastelera-100.png" alt="Dulce de leche">
+                                            <p>Dulce de leche</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-yogur-100.png" alt="Yogur">
+                                            <p>Yogur</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-crema-de-avena-100.png" alt="Crema de leche">
+                                            <p>Crema de leche</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-recipiente-de-helado-100.png" alt="Helado">
+                                            <p>Helado</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-queso-100.png" alt="Queso">
+                                            <p>Queso</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                        Granos/Cereales/Legumbres
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <button>
+                                            <img src="./img/icons8-guisantes-100.png" alt="Arvejas">
+                                            <p>Arvejas</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-avellana-100.png" alt="Avellanas">
+                                            <p>Avellanas</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-aceituna-100.png" alt="Aceitunas">
+                                            <p>Aceitunas</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-grains-of-rice-100.png" alt="Arroz">
+                                            <p>Arroz</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-rolled-oats-100.png" alt="Maní">
+                                            <p>Maní</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-almendra-100.png" alt="Almendra">
+                                            <p>Almendra</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-semilla-de-brasil-100.png" alt="Centeno">
+                                            <p>Centeno</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-cashew-100.png" alt="Castaña de cajú">
+                                            <p>Castaña de cajú</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-nuez-100.png" alt="Nuez">
+                                            <p>Nuez</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-white-beans-100.png" alt="Porotos">
+                                            <p>Porotos</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-granos-de-café-100.png" alt="Café">
+                                            <p>Café</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-seta-100.png" alt="Hongos">
+                                            <p>Hongos</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                        Proteínas
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <button>
+                                            <img src="./img/icons8-bistec-bien-hecho-100.png" alt="Carne de vaca">
+                                            <p>Carne de vaca</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-mariscos-100.png" alt="Mariscos">
+                                            <p>Mariscos</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-huevos-100.png" alt="Huevo">
+                                            <p>Huevo</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-salami-100.png" alt="Embutidos">
+                                            <p>Embutidos</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-costillas-de-cordero-100.png" alt="Carne de cordero">
+                                            <p>Carne de cordero</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-pescado-entero-100.png" alt="Pescado">
+                                            <p>Pescado</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-jamón-100.png" alt="Carne de cerdo">
+                                            <p>Carne de cerdo</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-acción-de-gracias-100.png" alt="Pollo">
+                                            <p>Pollo</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-hígado-100.png" alt="Achuras">
+                                            <p>Achuras</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                        aria-controls="flush-collapseSix">
+                                        Otros
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <button>
+                                            <img src="./img/icons8-mayonesa-100.png" alt="Mayonesa">
+                                            <p>Mayonesa</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-mostaza-100.png" alt="Mostaza">
+                                            <p>Mostaza</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-kétchup-100.png" alt="Ketchup">
+                                            <p>Kétchup</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-miel-100.png" alt="Miel">
+                                            <p>Miel</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-soy-sauce-100.png" alt="Agridulce">
+                                            <p>Agridulce</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-salsa-worcestershire-100.png" alt="Picante">
+                                            <p>Picante</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-saco-de-harina-100.png" alt="Harina">
+                                            <p>Harina</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-aceite-de-oliva-100.png" alt="Aceite de oliva">
+                                            <p>Aceite de oliva</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-pimentero-100.png" alt="Condimentos salados">
+                                            <p>Condimentos salados</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-palitos-de-canela-100.png" alt="Condimentos dulces">
+                                            <p>Condimentos dulces</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-thyme-100.png" alt="Aromatizantes">
+                                            <p>Aromatizantes</p>
+                                        </button>
+                                        <button>
+                                            <img src="./img/icons8-pan-100.png" alt="Pan">
+                                            <p>Pan</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seleccion">
+                            <h6>Tu selección:</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-warning" href=""><a href="#">Buscar recetas</a></button>
         </section>
-        <hr id="linkeoQuintaSeccion">
-        <section class="quintaSeccion">
-            <div class="textoRecomendaciones">
-                <h2>Recomendaciones</h2>
-            </div>
+        <hr>
+        <section class="recomendaciones">
+            <h2 class="titleRecomendaciones">R e c o m e n d a c i o n e s</h2>
+            <p class="textRecomendaciones">Estas son algunas de las recetas recomendadas por los usuarios. En
+                <strong>Como en casa</strong> no solo
+                te brindamos la receta perfecta con los ingredientes de tu heladera, sino también, apelamos al
+                compartimento comunitario de tus resultados. <br>
+                Si la receta que te brindamos te gustó, te pedimos que la compartas con los demás.
+            </p>
             <div class="tarjetasRecomendaciones">
                 <div class="card-group">
                     <div class="card">
-                        <img src="./img/platos-nueve.jpg" class="card-img-top" alt="...">
+                        <img src="./img/platos-nueve.jpg" class="card-img-top" alt="Nuggets de Gatuzo">
                         <div class="card-body">
                             <h5 class="card-title">Nuggets de Gatuzo</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">
+                                &#x2b9a; 500gr de Gatuzo <br>
+                                &#x2b9a; 4 rodajas de pan lactal <br>
+                                &#x2b9a; 3 cucharadas de queso tipo Philadelphia <br>
+                                &#x2b9a; 1 diente de ajo <br>
+                                &#x2b9a; 70cc de leche <br>
+                                &#x2b9a; Sal a gusto <br>
+                                &#x2b9a; Pimienta a gusto <br>
+                                &#x2b9a; Albahaca <br>
+                                &#x2b9a; 2 huevos <br>
+                                &#x2b9a; 250gr de pan rallado o panko <br>
+                                <a href="#">Leer más</a>
+                            </p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Recomendado por Anna Karenina hace 2 horas</small>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./img/platos-diez.jpg" class="card-img-top" alt="...">
+                        <img src="./img/platos-once.jpg" class="card-img-top" alt="Arroz con leche">
                         <div class="card-body">
-                            <h5 class="card-title">Milanesa de pechuga con ensalada verde</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
+                            <h5 class="card-title">Arroz con leche</h5>
+                            <p class="card-text">
+                                &#x2b9a; 100gr Arroz <br>
+                                &#x2b9a; 200gr Agua <br>
+                                &#x2b9a; 1lt Leche entera <br>
+                                &#x2b9a; 50gr Manteca <br>
+                                &#x2b9a; 150gr Azúcar <br>
+                                &#x2b9a; Canela en rama <br>
+                                &#x2b9a; Vainilla <br>
+                                &#x2b9a; Cáscara de limón <br>
+                                <a href="#">Leer más</a>
+                            </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Recomendado por Rodión Raskólnikov hace 8 horas</small>
+                            <small class="text-muted">Recomendado por Pierre Bezújov hace 13 horas</small>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./img/platos-once.jpg" class="card-img-top" alt="...">
+                        <img src="./img/platos-diez.jpg" class="card-img-top" alt="Espinacas con bechamel y pan gratinado">
                         <div class="card-body">
-                            <h5 class="card-title">Esparragos con jamón crudo</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content.</p>
+                            <h5 class="card-title">Espinacas con bechamel y pan gratinado</h5>
+                            <p class="card-text">
+                                &#x2b9a; 750gr de espinacas <br>
+                                &#x2b9a; 1 cebolla <br>
+                                &#x2b9a; 60gr de harina <br>
+                                &#x2b9a; 750 ml de leche <br>
+                                &#x2b9a; 1 pizca de nuez moscada <br>
+                                &#x2b9a; 3 Panes <br>
+                                &#x2b9a; Queso rallado para gratinar <br>
+                                &#x2b9a; Aceite de oliva <br>
+                                &#x2b9a; Pimienta <br>
+                                &#x2b9a; Sal <br>
+                                <a href="#">Leer más</a>
+                            </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Recomendado por Pierre Bezújov hace 1 día</small>
+                            <small class="text-muted">Recomendado por Pierre Bezújov hace 22 horas</small>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./img/platos-doce.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Albaricoques con queso de cabra en pan árabe</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Recomendado por Iván Ilich hace 2 días</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="./img/platos-catorce.jpg" class="card-img-top" alt="...">
+                        <img src="./img/platos-catorce.jpg" class="card-img-top" alt="Tallarines chinos">
                         <div class="card-body">
                             <h5 class="card-title">Tallarines chinos</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>
+                            <p class="card-text">
+                                &#x2b9a; 300gr Tallarines o fideos chinos (tipo udon) <br>
+                                &#x2b9a; 1 Pimiento verde <br>
+                                &#x2b9a; 1 Pimiento rojo <br>
+                                &#x2b9a; 125g Tofu firme <br>
+                                &#x2b9a;2 Dientes de ajo <br>
+                                &#x2b9a; Jengibre fresco <br>
+                                &#x2b9a; Aceite de girasol <br>
+                                &#x2b9a; 60 ml Salsa de soja <br>
+                                &#x2b9a; 2lts Caldo de verduras <br>
+                                &#x2b9a; Semillas de sésamo (opcional) <br>
+                                &#x2b9a;150gr Brotes de soja frescos <br>
+                                <a href="#">Leer más</a>
+                            </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Recomendado por Nikolai Stavroguin hace 5 días</small>
+                            <small class="text-muted">Recomendado por Nikolai Stavroguin hace 1 día</small>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./img/platos-quince.jpg" class="card-img-top" alt="...">
+                        <img src="./img/platos-quince.jpg" class="card-img-top" alt="Pollo en salsa de ketchup">
                         <div class="card-body">
                             <h5 class="card-title">Pollo en salsa de ketchup</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. </p>
+                            <p class="card-text">
+                                &#x2b9a; 700 gr Pollo deshuesado y sin piel (contramuslos, muslos y/o pechuga) <br>
+                                &#x2b9a; 70 gr Harina de trigo <br>
+                                &#x2b9a; 50 ml Aceite de oliva virgen extra <br>
+                                &#x2b9a; 2 Diente de ajo <br>
+                                &#x2b9a; 1 Cayena o guindilla (opcional) <br>
+                                &#x2b9a; 250 ml Kétchup de calidad decente <br>
+                                &#x2b9a; Pimienta negra molida <br>
+                                &#x2b9a; Sal <br>
+                                <a href="#">Leer más</a>
+                            </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Recomendado por Nastasya Filippovn hace 8 días</small>
+                            <small class="text-muted">Recomendado por Nastasya Filippovn hace 2 días</small>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer>
 
+        <div class="spinner-border m-5 text-warning" style="width: 3rem; height: 3rem;" role="status" id="spinner">
+            <span class="visually-hidden">Buscando recetas...</span>
+        </div>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

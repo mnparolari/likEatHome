@@ -11,318 +11,338 @@ header {
   /*position: -webkit-sticky;
     position: sticky;
     top: 0;*/ }
-  header nav {
+  header .encabezado-1 {
+    width: 100%;
+    height: 150px;
+    background-image: url(../img/1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+  header .indexLogo {
+    background-image: url(../img/platos-cuatro.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header .indexLogo a img {
+      margin-top: 70px;
+      border-radius: 10px; }
+  header .bajada {
     background-color: #ee9b00ff;
-    height: 80px; }
-    header nav .container-fluid .navbar-collapse {
-      padding-left: 5px;
-      padding-right: 5px; }
-      header nav .container-fluid .navbar-collapse .navbar-nav {
-        padding-right: 10px; }
-        header nav .container-fluid .navbar-collapse .navbar-nav .nav-link {
-          padding-right: 99px;
-          padding-left: 17px;
-          color: #001219ff;
-          font-family: "Encode Sans", sans-serif;
-          font-weight: bold; }
-      header nav .container-fluid .navbar-collapse .redes {
-        padding-left: 10px; }
-        header nav .container-fluid .navbar-collapse .redes a img {
-          height: 30px;
-          width: 30px;
-          transition: 1s; }
-          header nav .container-fluid .navbar-collapse .redes a img:hover {
-            transform: scale(1.5); }
+    font-family: "Encode Sans", sans-serif;
+    height: 170px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9; }
+    header .bajada h2 {
+      color: #001219ff;
+      font-weight: bold; }
+    header .bajada p {
+      font-family: "Encode Sans", sans-serif;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-left: 180px;
+      margin-right: 180px; }
+  header .redes {
+    padding-left: 10px; }
+    header .redes a img {
+      height: 30px;
+      width: 30px;
+      transition: 1s; }
+      header .redes a img:hover {
+        transform: scale(1.5); }
+  header .encabezado-2 {
+    width: 100%;
+    height: 150px;
+    background-image: url(../img/2-platos-cuatro.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9; }
+    header .encabezado-2 .btn {
+      background-color: #001219ff;
+      border-color: #001219ff;
+      text-align: center;
+      font-weight: bold; }
+      header .encabezado-2 .btn:hover {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff; }
+      header .encabezado-2 .btn a {
+        text-decoration: none;
+        color: #ee9b00ff;
+        font-weight: bold; }
+        header .encabezado-2 .btn a:hover {
+          color: #001219ff; }
 
 main {
-  padding-left: 40px;
-  padding-right: 40px; }
-  main .primeraSeccion {
+  background-color: #e9d8a6ff; }
+  main .cuestionario {
+    font-family: "Encode Sans", sans-serif;
+    background-color: #e9d8a6ff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px; }
-    main .primeraSeccion .textoQueEsComoEnCasa h2 {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ee9b00ff;
-      padding-left: 10px; }
-    main .primeraSeccion .textoQueEsComoEnCasa p {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1rem;
-      padding-left: 10px;
-      padding-right: 15px;
-      margin-top: 25px; }
-  main .segundaSeccion {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px; }
-    main .segundaSeccion .textoComoFunciona h2 {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ee9b00ff;
-      padding-right: 10px;
-      padding-top: 15px;
-      text-align: right; }
-    main .segundaSeccion .textoComoFunciona p {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1rem;
-      padding-left: 10px;
-      padding-right: 15px;
-      margin-top: 25px;
-      text-align: right; }
-    main .segundaSeccion .textoComoFunciona .botonesComoFunciona {
-      display: flex;
-      align-items: center;
-      justify-content: right; }
-      main .segundaSeccion .textoComoFunciona .botonesComoFunciona .btn-outline-warning {
+    justify-content: center; }
+    main .cuestionario .grillaPreguntas {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 30px 1fr 30px 1fr 30px 1fr 30px 100% 30px;
+      margin-bottom: 30px; }
+      main .cuestionario .grillaPreguntas .titulo-1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
         text-align: center;
-        margin-left: 15px;
-        margin-right: 15px; }
-        main .segundaSeccion .textoComoFunciona .botonesComoFunciona .btn-outline-warning a {
-          text-decoration: none;
-          color: #ee9b00ff; }
-          main .segundaSeccion .textoComoFunciona .botonesComoFunciona .btn-outline-warning a:hover {
-            color: #001219ff; }
-  main .terceraSeccion {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 30px; }
-    main .terceraSeccion .imagenIngredientes-1 {
-      width: 100%;
-      height: 150px;
-      background-image: url(../img/platos-siete.jpg);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
-    main .terceraSeccion .imagenIngredientes-2 {
-      width: 100%;
-      height: 150px;
-      background-image: url(../img/platos-siete.jpg);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
-    main .terceraSeccion .textoIngredientes {
-      height: 280px;
-      /*.formIngredientes {
-                form {
-                    div {
-                        .row {
-                            .col {
-                                input {
-                                    width: 190px;
-                                    margin-bottom: 30px;
-                                }
-                            }
-                        }
-                    }
-
-                    .textareaIngredientes {
-                        .form-floating {
-                            .form-control {
-                                width: 220px;
-                                height: 150px;
-                                margin-bottom: 10px;
-
-                                label {
-                                    color: gray;
-                                }
-                            }
-                        }
-                    }
-
-                    .modalIngredientes {
-                        button {
-                            margin-bottom: 10px;
-                        }
-
-                        .modal {
-                            .modal-dialog {
-                                .modal-content {
-                                    .modal-header {
-                                        font-family: $font-principal;
-                                    }
-
-                                    .modal-body {
-                                        font-family: $font-principal;
-                                    }
-
-                                    .modal-footer {
-                                        .btn {
-                                            color: nth($color-palette, 1);
-
-                                            &:hover {
-
-                                                color: nth($color-palette, 2);
-                                            }
-
-                                            a {
-                                                text-decoration: none;
-                                                color: nth($color-palette, 1);
-
-                                                &:hover {
-
-                                                    color: nth($color-palette, 2);
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }*/ }
-      main .terceraSeccion .textoIngredientes h2 {
-        font-family: "Encode Sans", sans-serif;
-        font-size: 1.5rem;
-        font-weight: bold;
         color: #ee9b00ff;
+        font-weight: bold;
+        margin-top: 10px; }
+      main .cuestionario .grillaPreguntas .tipoComida {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #001219ff;
+        margin-top: 15px; }
+        main .cuestionario .grillaPreguntas .tipoComida button {
+          padding-left: 10px;
+          padding-right: 10px;
+          border: none;
+          background-color: transparent;
+          font-weight: bold; }
+          main .cuestionario .grillaPreguntas .tipoComida button:hover {
+            transform: scale(1.1); }
+      main .cuestionario .grillaPreguntas .titulo-2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        text-align: center;
+        color: #ee9b00ff;
+        font-weight: bold;
+        margin-top: 10px; }
+      main .cuestionario .grillaPreguntas .tipoSabor {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #001219ff;
+        margin-top: 15px; }
+        main .cuestionario .grillaPreguntas .tipoSabor button {
+          padding-left: 10px;
+          padding-right: 10px;
+          border: none;
+          background-color: transparent;
+          font-weight: bold; }
+          main .cuestionario .grillaPreguntas .tipoSabor button:hover {
+            transform: scale(1.1); }
+      main .cuestionario .grillaPreguntas .titulo-3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: center;
+        color: #ee9b00ff;
+        font-weight: bold;
+        margin-top: 10px; }
+      main .cuestionario .grillaPreguntas .tipoModo {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #001219ff;
+        margin-top: 15px; }
+        main .cuestionario .grillaPreguntas .tipoModo button {
+          padding-left: 20px;
+          padding-right: 20px;
+          border: none;
+          background-color: transparent;
+          font-weight: bold; }
+          main .cuestionario .grillaPreguntas .tipoModo button:hover {
+            transform: scale(1.1); }
+      main .cuestionario .grillaPreguntas .titulo-4 {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: center;
+        color: #ee9b00ff;
+        font-weight: bold;
+        margin-top: 10px; }
+      main .cuestionario .grillaPreguntas .tipoRestringido {
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #001219ff;
+        margin-top: 15px; }
+        main .cuestionario .grillaPreguntas .tipoRestringido button {
+          padding-left: 10px;
+          padding-right: 10px;
+          border: none;
+          background-color: transparent;
+          font-weight: bold; }
+          main .cuestionario .grillaPreguntas .tipoRestringido button:hover {
+            transform: scale(1.1); }
+      main .cuestionario .grillaPreguntas .titulo-5 {
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: center;
+        color: #ee9b00ff;
+        font-weight: bold;
+        margin-top: 10px; }
+      main .cuestionario .grillaPreguntas .tipoIngredientes {
+        grid-row-start: 8;
+        grid-row-end: 9;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        text-align: center;
+        margin-top: 20px; }
+        main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around; }
+          main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion {
+            border: #001219ff 2px solid;
+            border-radius: 5px; }
+            main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item {
+              width: 500px;
+              border-color: #001219ff; }
+              main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-header {
+                font-family: "Encode Sans", sans-serif; }
+                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-header button {
+                  background-color: #e9d8a6ff;
+                  color: #ee9b00ff;
+                  font-weight: bold;
+                  border: 0; }
+                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-header button:focus {
+                    box-shadow: none;
+                    outline: none; }
+              main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                background-color: #e9d8a6ff; }
+                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body button {
+                  border: none;
+                  background-color: transparent;
+                  color: #001219ff;
+                  font-weight: bold; }
+                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body button:hover {
+                    transform: scale(1.1); }
+          main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .seleccion {
+            border: #001219ff 2px solid;
+            color: #ee9b00ff;
+            border-radius: 10px;
+            width: 500px; }
+            main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .seleccion h6 {
+              font-weight: bold;
+              margin-top: 10px; }
+    main .cuestionario .btn {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #001219ff;
+      border-color: #001219ff;
+      text-align: center;
+      font-weight: bold; }
+      main .cuestionario .btn:hover {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff; }
+      main .cuestionario .btn a {
+        text-decoration: none;
+        color: #ee9b00ff;
+        font-weight: bold;
         text-align: center; }
-      main .terceraSeccion .textoIngredientes p {
-        font-family: "Encode Sans", sans-serif;
-        font-size: 1rem;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 15px;
-        text-align: left; }
-  main .cuartaSeccion {
-    display: flex;
-    flex-direction: row;
-    align-items: normal;
-    justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    /*.formCalorias {
-            form {
-                text-align: center;
-
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-
-                    .row {
-                        .col {
-                            text-align: center;
-
-                            input {
-                                width: 250px;
-                                margin-bottom: 30px;
-                                text-align: center;
-                            }
-                        }
-                    }
-                }
-
-                .textareaCalorias {
-                    .form-floating {
-                        .form-control {
-                            width: 220px;
-                            height: 150px;
-                            margin-bottom: 10px;
-
-                            label {
-                                color: gray;
-                            }
-                        }
-                    }
-                }
-
-                .botonCalorias {
-                    margin-bottom: 10px;
-
-                    a {
-                        text-decoration: none;
-                        color: nth($color-palette, 1);
-
-                        &:hover {
-                            color: nth($color-palette, 2);
-                        }
-                    }
-                }
-            }
-        }*/ }
-    main .cuartaSeccion .imagenCalorias-1 {
-      width: 500px;
-      height: 570px;
-      background-image: url(../img/platos-cuatro.jpg);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
-    main .cuartaSeccion .imagenCalorias-2 {
-      width: 500px;
-      height: 570px;
-      background-image: url(../img/platos-cuatro.jpg);
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center; }
-    main .cuartaSeccion .textoCalorias h2 {
+        main .cuestionario .btn a:hover {
+          color: #001219ff; }
+  main .recomendaciones {
+    margin-top: 30px; }
+    main .recomendaciones .titleRecomendaciones {
       font-family: "Encode Sans", sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #ee9b00ff;
-      text-align: center; }
-    main .cuartaSeccion .textoCalorias p {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1rem;
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-top: 15px;
-      text-align: center; }
-  main .quintaSeccion {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 30px; }
-    main .quintaSeccion .textoRecomendaciones h2 {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ee9b00ff;
-      text-align: center; }
-    main .quintaSeccion .textoRecomendaciones p {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1rem;
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-top: 15px;
-      text-align: center; }
-    main .quintaSeccion .tarjetasRecomendaciones .card-group .card .card-body .card-title {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #ee9b00ff; }
-    main .quintaSeccion .tarjetasRecomendaciones .card-group .card .card-body .card-text {
-      font-family: "Encode Sans", sans-serif;
-      color: #001219ff; }
-    main .quintaSeccion .tarjetasRecomendaciones .card-group .card .card-footer {
-      font-family: "Encode Sans", sans-serif;
       color: #001219ff;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px; }
+    main .recomendaciones .textRecomendaciones {
+      font-family: "Encode Sans", sans-serif;
       font-weight: bold;
-      font-size: 1rem; }
+      text-align: center;
+      margin-bottom: 20px;
+      margin-left: 180px;
+      margin-right: 180px; }
+      main .recomendaciones .textRecomendaciones strong {
+        color: #ee9b00ff; }
+    main .recomendaciones .tarjetasRecomendaciones .card-group {
+      padding-bottom: 30px;
+      border-radius: 10%; }
+      main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+        width: 200px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 10px;
+        border-color: #001219ff;
+        border: #001219ff 1.5px solid; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card img {
+          width: 100%;
+          text-align: center;
+          border-radius: 10px; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card p {
+          font-family: "Encode Sans", sans-serif;
+          color: #001219ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-title {
+          font-family: "Encode Sans", sans-serif;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #ee9b00ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-text {
+          font-family: "Encode Sans", sans-serif;
+          color: #001219ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-footer {
+          font-family: "Encode Sans", sans-serif;
+          color: #001219ff;
+          font-weight: bold; }
   main hr {
-    color: #ee9b00ff; }
+    color: #ee9b00ff;
+    border: #ee9b00ff 2px solid;
+    margin-top: 40px; }
 
 footer {
   width: 100%;
-  height: 100px;
+  height: 150px;
   background-color: #ee9b00ff; }
