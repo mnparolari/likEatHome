@@ -1,123 +1,119 @@
-
-
-/*function bienvenidaNombre () {
-
-  let nombre = prompt ("Hola. Ingrese su nombre para poder darle un atención personalizada")
-
-  if ((nombre == "") || (nombre == null)) {
-    console.log("Hola humana/o no identificada/o.") 
-  } else {
-    console.log("Bienvenida/o " + nombre)
-  }
-}
-
-bienvenidaNombre();
-
-
-function Contactos (email,telefono) {
-
-  return email +" "+ telefono;
-}
-
-let aclaracion = alert("Las búsquedas proporcionadas a continuación serán enviadas a los contactos declarados al hacerse usuario en el sitio")
-let resultado = Contactos ("mnparolari@gmail.com","1134629639")
-console.log (resultado)
-*/
-
-/*
+/**Datos por prompt: Pedido de datos personales con los que el sitio identificará personalizadamente al usuario como también hacer el envío de los resultados (vía mail o whatsapp).*/
 class DatosPersonales {
-  constructor (nombre, apellido, pais, email, telefono) {
+  constructor (nombre, pais, email, telefono) {
     this.nombre = nombre.toUpperCase();
-    this.apellido = apellido.toUpperCase();
     this.pais = pais.toUpperCase();
     this.email = email.toUpperCase();
     this.telefono = telefono;
   }
 
   detalle(){
-    return "Nombre: "+this.nombre+"\nApellido: "+this.apellido+"\nPaís: "+this.pais+"\nEmail: "+this.email+"\nTeléfono: "+this.telefono
+    return "Nombre: "+this.nombre+"\nPaís: "+this.pais+"\nEmail: "+this.email+"\nTeléfono: "+this.telefono
   }
 }
 
-const usuario = new DatosPersonales (prompt("Ingrese su nombre"), prompt("Ingrese su apellido"), prompt("Ingrese país de residencia"), prompt("Ingrese su email"), prompt("Ingrese su teléfono"))
+const usuario = new DatosPersonales (prompt("Ingrese su nombre"), prompt("Ingrese país de residencia"), prompt("Ingrese su email"), prompt("Ingrese su teléfono"))
 
 let respuesta = "Si"
 
 do {
     let respuesta = prompt(usuario.nombre+", los datos ingresados son: \n"+usuario.detalle()+ "\n¿Sus datos son correctos?")
 
-      if (respuesta == "No") {
-        alert ("Por favor, vuelva a ingresarlos")
-      } else if (respuesta == "Si") {
+      if ((respuesta == "No") || (respuesta == "") || (respuesta == null)) {
+        alert ("Por favor, refresque la página y vuelva a ingresarlos")
+        
+      } else if ((respuesta == "Si")) {
         alert ("Muchas gracias por confirmarnos tus datos.")
       } else {
-        alert ("Ocurrió un error y no hemos podido guardar sus datos. Intente nuevamente más tarde.")
+        alert ("Ocurrió un error y no hemos podido guardar sus datos. Refresque la página o intente nuevamente más tarde.")
       }
 
-} while (respuesta != "Si") 
+} while (respuesta != "Si") {
+  console.log(usuario.detalle())
+}
 
+/**Datos por prompt: Pedido de datos generales mediante ciclo como primer filtro de la elección de la receta.*/
 
-function recetasCalorias () {
+let bucle = 1;
 
-  let calorias = Number(prompt("Ingrese el máximo de calorías que desea que tuviese la receta recomendada"))
-
-  if ((calorias == "") || (calorias == null)) {
-    console.log("Ha decidido que no le recomendemos recetas según la cantidad de calorías.");
-  } else if (calorias <= 200) {
-    console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 200 calorías: ...")
-  } else if (calorias <= 400) {
-    console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 400 calorías: ...")
-  } else if (calorias <= 600) {
-    console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 600 calorías: ...")
-  } else if (calorias <= 800) {
-    console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 800 calorías: ...")
-  } else if (calorias <= 1000) {
-    console.log ("Le enviamos por email la siguiente receta que contiene menos, o hasta 1000 calorías: ...")
-  } else  {
-    console.log ("Si bien no es recomendable consumir platos con más de 1000 calorías, le enviamos por email la siguiente receta que contiene más de 1000 calorías.")
+class ConsultaReceta {
+  constructor (tipocomida, tipoalimento, tipomodo) {
+    this.tipocomida = tipocomida.toUpperCase();
+    this.tipoalimento = tipoalimento.toUpperCase();
+    this.tipomodo = tipomodo.toUpperCase();
   }
 }
 
-recetasCalorias();
-
-
-function recetasCalificacion () {
-
-  for (let i = 1; i <= 3; i++) {  
-
-  let ingrediente = prompt("Ingrese hasta tres (3) ingredientes que tenga en su heladera. Por cada uno, le detallaremos la mejor opción según la calificación de nuestros usuarios")
-  
-  if ((ingrediente == "") || (ingrediente == null)) {
-    console.log("Ha decidido que no le recomendemos recetas según los ingredientes de su heladera.");
-    break;
-  } else if (ingrediente != "") {
-    console.log("El "+i+ " ingrediente elegido es " + ingrediente +".")
-    console.log("Le enviamos por email la mejor receta con "+ingrediente+" según la calificación de nuestros usuarios.")
-    } 
-  }
-}
-
-recetasCalificacion ();
-
-
-let bucle = 2;
-
-class RecetasIngredientes {
-  constructor (tipocomida, tipoalimento, tiposabor) {
-    this.tipocomida = tipocomida;
-    this.tipoalimento = tipoalimento;
-    this.tiposabor = tiposabor;
-  }
-}
-
-const recetasIngredientesIngresadas = [];
+const datosIngresados = [];
 do {
-  recetasIngredientesIngresadas.push (new RecetasIngredientes(prompt("Ingrese el tipo de comida"), prompt("Ingrese el tipo de alimento"),prompt("Ingrese el tipo de sabor")))
-  console.log (recetasIngredientesIngresadas)
-} while (recetasIngredientesIngresadas.length != bucle)
+  datosIngresados.push (new ConsultaReceta(prompt("Ingrese el tipo de comida (ejemplo: Con carne)"), prompt("Ingrese el tipo de plato (ejemplo: Comida tipo casera)"),prompt("Ingrese cómo quiere cocinarlo (ejemplo: a la olla)")))
+  console.log (datosIngresados)
+} while (datosIngresados.length != bucle)
+
+/**Lista de ingredientes mediante F.O.S + cantidad de ingredientes en array para uso interno*/
+
+const listaIngredientes = [
+  { tipo: "Fruta", nombre: "Tomate", id: "F1" },
+  { tipo: "Fruta", nombre: "Manzana", id: "F2" },
+  { tipo: "Fruta", nombre: "Pera", id: "F3" },
+  { tipo: "Verdura", nombre: "Choclo", id: "V1" },
+  { tipo: "Verdura", nombre: "Morrón", id: "V2" },
+  { tipo: "Verdura", nombre: "Cebolla", id: "V3" },
+  { tipo: "Proteína", nombre: "Ternera", id: "P1" },
+  { tipo: "Proteína", nombre: "Pollo", id: "P2" },
+  { tipo: "Proteína", nombre: "Pescado", id: "P3" },
+  { tipo: "Granos/Cereales", nombre: "Arroz", id: "G1" },
+  { tipo: "Granos/Cereales", nombre: "Nuez", id: "G2" },
+  { tipo: "Granos/Cereales", nombre: "Almendra", id: "G3" },
+  { tipo: "Otros", nombre: "Mayonesa", id: "O1" },
+  { tipo: "Otros", nombre: "Miel", id: "O2" },
+  { tipo: "Otros", nombre: "Aceite de oliva", id: "O3" }
+];
+
+const resultado1 = listaIngredientes.filter((el) =>el.nombre.includes("Tomate"));
+const resultado2 = listaIngredientes.filter((el) => el.id.includes("P1"));
+const resultado3 = listaIngredientes.filter((el) =>el.nombre.includes("Arroz"));
+
+function retornarResultados() {
+  console.log(resultado1);
+  console.log(resultado2);
+  console.log(resultado3);
+}
+
+function cantidadIngredientes() {
+  console.log("(Mensaje interno: Existen actualmente "+listaIngredientes.length+" productos cargados)");
+}
+
+retornarResultados();
+cantidadIngredientes();
+
+/**Datos por parámetro: Consulta de ingredientes + respuesta con receta.*/
+
+class ConsultaIngrediente {
+  constructor (ingrediente1, ingrediente2, ingrediente3) {
+    this.ingrediente1 = ingrediente1.toUpperCase();
+    this.ingrediente2 = ingrediente2.toUpperCase();
+    this.ingrediente3 = ingrediente3.toUpperCase();
+  }
+
+  resultadoIngrediente() {
+    return "La receta que elegimos con los siguientes ingredientes que ingresaste:"+this.ingrediente1+", "+this.ingrediente2+", y "+this.ingrediente3+", es la siguiente:\nhttps://www.bonviveur.es/recetas/arroz-con-carne-picada"
+  }
+}
+
+const ingredientesReceta = [];
+ingredientesReceta.push (new ConsultaIngrediente("Arroz", "Tomate", "Carne"))
+
+for (const ConsultaIngrediente of ingredientesReceta)
+  console.log(ConsultaIngrediente.resultadoIngrediente())
+
+/**Incorporación de ingredientes + cantidad de ingredientes ACTUAL en array para uso interno*/
+
+function cargarIngredientes() {
+  listaIngredientes.push({ tipo: "Fruta", nombre: "Tomate", id: "F1" })
+  cantidadIngredientes();
+} 
+cargarIngredientes();
 
 
-/*
-const tipoComida = ["Desayuno", "Almuerzo", "Merienda", "Cena", "Brunch"]
-const tipoAlimento = ["Frutas", "Verduras", "Lácteos", "Granos", "Proteinas"]
-const tipoSabor = ["Dulce", "Salado", "Agridulce"]*/
+
