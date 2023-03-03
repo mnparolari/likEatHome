@@ -97,7 +97,7 @@ class ConsultaIngrediente {
   }
 
   resultadoIngrediente() {
-    return "La receta que elegimos con los siguientes ingredientes que ingresaste:"+this.ingrediente1+", "+this.ingrediente2+", y "+this.ingrediente3+", es la siguiente:\nhttps://www.bonviveur.es/recetas/arroz-con-carne-picada"
+    return "La receta que elegimos con los siguientes ingredientes que ingresaste: "+this.ingrediente1+", "+this.ingrediente2+", y "+this.ingrediente3+", es la siguiente:\nhttps://www.bonviveur.es/recetas/arroz-con-carne-picada"
   }
 }
 
