@@ -253,14 +253,21 @@ main {
                 height: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
                 background-color: #e9d8a6ff; }
-                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body button {
+                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor img {
                   border: none;
                   background-color: transparent;
                   color: #001219ff;
                   font-weight: bold; }
-                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body button:hover {
+                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor img:hover {
+                    transform: scale(1.1); }
+                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor button {
+                  border: none;
+                  background-color: transparent;
+                  color: #001219ff;
+                  font-weight: bold; }
+                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor button:hover {
                     transform: scale(1.1); }
           main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .seleccion {
             border: #001219ff 2px solid;

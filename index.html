@@ -17,44 +17,6 @@
 </head>
 
 <body>
-    <!--MODAL BIENVENIDA
-    <div class="modal" id="modalBievenida" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Bienvenida/o a <strong>Como en Casa</strong></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="modal-body">
-                    <div class="nombre">
-                        <p>Por favor, ingrese su nombre:</p>
-                        <div class="row">
-                            <div class="col">
-                            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-                        </div>
-                    </div>
-                    <div class="email">
-                        <p>Para recibir el resultado de sus búsquedas es necesario que ingrese su email:</p>
-                        <div>
-                            <label for="exampleFormControlInput1" class="form-label"></label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="comoencasa@comoencasa.com">
-                        </div>
-                    </div>
-                    <div class="telefono">
-                        <p>También, puede recibir su resultado mediante Whatsapp. En ese caso, debe indicarnos el número:</p>
-                        <div class="row">
-                            <div class="col">
-                            <input type="number" class="form-control" placeholder="Teléfono" aria-label="phone">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Aceptar</button>
-                </div>
-            </div>
-        </div>
-    </div>-->
     <!--MODAL RESULTADO BÚSQUEDA
         <div class="modalIngredientes">
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -318,23 +280,8 @@
         <section class="cuestionario" id="cuestionario">
             <div class="grillaPreguntas">
                 <h5 class="titulo-1">Seleccioná que tipo de comida querés realizar: </h5>
-                <div class="tipoComida">
-                    <button>
-                        <img src="./img/icons8-paleo-dieta-100.png" alt="Con carne">
-                        <p>Con carne</p>
-                    </button>
-                    <button>
-                        <img src="./img/icons8-marca-vegetariana-100.png" alt="Vegetariano">
-                        <p>Vegetariano</p>
-                    </button>
-                    <button>
-                        <img src="./img/icons8-comida-vegana-100.png" alt="Vegana">
-                        <p>Vegano</p>
-                    </button>
-                    <button>
-                        <img src="./img/icons8-energía-calórica-100.png" alt="Energía calórica">
-                        <p>Con energía calórica</p>
-                    </button>
+                <div class="tipoComida" id="tipo-comida">
+
                 </div>
                 <h5 class="titulo-2">Seleccioná que tipo de plato queres realizar: </h5>
                 <div class="tipoSabor">
@@ -428,55 +375,8 @@
                                 </h2>
                                 <div id="flush-collapseOne" class="accordion-collapse collapse"
                                     aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">
-                                        <button>
-                                            <img src="./img/icons8-manzana-100.png" alt="Manzana">
-                                            <p>Manzana</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-lime-100.png" alt="Lima">
-                                            <p>Lima</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-plátano-100.png" alt="Banana">
-                                            <p>Banana</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-sandía-100.png" alt="Sandía">
-                                            <p>Sandía</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-piña-100.png" alt="Ananá">
-                                            <p>Ananá</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-aguacate-100.png" alt="Palta">
-                                            <p>Palta</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-pera-100.png" alt="Pera">
-                                            <p>Pera</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-melón-100.png" alt="Melón">
-                                            <p>Melón</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-uvas-100.png" alt="Uvas">
-                                            <p>Uva</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-kiwi-100.png" alt="Kiwi">
-                                            <p>Kiwi</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-fresa-100.png" alt="Frutilla">
-                                            <p>Frutilla</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-melocotón-100.png" alt="Durazno">
-                                            <p>Durazno</p>
-                                        </button>
+                                    <div class="accordion-body" id="frutas">
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -492,18 +392,6 @@
                                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <button>
-                                            <img src="./img/icons8-lechuga-100.png" alt="Lechuga">
-                                            <p>Lechuga</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-ajo-100.png" alt="Ajo">
-                                            <p>Ajo</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-berenjena-100.png" alt="Berenjena">
-                                            <p>Berenjena</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-pimenton-100.png" alt="Morrón">
                                             <p>Morrón</p>
                                         </button>
@@ -512,28 +400,8 @@
                                             <p>Cebolla</p>
                                         </button>
                                         <button>
-                                            <img src="./img/icons8-alcachofa-100.png" alt="Alcaucil">
-                                            <p>Alcaucil</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-zanahoria-100.png" alt="Zanahoria">
                                             <p>Zanahoria</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-maíz-100.png" alt="Choclo">
-                                            <p>Choclo</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-calabaza-100.png" alt="Calabaza">
-                                            <p>Calabaza</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-tomate-100.png" alt="Tomate">
-                                            <p>Tomate</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-remolacha-100.png" alt="Remolacha">
-                                            <p>Remolacha</p>
                                         </button>
                                         <button>
                                             <img src="./img/icons8-patata-100.png" alt="Papa">
@@ -558,24 +426,12 @@
                                             <p>Leche</p>
                                         </button>
                                         <button>
-                                            <img src="./img/icons8-coconut-milk-100.png" alt="Leche de coco">
-                                            <p>Leche de coco</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-manga-pastelera-100.png" alt="Dulce de leche">
-                                            <p>Dulce de leche</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-yogur-100.png" alt="Yogur">
                                             <p>Yogur</p>
                                         </button>
                                         <button>
                                             <img src="./img/icons8-crema-de-avena-100.png" alt="Crema de leche">
                                             <p>Crema de leche</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-recipiente-de-helado-100.png" alt="Helado">
-                                            <p>Helado</p>
                                         </button>
                                         <button>
                                             <img src="./img/icons8-queso-100.png" alt="Queso">
@@ -596,52 +452,20 @@
                                     aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <button>
-                                            <img src="./img/icons8-guisantes-100.png" alt="Arvejas">
-                                            <p>Arvejas</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-avellana-100.png" alt="Avellanas">
                                             <p>Avellanas</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-aceituna-100.png" alt="Aceitunas">
-                                            <p>Aceitunas</p>
                                         </button>
                                         <button>
                                             <img src="./img/icons8-grains-of-rice-100.png" alt="Arroz">
                                             <p>Arroz</p>
                                         </button>
                                         <button>
-                                            <img src="./img/icons8-rolled-oats-100.png" alt="Maní">
-                                            <p>Maní</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-almendra-100.png" alt="Almendra">
                                             <p>Almendra</p>
                                         </button>
                                         <button>
-                                            <img src="./img/icons8-semilla-de-brasil-100.png" alt="Centeno">
-                                            <p>Centeno</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-cashew-100.png" alt="Castaña de cajú">
-                                            <p>Castaña de cajú</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-nuez-100.png" alt="Nuez">
                                             <p>Nuez</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-white-beans-100.png" alt="Porotos">
-                                            <p>Porotos</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-granos-de-café-100.png" alt="Café">
-                                            <p>Café</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-seta-100.png" alt="Hongos">
-                                            <p>Hongos</p>
                                         </button>
                                     </div>
                                 </div>
@@ -662,36 +486,15 @@
                                             <p>Ternera</p>
                                         </button>
                                         <button>
-                                            <img src="./img/icons8-mariscos-100.png" alt="Mariscos">
-                                            <p>Mariscos</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-huevos-100.png" alt="Huevo">
                                             <p>Huevo</p>
                                         </button>
-                                        <button>
-                                            <img src="./img/icons8-salami-100.png" alt="Embutidos">
-                                            <p>Embutidos</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-costillas-de-cordero-100.png" alt="Carne de cordero">
-                                            <p>Cordero</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-pescado-entero-100.png" alt="Pescado">
                                             <p>Pescado</p>
                                         </button>
                                         <button>
-                                            <img src="./img/icons8-jamón-100.png" alt="Carne de cerdo">
-                                            <p>Cerdo</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-acción-de-gracias-100.png" alt="Pollo">
                                             <p>Pollo</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-hígado-100.png" alt="Achuras">
-                                            <p>Achuras</p>
                                         </button>
                                     </div>
                                 </div>
@@ -708,30 +511,6 @@
                                     aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <button>
-                                            <img src="./img/icons8-mayonesa-100.png" alt="Mayonesa">
-                                            <p>Mayonesa</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-mostaza-100.png" alt="Mostaza">
-                                            <p>Mostaza</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-kétchup-100.png" alt="Ketchup">
-                                            <p>Kétchup</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-miel-100.png" alt="Miel">
-                                            <p>Miel</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-soy-sauce-100.png" alt="Agridulce">
-                                            <p>Agridulce</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-salsa-worcestershire-100.png" alt="Picante">
-                                            <p>Picante</p>
-                                        </button>
-                                        <button>
                                             <img src="./img/icons8-saco-de-harina-100.png" alt="Harina">
                                             <p>Harina</p>
                                         </button>
@@ -747,19 +526,11 @@
                                             <img src="./img/icons8-palitos-de-canela-100.png" alt="Condimentos dulces">
                                             <p>Condimentos dulces</p>
                                         </button>
-                                        <button>
-                                            <img src="./img/icons8-thyme-100.png" alt="Aromatizantes">
-                                            <p>Aromatizantes</p>
-                                        </button>
-                                        <button>
-                                            <img src="./img/icons8-pan-100.png" alt="Pan">
-                                            <p>Pan</p>
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="seleccion">
+                        <div class="seleccion" id="seleccion">
                             <h6>Tu selección:</h6>
                         </div>
                     </div>
@@ -896,9 +667,11 @@
         </div>
 
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="./js/ingredientes.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

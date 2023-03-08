@@ -215,19 +215,34 @@ main {
                                     height: 100%;
                                     display: grid;
                                     grid-template-columns: 1fr 1fr 1fr 1fr;
-                                    grid-template-rows: 1fr 1fr 1fr;
+                                    grid-template-rows: 1fr;
                                     background-color: nth($color-palette,6);
-
-                                    button {
-                                        border: none;
-                                        background-color: transparent;
-                                        color: nth($color-palette,2);
-                                        font-weight: bold;
-
-                                        &:hover {
-                                            transform: scale(1.1);
+                                    article {
+                                        .contenedor {
+                                            img {
+                                                border: none;
+                                                background-color: transparent;
+                                                color: nth($color-palette,2);
+                                                font-weight: bold;
+        
+                                                &:hover {
+                                                    transform: scale(1.1);
+                                                }
+                                            }
+        
+                                            button {
+                                                border: none;
+                                                background-color: transparent;
+                                                color: nth($color-palette,2);
+                                                font-weight: bold;
+        
+                                                &:hover {
+                                                    transform: scale(1.1);
+                                                }
+                                            }
                                         }
                                     }
+                                    
                                 }
                             }
                         }
