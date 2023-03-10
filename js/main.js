@@ -83,62 +83,135 @@ pusheadorFrutas.listaFrutas.forEach(frutas => {
 
 });
 */
+const contenedorComida = document.querySelector('#comidas');
 
-
-const contenedorFrutas = document.querySelector('#frutas');
-
-const mostrarFrutas = (data) => {
-  data.forEach (fruta => {
-      const botonFruta = document.createElement('article');
-      botonFruta.innerHTML = `
+const mostrarComida = (dataComida) => {
+  dataComida.forEach (comida => {
+      const botonComida = document.createElement('article');
+      botonComida.innerHTML = `
                             <div class="contenedor">
-                              <img src="${fruta.img}" alt="${fruta.nombre}">
-                              <button id='${fruta.id}' class='btn-selector'>${fruta.nombre}</button>
+                              <img src="${comida.img}" alt="${comida.nombre}">
+                              <button id='${comida.id}' class='btn-selector-c'>${comida.nombre}</button>
                             </div>
                               `;
-      contenedorFrutas.appendChild(botonFruta);
+      contenedorComida.appendChild(botonComida);
     });
     
-    const btnSeleccionarFrutas = document.querySelectorAll('.btn-selector')
-    btnSeleccionarFrutas.forEach(el => {
+    const btnSeleccionarComida = document.querySelectorAll('.btn-selector-c')
+    btnSeleccionarComida.forEach(el => {
     el.addEventListener('click', (e) => {
-      seleccionarFrutas(e.target.id)
+      seleccionarComida(e.target.id)
     });
   });
 }
 
-mostrarFrutas(frutas);
+mostrarComida(comida);
 
-const depositoFrutas = [];
+const depositoComida = [];
 
-function seleccionarFrutas (id) {
-  /* const existe = depositoFrutas.some(fruta => fruta.id === parseInt (id))
+function seleccionarComida (id) {
+  /*const existe = depositoComida.some(comida => comida.id === parseInt (id))
 
   if(existe) {
-    depositoFrutas.map()
-  }*/
-
-  let frutaEncontrada = frutas.find(fruta => fruta.id === parseInt (id));
-  depositoFrutas.push(frutaEncontrada);
-  console.log(depositoFrutas)
+    depositoComida.splice(0,1)
+  } else {*/
+    let comidaEncontrado = comida.find(comida => comida.id === parseInt (id));
+    depositoComida.push(comidaEncontrado);
+    seleccionUsuarioC(depositoComida);
+  //}
 }
 
-const mySeleccion = document.querySelector('#seleccion');
+const mySeleccionC = document.querySelector('#seleccionComidas');
 
-const seleccionUsuario = (seleccion) => {
-  seleccion.forEach (select => {
-      const replica = document.createElement('article');
-      replica.innerHTML = `
+const seleccionUsuarioC = (seleccionC) => {
+  mySeleccionC.innerHTML = "";
+  seleccionC.forEach (selectC => {
+      const replicarC = document.createElement('article');
+      replicarC.innerHTML = `
                             <div class="contenedor">
-                              <img src="${select.img}" alt="${select.nombre}">
-                              <button id='${select.id}' class='btn-selector'>${select.nombre}</button>
+                              <img src="${selectC.img}" alt="${selectC.nombre}">
+                              <button type="button" class="btn-close" aria-label="Close" id="${selectC.id}"></button>
+                              <p>${selectC.nombre}</p>
                             </div>
                               `;
-      mySeleccion.appendChild(replica);
+      mySeleccionC.appendChild(replicarC);
     });
+
+    const btnEliminarComida = document.querySelectorAll('.btn-close')
+    btnEliminarComida.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.target.parentElement.remove();
+    });
+  });
 }
 
-seleccionUsuario(depositoFrutas);
+
+
+
+
+
+
+const contenedorIngredientes = document.querySelector('#ingredientes');
+
+const mostrarIngredientes = (dataI) => {
+  dataI.forEach (ingrediente => {
+      const botonIngredientes = document.createElement('article');
+      botonIngredientes.innerHTML = `
+                            <div class="contenedor">
+                              <img src="${ingrediente.img}" alt="${ingrediente.nombre}">
+                              <button id='${ingrediente.id}' class='btn-selector'>${ingrediente.nombre}</button>
+                            </div>
+                              `;
+      contenedorIngredientes.appendChild(botonIngredientes);
+    });
+    
+    const btnSeleccionarIngredientes = document.querySelectorAll('.btn-selector')
+    btnSeleccionarIngredientes.forEach(el => {
+    el.addEventListener('click', (e) => {
+      seleccionarIngredientes(e.target.id);
+    });
+  });
+}
+
+mostrarIngredientes(ingredientes);
+
+const depositoIngredientes = [];
+
+function seleccionarIngredientes (id) {
+  /*const existe = depositoIngredientes.some(ingrediente => ingrediente.id === parseInt (id))
+
+  if(existe) {
+    
+    } */
+
+  let ingredienteEncontrado = ingredientes.find(ingrediente => ingrediente.id === parseInt (id));
+  depositoIngredientes.push(ingredienteEncontrado);
+  seleccionUsuarioI(depositoIngredientes);
+}
+
+const mySeleccionI = document.querySelector('#seleccionIngredientes');
+
+const seleccionUsuarioI = (seleccionI) => {
+  mySeleccionI.innerHTML = "";
+  seleccionI.forEach (selectI => {
+      const replicarI = document.createElement('article');
+      replicarI.innerHTML = `
+                            <div class="contenedor">
+                              <img src="${selectI.img}" alt="${selectI.nombre}">
+                              <button type="button" class="btn-close" aria-label="Close" id="${selectI.id}"></button>
+                              <p>${selectI.nombre}</p>
+                            </div>
+                              `;
+      mySeleccionI.appendChild(replicarI);
+  });
+    const btnEliminarIngredientes = document.querySelectorAll('.btn-close')
+    btnEliminarIngredientes.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.target.parentElement.remove();
+    });
+  });
+}
+
 
 /**Datos por prompt: Pedido de datos personales con los que el sitio identificará personalizadamente al usuario como también hacer el envío de los resultados (vía mail o whatsapp).
 class DatosPersonales {

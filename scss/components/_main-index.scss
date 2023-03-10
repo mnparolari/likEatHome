@@ -1,363 +1,267 @@
 main {
-    background-color: nth($color-palette,6);
+    background-color: nth($color-palette, 6);
+
     .cuestionario {
         font-family: $font-principal;
-        background-color: nth($color-palette,6);
+        background-color: nth($color-palette, 6);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
         .grillaPreguntas {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 30px 1fr 30px 1fr 30px 1fr 30px 100% 30px;
             margin-bottom: 30px;
 
-            .titulo-1 {
-                grid-row-start: 1;
-                grid-row-end: 2;
-                grid-column-start: 1;
-                grid-column-end: 3;
-                text-align: center;
-                color: nth($color-palette,1);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
             .tipoComida {
-                grid-row-start: 2;
-                grid-row-end: 3;
-                grid-column-start: 1;
-                grid-column-end: 3;
                 text-align: center;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                color: nth($color-palette,2);
+                color: nth($color-palette, 2);
                 margin-top: 15px;
 
-                button {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    border: none;
-                    background-color: transparent;
+                .titulo-1 {
+                    text-align: center;
+                    color: nth($color-palette, 1);
                     font-weight: bold;
+                    margin-top: 10px;
+                }
 
-                    &:hover {
-                        transform: scale(1.1);
+                .seleccion {
+                    border: nth($color-palette, 2) 2px solid;
+                    color: nth($color-palette, 1);
+                    border-radius: 10px;
+                    width: 100%;
+
+                    h6 {
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+
+                    .seleccionComida {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+
+                    .comidas {
+                        margin-top: 10px;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                        grid-template-rows: 1fr 1fr 1fr;
+
+                        article {
+                            .contenedor {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                padding-bottom: 20px;
+                                padding-top: 10px;
+
+                                img {
+                                    padding-left: 30px;
+                                    padding-right: 30px;
+                                    border: none;
+                                    background-color: transparent;
+                                    font-weight: bold;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                    }
+                                }
+
+                                button {
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    border: none;
+                                    background-color: transparent;
+                                    font-weight: bold;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-            }
-
-            .titulo-2 {
-                grid-row-start: 1;
-                grid-row-end: 2;
-                grid-column-start: 3;
-                grid-column-end: 5;
-                text-align: center;
-                color: nth($color-palette,1);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            .tipoSabor {
-                grid-row-start: 2;
-                grid-row-end: 3;
-                grid-column-start: 3;
-                grid-column-end: 5;
-                text-align: center;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                color: nth($color-palette,2);
-                margin-top: 15px;
-
-                button {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    border: none;
-                    background-color: transparent;
-                    font-weight: bold;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-            .titulo-3 {
-                grid-row-start: 3;
-                grid-row-end: 4;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                text-align: center;
-                color: nth($color-palette,1);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            .tipoModo {
-                grid-row-start: 4;
-                grid-row-end: 5;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                text-align: center;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                color: nth($color-palette,2);
-                margin-top: 15px;
-
-                button {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    border: none;
-                    background-color: transparent;
-                    font-weight: bold;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-            .titulo-4 {
-                grid-row-start: 5;
-                grid-row-end: 6;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                text-align: center;
-                color: nth($color-palette,1);
-                font-weight: bold;
-                margin-top: 10px;
-            }
-
-            .tipoRestringido {
-                grid-row-start: 6;
-                grid-row-end: 7;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                text-align: center;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                color: nth($color-palette,2);
-                margin-top: 15px;
-
-                button {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    border: none;
-                    background-color: transparent;
-                    font-weight: bold;
-
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-                }
-            }
-
-            .titulo-5 {
-                grid-row-start: 7;
-                grid-row-end: 8;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                text-align: center;
-                color: nth($color-palette,1);
-                font-weight: bold;
-                margin-top: 10px;
             }
 
             .tipoIngredientes {
-                grid-row-start: 8;
-                grid-row-end: 9;
-                grid-column-start: 1;
-                grid-column-end: 5;
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .titulo-2 {
+                    text-align: center;
+                    color: nth($color-palette, 1);
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+
+                .seleccion {
+                    border: nth($color-palette, 2) 2px solid;
+                    color: nth($color-palette, 1);
+                    border-radius: 10px;
+                    width: 100%;
+
+                    h6 {
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+
+                    .seleccionIngredientes {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                }
 
                 .ingredientes {
                     margin-top: 10px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr;
 
-                    .accordion {
-                        border: nth($color-palette, 2) 2px solid;
-                        border-radius: 5px;
-                        .accordion-item {
-                            width: 500px;
-                            border-color: nth($color-palette, 2);
+                    article {
+                        .contenedor {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
 
-                            .accordion-header {
-                                font-family: $font-principal;                                
+                            img {
+                                padding-left: 30px;
+                                padding-right: 30px;
+                                border: none;
+                                background-color: transparent;
+                                color: nth($color-palette, 2);
+                                font-weight: bold;
 
-                                button {
-                                    background-color: nth($color-palette,6);
-                                    color: nth($color-palette, 1);
-                                    font-weight: bold;
-                                    border: 0;
-
-                                    &:focus {
-                                        box-shadow: none;
-                                        outline: none;
-                                    }
+                                &:hover {
+                                    transform: scale(1.1);
                                 }
                             }
 
-                            .accordion-collapse {                           
-                                .accordion-body {
-                                    height: 100%;
-                                    display: grid;
-                                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                                    grid-template-rows: 1fr;
-                                    background-color: nth($color-palette,6);
-                                    article {
-                                        .contenedor {
-                                            img {
-                                                border: none;
-                                                background-color: transparent;
-                                                color: nth($color-palette,2);
-                                                font-weight: bold;
-        
-                                                &:hover {
-                                                    transform: scale(1.1);
-                                                }
-                                            }
-        
-                                            button {
-                                                border: none;
-                                                background-color: transparent;
-                                                color: nth($color-palette,2);
-                                                font-weight: bold;
-        
-                                                &:hover {
-                                                    transform: scale(1.1);
-                                                }
-                                            }
-                                        }
-                                    }
-                                    
+                            button {
+                                border: none;
+                                background-color: transparent;
+                                color: nth($color-palette, 2);
+                                font-weight: bold;
+
+                                &:hover {
+                                    transform: scale(1.1);
                                 }
                             }
-                        }
-                    }
-
-                    .seleccion {
-                        border: nth($color-palette, 2) 2px solid;
-                        color: nth($color-palette,1);
-                        border-radius: 10px;
-                        width: 500px;
-
-                        h6 {
-                            font-weight: bold;
-                            margin-top: 10px;
                         }
                     }
                 }
             }
-        }
-        
-        .btn {
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 10px;
-            padding-right: 10px;
-            background-color: nth($color-palette,2);
-            border-color: nth($color-palette,2);
-            text-align: center; 
-            font-weight: bold;
 
-            &:hover {
-                background-color: nth($color-palette,1);
-                border-color: nth($color-palette,1);
-            }
-
-            a {
-                text-decoration: none;
-                color: nth($color-palette, 1);
-                font-weight: bold;
+            .btn {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: nth($color-palette, 2);
+                border-color: nth($color-palette, 2);
                 text-align: center;
+                font-weight: bold;
 
                 &:hover {
-                    color: nth($color-palette,2);
+                    background-color: nth($color-palette, 1);
+                    border-color: nth($color-palette, 1);
                 }
-            }
-        }
-    }
 
-    .recomendaciones {
-        margin-top: 30px;
-        
-            .titleRecomendaciones {
-                font-family: $font-principal;
-                font-size: nth($font-size, 4);
-                font-weight: bold;
-                color: nth($color-palette, 2);
-                text-align: center; 
-                margin-top: 10px;
-                margin-bottom: 20px;
-            }
-
-            .textRecomendaciones{
-                font-family: $font-principal;
-                font-weight: bold;
-                text-align: center;
-                margin-bottom: 20px;
-                margin-left: 180px;
-                margin-right: 180px;
-
-                strong {
+                a {
+                    text-decoration: none;
                     color: nth($color-palette, 1);
+                    font-weight: bold;
+                    text-align: center;
+
+                    &:hover {
+                        color: nth($color-palette, 2);
+                    }
                 }
             }
 
-        .tarjetasRecomendaciones {
-            .card-group {
-                padding-bottom: 30px;
-                border-radius: 10%;
-                .card {
-                    width: 200px;
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    border-radius: 10px;
-                    border-color: nth($color-palette,2);
-                    border: nth($color-palette,2) 1.5px solid;
+            .recomendaciones {
+                margin-top: 30px;
 
-                    img {
-                        width: 100%;
-                        text-align: center;
-                        border-radius: 10px;
+                .titleRecomendaciones {
+                    font-family: $font-principal;
+                    font-size: nth($font-size, 4);
+                    font-weight: bold;
+                    color: nth($color-palette, 2);
+                    text-align: center;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+
+                .textRecomendaciones {
+                    font-family: $font-principal;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    margin-left: 180px;
+                    margin-right: 180px;
+
+                    strong {
+                        color: nth($color-palette, 1);
                     }
+                }
 
-                    p {
-                        font-family: $font-principal;
-                        color: nth($color-palette,2);
-                    }
+                .tarjetasRecomendaciones {
+                    .card-group {
+                        padding-bottom: 30px;
+                        border-radius: 10%;
 
-                    .card-body {
-                        .card-title {
-                            font-family: $font-principal;
-                            font-size: nth($font-size, 5);
-                            font-weight: bold;
-                            color: nth($color-palette, 1)
+                        .card {
+                            width: 200px;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                            border-radius: 10px;
+                            border-color: nth($color-palette, 2);
+                            border: nth($color-palette, 2) 1.5px solid;
+
+                            img {
+                                width: 100%;
+                                text-align: center;
+                                border-radius: 10px;
+                            }
+
+                            p {
+                                font-family: $font-principal;
+                                color: nth($color-palette, 2);
+                            }
+
+                            .card-body {
+                                .card-title {
+                                    font-family: $font-principal;
+                                    font-size: nth($font-size, 5);
+                                    font-weight: bold;
+                                    color: nth($color-palette, 1)
+                                }
+
+                                .card-text {
+                                    font-family: $font-principal;
+                                    color: nth($color-palette, 2)
+                                }
+                            }
+
+                            .card-footer {
+                                font-family: $font-principal;
+                                color: nth($color-palette, 2);
+                                font-weight: bold;
+                            }
                         }
-
-                        .card-text {
-                            font-family: $font-principal;
-                            color: nth($color-palette, 2)
-                        }
-                    }
-
-                    .card-footer {
-                        font-family: $font-principal;
-                        color: nth($color-palette, 2);
-                        font-weight: bold;
                     }
                 }
             }

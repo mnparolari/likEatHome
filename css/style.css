@@ -92,258 +92,179 @@ main {
     align-items: center;
     justify-content: center; }
     main .cuestionario .grillaPreguntas {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 30px 1fr 30px 1fr 30px 1fr 30px 100% 30px;
       margin-bottom: 30px; }
-      main .cuestionario .grillaPreguntas .titulo-1 {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        text-align: center;
-        color: #ee9b00ff;
-        font-weight: bold;
-        margin-top: 10px; }
       main .cuestionario .grillaPreguntas .tipoComida {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        grid-column-start: 1;
-        grid-column-end: 3;
         text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         color: #001219ff;
         margin-top: 15px; }
-        main .cuestionario .grillaPreguntas .tipoComida button {
-          padding-left: 10px;
-          padding-right: 10px;
-          border: none;
-          background-color: transparent;
-          font-weight: bold; }
-          main .cuestionario .grillaPreguntas .tipoComida button:hover {
-            transform: scale(1.1); }
-      main .cuestionario .grillaPreguntas .titulo-2 {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 3;
-        grid-column-end: 5;
-        text-align: center;
-        color: #ee9b00ff;
-        font-weight: bold;
-        margin-top: 10px; }
-      main .cuestionario .grillaPreguntas .tipoSabor {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        grid-column-start: 3;
-        grid-column-end: 5;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        color: #001219ff;
-        margin-top: 15px; }
-        main .cuestionario .grillaPreguntas .tipoSabor button {
-          padding-left: 10px;
-          padding-right: 10px;
-          border: none;
-          background-color: transparent;
-          font-weight: bold; }
-          main .cuestionario .grillaPreguntas .tipoSabor button:hover {
-            transform: scale(1.1); }
-      main .cuestionario .grillaPreguntas .titulo-3 {
-        grid-row-start: 3;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        text-align: center;
-        color: #ee9b00ff;
-        font-weight: bold;
-        margin-top: 10px; }
-      main .cuestionario .grillaPreguntas .tipoModo {
-        grid-row-start: 4;
-        grid-row-end: 5;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        color: #001219ff;
-        margin-top: 15px; }
-        main .cuestionario .grillaPreguntas .tipoModo button {
-          padding-left: 20px;
-          padding-right: 20px;
-          border: none;
-          background-color: transparent;
-          font-weight: bold; }
-          main .cuestionario .grillaPreguntas .tipoModo button:hover {
-            transform: scale(1.1); }
-      main .cuestionario .grillaPreguntas .titulo-4 {
-        grid-row-start: 5;
-        grid-row-end: 6;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        text-align: center;
-        color: #ee9b00ff;
-        font-weight: bold;
-        margin-top: 10px; }
-      main .cuestionario .grillaPreguntas .tipoRestringido {
-        grid-row-start: 6;
-        grid-row-end: 7;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        color: #001219ff;
-        margin-top: 15px; }
-        main .cuestionario .grillaPreguntas .tipoRestringido button {
-          padding-left: 10px;
-          padding-right: 10px;
-          border: none;
-          background-color: transparent;
-          font-weight: bold; }
-          main .cuestionario .grillaPreguntas .tipoRestringido button:hover {
-            transform: scale(1.1); }
-      main .cuestionario .grillaPreguntas .titulo-5 {
-        grid-row-start: 7;
-        grid-row-end: 8;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        text-align: center;
-        color: #ee9b00ff;
-        font-weight: bold;
-        margin-top: 10px; }
+        main .cuestionario .grillaPreguntas .tipoComida .titulo-1 {
+          text-align: center;
+          color: #ee9b00ff;
+          font-weight: bold;
+          margin-top: 10px; }
+        main .cuestionario .grillaPreguntas .tipoComida .seleccion {
+          border: #001219ff 2px solid;
+          color: #ee9b00ff;
+          border-radius: 10px;
+          width: 100%; }
+          main .cuestionario .grillaPreguntas .tipoComida .seleccion h6 {
+            font-weight: bold;
+            margin-top: 10px; }
+          main .cuestionario .grillaPreguntas .tipoComida .seleccion .seleccionComida {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-left: 30px;
+            padding-right: 30px; }
+          main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; }
+            main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding-bottom: 20px;
+              padding-top: 10px; }
+              main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor img {
+                padding-left: 30px;
+                padding-right: 30px;
+                border: none;
+                background-color: transparent;
+                font-weight: bold; }
+                main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor img:hover {
+                  transform: scale(1.1); }
+              main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor button {
+                padding-left: 10px;
+                padding-right: 10px;
+                border: none;
+                background-color: transparent;
+                font-weight: bold; }
+                main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor button:hover {
+                  transform: scale(1.1); }
       main .cuestionario .grillaPreguntas .tipoIngredientes {
-        grid-row-start: 8;
-        grid-row-end: 9;
-        grid-column-start: 1;
-        grid-column-end: 5;
         text-align: center;
-        margin-top: 20px; }
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        main .cuestionario .grillaPreguntas .tipoIngredientes .titulo-2 {
+          text-align: center;
+          color: #ee9b00ff;
+          font-weight: bold;
+          margin-top: 10px; }
+        main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion {
+          border: #001219ff 2px solid;
+          color: #ee9b00ff;
+          border-radius: 10px;
+          width: 100%; }
+          main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion h6 {
+            font-weight: bold;
+            margin-top: 10px; }
+          main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .seleccionIngredientes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-left: 30px;
+            padding-right: 30px; }
         main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes {
           margin-top: 10px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around; }
-          main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion {
-            border: #001219ff 2px solid;
-            border-radius: 5px; }
-            main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item {
-              width: 500px;
-              border-color: #001219ff; }
-              main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-header {
-                font-family: "Encode Sans", sans-serif; }
-                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-header button {
-                  background-color: #e9d8a6ff;
-                  color: #ee9b00ff;
-                  font-weight: bold;
-                  border: 0; }
-                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-header button:focus {
-                    box-shadow: none;
-                    outline: none; }
-              main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body {
-                height: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 1fr;
-                background-color: #e9d8a6ff; }
-                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor img {
-                  border: none;
-                  background-color: transparent;
-                  color: #001219ff;
-                  font-weight: bold; }
-                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor img:hover {
-                    transform: scale(1.1); }
-                main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor button {
-                  border: none;
-                  background-color: transparent;
-                  color: #001219ff;
-                  font-weight: bold; }
-                  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .accordion .accordion-item .accordion-collapse .accordion-body article .contenedor button:hover {
-                    transform: scale(1.1); }
-          main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .seleccion {
-            border: #001219ff 2px solid;
-            color: #ee9b00ff;
-            border-radius: 10px;
-            width: 500px; }
-            main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes .seleccion h6 {
-              font-weight: bold;
-              margin-top: 10px; }
-    main .cuestionario .btn {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 10px;
-      padding-right: 10px;
-      background-color: #001219ff;
-      border-color: #001219ff;
-      text-align: center;
-      font-weight: bold; }
-      main .cuestionario .btn:hover {
-        background-color: #ee9b00ff;
-        border-color: #ee9b00ff; }
-      main .cuestionario .btn a {
-        text-decoration: none;
-        color: #ee9b00ff;
-        font-weight: bold;
-        text-align: center; }
-        main .cuestionario .btn a:hover {
-          color: #001219ff; }
-  main .recomendaciones {
-    margin-top: 30px; }
-    main .recomendaciones .titleRecomendaciones {
-      font-family: "Encode Sans", sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #001219ff;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 20px; }
-    main .recomendaciones .textRecomendaciones {
-      font-family: "Encode Sans", sans-serif;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-      margin-left: 180px;
-      margin-right: 180px; }
-      main .recomendaciones .textRecomendaciones strong {
-        color: #ee9b00ff; }
-    main .recomendaciones .tarjetasRecomendaciones .card-group {
-      padding-bottom: 30px;
-      border-radius: 10%; }
-      main .recomendaciones .tarjetasRecomendaciones .card-group .card {
-        width: 200px;
-        margin-left: 5px;
-        margin-right: 5px;
-        border-radius: 10px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr; }
+          main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes article .contenedor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+            main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes article .contenedor img {
+              padding-left: 30px;
+              padding-right: 30px;
+              border: none;
+              background-color: transparent;
+              color: #001219ff;
+              font-weight: bold; }
+              main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes article .contenedor img:hover {
+                transform: scale(1.1); }
+            main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes article .contenedor button {
+              border: none;
+              background-color: transparent;
+              color: #001219ff;
+              font-weight: bold; }
+              main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes article .contenedor button:hover {
+                transform: scale(1.1); }
+      main .cuestionario .grillaPreguntas .btn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #001219ff;
         border-color: #001219ff;
-        border: #001219ff 1.5px solid; }
-        main .recomendaciones .tarjetasRecomendaciones .card-group .card img {
-          width: 100%;
-          text-align: center;
-          border-radius: 10px; }
-        main .recomendaciones .tarjetasRecomendaciones .card-group .card p {
-          font-family: "Encode Sans", sans-serif;
-          color: #001219ff; }
-        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-title {
-          font-family: "Encode Sans", sans-serif;
-          font-size: 1.2rem;
+        text-align: center;
+        font-weight: bold; }
+        main .cuestionario .grillaPreguntas .btn:hover {
+          background-color: #ee9b00ff;
+          border-color: #ee9b00ff; }
+        main .cuestionario .grillaPreguntas .btn a {
+          text-decoration: none;
+          color: #ee9b00ff;
           font-weight: bold;
-          color: #ee9b00ff; }
-        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-text {
+          text-align: center; }
+          main .cuestionario .grillaPreguntas .btn a:hover {
+            color: #001219ff; }
+      main .cuestionario .grillaPreguntas .recomendaciones {
+        margin-top: 30px; }
+        main .cuestionario .grillaPreguntas .recomendaciones .titleRecomendaciones {
           font-family: "Encode Sans", sans-serif;
-          color: #001219ff; }
-        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-footer {
-          font-family: "Encode Sans", sans-serif;
+          font-size: 1.5rem;
+          font-weight: bold;
           color: #001219ff;
-          font-weight: bold; }
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 20px; }
+        main .cuestionario .grillaPreguntas .recomendaciones .textRecomendaciones {
+          font-family: "Encode Sans", sans-serif;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 20px;
+          margin-left: 180px;
+          margin-right: 180px; }
+          main .cuestionario .grillaPreguntas .recomendaciones .textRecomendaciones strong {
+            color: #ee9b00ff; }
+        main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group {
+          padding-bottom: 30px;
+          border-radius: 10%; }
+          main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card {
+            width: 200px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 10px;
+            border-color: #001219ff;
+            border: #001219ff 1.5px solid; }
+            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card img {
+              width: 100%;
+              text-align: center;
+              border-radius: 10px; }
+            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card p {
+              font-family: "Encode Sans", sans-serif;
+              color: #001219ff; }
+            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-title {
+              font-family: "Encode Sans", sans-serif;
+              font-size: 1.2rem;
+              font-weight: bold;
+              color: #ee9b00ff; }
+            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-text {
+              font-family: "Encode Sans", sans-serif;
+              color: #001219ff; }
+            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card .card-footer {
+              font-family: "Encode Sans", sans-serif;
+              color: #001219ff;
+              font-weight: bold; }
   main hr {
     color: #ee9b00ff;
     border: #ee9b00ff 2px solid;
