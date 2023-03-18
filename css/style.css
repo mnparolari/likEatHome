@@ -71,19 +71,165 @@ header {
       background-color: #001219ff;
       border-color: #001219ff;
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      font-family: "Encode Sans", sans-serif; }
       header .encabezado-2 .btn:hover {
         background-color: #ee9b00ff;
         border-color: #ee9b00ff; }
       header .encabezado-2 .btn a {
         text-decoration: none;
         color: #ee9b00ff;
-        font-weight: bold; }
+        font-weight: bold;
+        font-family: "Encode Sans", sans-serif; }
         header .encabezado-2 .btn a:hover {
           color: #001219ff; }
 
 main {
   background-color: #e9d8a6ff; }
+  main .datosPersonales {
+    font-family: "Encode Sans", sans-serif;
+    text-align: center;
+    color: #001219ff;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    main .datosPersonales .titulo-1 {
+      font-family: "Encode Sans", sans-serif;
+      text-align: center;
+      color: #ee9b00ff;
+      font-weight: bold;
+      padding-top: 10px;
+      margin-left: 30px;
+      margin-right: 30px; }
+    main .datosPersonales .primeraVez .btn {
+      background-color: #001219ff;
+      border-color: #001219ff;
+      text-align: center;
+      font-weight: bold;
+      font-family: "Encode Sans", sans-serif;
+      margin-right: 70px; }
+      main .datosPersonales .primeraVez .btn:hover {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff; }
+    main .datosPersonales .primeraVez #modal-primeravez {
+      font-family: "Encode Sans", sans-serif; }
+      main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-header {
+        display: flex;
+        flex-direction: column-reverse; }
+      main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .subtitulo {
+        text-align: center;
+        color: #001219ff;
+        font-weight: bold;
+        padding-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px; }
+      main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 20px; }
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .nombre {
+          padding: 10px;
+          color: #001219ff; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .nombre .form-control {
+            border: 0; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .nombre .form-control:focus {
+              box-shadow: none;
+              outline: none; }
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .pais {
+          padding: 10px;
+          color: #001219ff; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .pais .form-control {
+            border: 0; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .pais .form-control:focus {
+              box-shadow: none;
+              outline: none; }
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .telefono {
+          padding: 10px;
+          color: #001219ff; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .telefono .form-control {
+            border: 0; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .telefono .form-control:focus {
+              box-shadow: none;
+              outline: none; }
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .correoElectronico {
+          padding: 10px;
+          color: #001219ff; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .correoElectronico .form-control {
+            border: 0; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .correoElectronico .form-control:focus {
+              box-shadow: none;
+              outline: none; }
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .btn {
+          background-color: #ee9b00ff;
+          border-color: #ee9b00ff;
+          color: #001219ff;
+          width: 150px;
+          height: 60px;
+          font-weight: bold;
+          margin-bottom: 30px;
+          text-align: center; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .btn:hover {
+            background-color: #001219ff;
+            border-color: #001219ff;
+            color: #ee9b00ff; }
+      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-header {
+        font-family: "Encode Sans", sans-serif; }
+      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 {
+        font-family: "Encode Sans", sans-serif;
+        font-size: 1.5rem;
+        color: #ee9b00ff;
+        font-weight: bold;
+        margin-top: 35px; }
+        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 .strong {
+          text-decoration: underline; }
+      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h2 {
+        font-family: "Encode Sans", sans-serif;
+        font-size: 1.2rem;
+        color: #001219ff; }
+        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h2 .strong {
+          text-decoration: underline; }
+      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff;
+        color: #001219ff;
+        width: 150px;
+        height: 60px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center; }
+        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver:hover {
+          background-color: #001219ff;
+          border-color: #001219ff;
+          color: #ee9b00ff; }
+      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff;
+        color: #001219ff;
+        width: 150px;
+        height: 60px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center; }
+        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar:hover {
+          background-color: #001219ff;
+          border-color: #001219ff;
+          color: #ee9b00ff; }
+    main .datosPersonales .loguear .btn {
+      background-color: #001219ff;
+      border-color: #001219ff;
+      text-align: center;
+      font-weight: bold;
+      font-family: "Encode Sans", sans-serif; }
+      main .datosPersonales .loguear .btn:hover {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff; }
   main .cuestionario {
     font-family: "Encode Sans", sans-serif;
     background-color: #e9d8a6ff;
@@ -97,11 +243,12 @@ main {
         text-align: center;
         color: #001219ff;
         margin-top: 15px; }
-        main .cuestionario .grillaPreguntas .tipoComida .titulo-1 {
+        main .cuestionario .grillaPreguntas .tipoComida .titulo-2 {
           text-align: center;
           color: #ee9b00ff;
           font-weight: bold;
-          margin-top: 10px; }
+          margin-top: 10px;
+          padding-bottom: 20px; }
         main .cuestionario .grillaPreguntas .tipoComida .seleccion {
           border: #001219ff 2px solid;
           color: #ee9b00ff;
@@ -152,11 +299,12 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center; }
-        main .cuestionario .grillaPreguntas .tipoIngredientes .titulo-2 {
+        main .cuestionario .grillaPreguntas .tipoIngredientes .titulo-3 {
           text-align: center;
           color: #ee9b00ff;
           font-weight: bold;
-          margin-top: 10px; }
+          margin-top: 10px;
+          padding-bottom: 20px; }
         main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion {
           border: #001219ff 2px solid;
           color: #ee9b00ff;
@@ -198,7 +346,55 @@ main {
               font-weight: bold; }
               main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes article .contenedor button:hover {
                 transform: scale(1.1); }
-      main .cuestionario .grillaPreguntas .btn {
+    main .cuestionario .btn {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: #001219ff;
+      border-color: #001219ff;
+      text-align: center;
+      font-weight: bold; }
+      main .cuestionario .btn:hover {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff; }
+      main .cuestionario .btn a {
+        text-decoration: none;
+        color: #ee9b00ff;
+        font-weight: bold;
+        text-align: center; }
+        main .cuestionario .btn a:hover {
+          color: #001219ff; }
+  main .modal .modal-dialog .modal-content {
+    font-family: "Encode Sans", sans-serif;
+    background-color: #e9d8a6ff; }
+    main .modal .modal-dialog .modal-content .modal-header {
+      display: flex;
+      flex-direction: column; }
+      main .modal .modal-dialog .modal-content .modal-header .btn-close {
+        color: #ee9b00ff; }
+      main .modal .modal-dialog .modal-content .modal-header .modal-title {
+        color: #ee9b00ff;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.5rem; }
+      main .modal .modal-dialog .modal-content .modal-header p {
+        font-size: 1rem; }
+      main .modal .modal-dialog .modal-content .modal-header .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: "Encode Sans", sans-serif; }
+        main .modal .modal-dialog .modal-content .modal-header .modal-body article .recetaFinal h4 {
+          text-align: center; }
+        main .modal .modal-dialog .modal-content .modal-header .modal-body article .recetaFinal img {
+          text-align: center; }
+        main .modal .modal-dialog .modal-content .modal-header .modal-body article .recetaFinal p {
+          text-align: center; }
+        main .modal .modal-dialog .modal-content .modal-header .modal-body article .recetaFinal button {
+          text-align: center; }
+      main .modal .modal-dialog .modal-content .modal-header .modal-footer .btn {
         padding-top: 20px;
         padding-bottom: 20px;
         padding-left: 10px;
@@ -207,67 +403,71 @@ main {
         border-color: #001219ff;
         text-align: center;
         font-weight: bold; }
-        main .cuestionario .grillaPreguntas .btn:hover {
+        main .modal .modal-dialog .modal-content .modal-header .modal-footer .btn:hover {
           background-color: #ee9b00ff;
           border-color: #ee9b00ff; }
-        main .cuestionario .grillaPreguntas .btn a {
+        main .modal .modal-dialog .modal-content .modal-header .modal-footer .btn a {
           text-decoration: none;
           color: #ee9b00ff;
           font-weight: bold;
           text-align: center; }
-          main .cuestionario .grillaPreguntas .btn a:hover {
+          main .modal .modal-dialog .modal-content .modal-header .modal-footer .btn a:hover {
             color: #001219ff; }
-      main .cuestionario .grillaPreguntas .recomendaciones {
-        margin-top: 30px; }
-        main .cuestionario .grillaPreguntas .recomendaciones .titleRecomendaciones {
+  main .recomendaciones {
+    margin-top: 30px; }
+    main .recomendaciones .titleRecomendaciones {
+      font-family: "Encode Sans", sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #001219ff;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px; }
+    main .recomendaciones .textRecomendaciones {
+      font-family: "Encode Sans", sans-serif;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-left: 180px;
+      margin-right: 180px; }
+      main .recomendaciones .textRecomendaciones strong {
+        color: #ee9b00ff; }
+    main .recomendaciones .tarjetasRecomendaciones .card-group {
+      padding-bottom: 30px;
+      border-radius: 10%; }
+      main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+        width: 200px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 10px;
+        border-color: #001219ff;
+        border: #001219ff 1.5px solid; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card img {
+          width: 100%;
+          text-align: center;
+          border-radius: 10px; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card p {
           font-family: "Encode Sans", sans-serif;
-          font-size: 1.5rem;
+          color: #001219ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-title {
+          font-family: "Encode Sans", sans-serif;
+          font-size: 1.2rem;
           font-weight: bold;
+          color: #ee9b00ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-text {
+          font-family: "Encode Sans", sans-serif;
+          color: #001219ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-footer {
+          font-family: "Encode Sans", sans-serif;
           color: #001219ff;
-          text-align: center;
-          margin-top: 10px;
-          margin-bottom: 20px; }
-        main .cuestionario .grillaPreguntas .recomendaciones .textRecomendaciones {
-          font-family: "Encode Sans", sans-serif;
-          font-weight: bold;
-          text-align: center;
-          margin-bottom: 20px;
-          margin-left: 180px;
-          margin-right: 180px; }
-          main .cuestionario .grillaPreguntas .recomendaciones .textRecomendaciones strong {
-            color: #ee9b00ff; }
-        main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group {
-          padding-bottom: 30px;
-          border-radius: 10%; }
-          main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card {
-            width: 200px;
-            margin-left: 5px;
-            margin-right: 5px;
-            border-radius: 10px;
-            border-color: #001219ff;
-            border: #001219ff 1.5px solid; }
-            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card img {
-              width: 100%;
-              text-align: center;
-              border-radius: 10px; }
-            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card p {
-              font-family: "Encode Sans", sans-serif;
-              color: #001219ff; }
-            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-title {
-              font-family: "Encode Sans", sans-serif;
-              font-size: 1.2rem;
-              font-weight: bold;
-              color: #ee9b00ff; }
-            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-text {
-              font-family: "Encode Sans", sans-serif;
-              color: #001219ff; }
-            main .cuestionario .grillaPreguntas .recomendaciones .tarjetasRecomendaciones .card-group .card .card-footer {
-              font-family: "Encode Sans", sans-serif;
-              color: #001219ff;
-              font-weight: bold; }
-  main hr {
+          font-weight: bold; }
+  main .hrDivisor {
     color: #ee9b00ff;
     border: #ee9b00ff 2px solid;
+    margin-top: 40px; }
+  main .hrSeleccion {
+    color: #001219ff;
+    border: #001219ff 2px solid;
     margin-top: 40px; }
 
 footer {
