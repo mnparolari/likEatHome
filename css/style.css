@@ -96,24 +96,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center; }
-    main .datosPersonales .titulo-1 {
-      font-family: "Encode Sans", sans-serif;
-      text-align: center;
-      color: #ee9b00ff;
-      font-weight: bold;
-      padding-top: 10px;
-      margin-left: 30px;
-      margin-right: 30px; }
-    main .datosPersonales .primeraVez .btn {
-      background-color: #001219ff;
-      border-color: #001219ff;
-      text-align: center;
-      font-weight: bold;
-      font-family: "Encode Sans", sans-serif;
-      margin-right: 70px; }
-      main .datosPersonales .primeraVez .btn:hover {
-        background-color: #ee9b00ff;
-        border-color: #ee9b00ff; }
     main .datosPersonales .primeraVez #modal-primeravez {
       font-family: "Encode Sans", sans-serif; }
       main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-header {
@@ -126,7 +108,7 @@ main {
         padding-top: 10px;
         margin-left: 30px;
         margin-right: 30px; }
-      main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form {
+      main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -134,102 +116,122 @@ main {
         margin-left: 70px;
         margin-right: 70px;
         margin-top: 20px; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .nombre {
-          padding: 10px;
-          color: #001219ff; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .nombre .form-control {
-            border: 0; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .nombre .form-control:focus {
-              box-shadow: none;
-              outline: none; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .pais {
-          padding: 10px;
-          color: #001219ff; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .pais .form-control {
-            border: 0; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .pais .form-control:focus {
-              box-shadow: none;
-              outline: none; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .telefono {
-          padding: 10px;
-          color: #001219ff; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .telefono .form-control {
-            border: 0; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .telefono .form-control:focus {
-              box-shadow: none;
-              outline: none; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .correoElectronico {
-          padding: 10px;
-          color: #001219ff; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .correoElectronico .form-control {
-            border: 0; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .correoElectronico .form-control:focus {
-              box-shadow: none;
-              outline: none; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .btn {
-          background-color: #ee9b00ff;
-          border-color: #ee9b00ff;
-          color: #001219ff;
-          width: 150px;
-          height: 60px;
-          font-weight: bold;
-          margin-bottom: 30px;
-          text-align: center; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .form .btn:hover {
-            background-color: #001219ff;
-            border-color: #001219ff;
-            color: #ee9b00ff; }
-      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-header {
-        font-family: "Encode Sans", sans-serif; }
-      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 {
-        font-family: "Encode Sans", sans-serif;
-        font-size: 1.5rem;
-        color: #ee9b00ff;
-        font-weight: bold;
-        margin-top: 35px; }
-        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 .strong {
-          text-decoration: underline; }
-      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h2 {
-        font-family: "Encode Sans", sans-serif;
-        font-size: 1.2rem;
-        color: #001219ff; }
-        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-body h2 .strong {
-          text-decoration: underline; }
-      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver {
-        background-color: #ee9b00ff;
-        border-color: #ee9b00ff;
-        color: #001219ff;
-        width: 150px;
-        height: 60px;
-        font-weight: bold;
-        margin-bottom: 30px;
-        text-align: center; }
-        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver:hover {
-          background-color: #001219ff;
-          border-color: #001219ff;
-          color: #ee9b00ff; }
-      main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar {
-        background-color: #ee9b00ff;
-        border-color: #ee9b00ff;
-        color: #001219ff;
-        width: 150px;
-        height: 60px;
-        font-weight: bold;
-        margin-bottom: 30px;
-        text-align: center; }
-        main .datosPersonales .primeraVez #modal-primeravez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar:hover {
-          background-color: #001219ff;
-          border-color: #001219ff;
-          color: #ee9b00ff; }
-    main .datosPersonales .loguear .btn {
-      background-color: #001219ff;
-      border-color: #001219ff;
-      text-align: center;
-      font-weight: bold;
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs {
+          display: flex;
+          flex-direction: row; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre {
+            padding: 10px;
+            color: #001219ff; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre .form-control {
+              border: 0; }
+              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre .form-control:focus {
+                box-shadow: none;
+                outline: none; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais {
+            padding: 10px;
+            color: #001219ff; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais .form-control {
+              border: 0; }
+              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais .form-control:focus {
+                box-shadow: none;
+                outline: none; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono {
+            padding: 10px;
+            color: #001219ff; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono .form-control {
+              border: 0; }
+              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono .form-control:focus {
+                box-shadow: none;
+                outline: none; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico {
+            width: 250px;
+            padding: 10px;
+            color: #001219ff; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico .form-control {
+              border: 0; }
+              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico .form-control:focus {
+                box-shadow: none;
+                outline: none; }
+        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-carga {
+            background-color: #ee9b00ff;
+            border-color: #ee9b00ff;
+            color: #001219ff;
+            width: 130px;
+            height: 40px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            margin: 20px; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-carga:hover {
+              background-color: #001219ff;
+              border-color: #001219ff;
+              color: #ee9b00ff; }
+          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-relogueo {
+            background-color: #ee9b00ff;
+            border-color: #ee9b00ff;
+            color: #001219ff;
+            width: 250px;
+            height: 40px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin: 20px; }
+            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-relogueo:hover {
+              background-color: #001219ff;
+              border-color: #001219ff;
+              color: #ee9b00ff; }
+    main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-header {
       font-family: "Encode Sans", sans-serif; }
-      main .datosPersonales .loguear .btn:hover {
+    main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 {
+      font-family: "Encode Sans", sans-serif;
+      font-size: 1.5rem;
+      color: #ee9b00ff;
+      font-weight: bold;
+      margin-top: 35px; }
+      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 .strong {
+        text-decoration: underline; }
+    main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h2 {
+      font-family: "Encode Sans", sans-serif;
+      font-size: 1.2rem;
+      color: #001219ff; }
+      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h2 .strong {
+        text-decoration: underline; }
+    main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
+      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver {
         background-color: #ee9b00ff;
-        border-color: #ee9b00ff; }
+        border-color: #ee9b00ff;
+        color: #001219ff;
+        width: 170px;
+        height: 40px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        margin: 15px; }
+        main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver:hover {
+          background-color: #001219ff;
+          border-color: #001219ff;
+          color: #ee9b00ff; }
+      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar {
+        background-color: #ee9b00ff;
+        border-color: #ee9b00ff;
+        color: #001219ff;
+        width: 130px;
+        height: 40px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        margin: 15px; }
+        main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar:hover {
+          background-color: #001219ff;
+          border-color: #001219ff;
+          color: #ee9b00ff; }
   main .cuestionario {
     font-family: "Encode Sans", sans-serif;
     background-color: #e9d8a6ff;

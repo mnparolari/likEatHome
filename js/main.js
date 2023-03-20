@@ -1,6 +1,7 @@
+//Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage//
+obtenerNombre();
 
-
-//Objeto//
+//Objeto de usuario//
 class DatosPersonales {
   constructor(nombre, pais, telefono, email) {
     this.nombre = nombre;
@@ -10,10 +11,10 @@ class DatosPersonales {
   }
 }
 
-//Array de usuarios//
+//Array de usuario//
 const usuarios = [];
 
-//Saludo y datos de usuario//
+//Datos de usuario//
 const formulario = document.querySelector("#formulario");
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -36,12 +37,7 @@ formulario.addEventListener("submit", (e) => {
     <h2>Nos informaste que sos de <strong class="strong">${persona.pais}</strong>, que tu email es <strong class="strong">${persona.email}</strong>, y que tu teléfono es <strong class="strong">${persona.telefono}</strong>. <br>
         ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! &#128170&#9996</h2>
     `;
-  if (
-    persona.nombre === "" &&
-    persona.telefono === "" &&
-    persona.pais === "" &&
-    persona.email === ""
-  ) {
+  if (persona.nombre === "" && persona.telefono === "" && persona.pais === "" && persona.email === "") {
     confirmacionDatos.innerHTML = `
       <h1>Hola <strong class="strong">humano/a no identificado/a</strong> &#128518&#128540</h1>
       <h2>Nos informaste que sos de un lugar desconocido &#128518&#128540, que tu email es muy vergonzoso para informarlo &#128518&#128540, y que tu teléfono es muy reservado para informarlo &#128518&#128540. <br>
@@ -73,29 +69,24 @@ formulario.addEventListener("submit", (e) => {
       `;
   }
 
+  obtenerNombre();
   formulario.reset();
-
-  const btnSaludo = document.querySelectorAll("#btn-saludo");
-  btnSaludo.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      obtenerNombre(e.target);
-    });
-  });
 });
 
+
+//Función para obtener el nombre del objeto del array del localStorage y saludar//
 function obtenerNombre() {
   const usuarioJSON = localStorage.getItem("datosUsuario");
-  const usuarioJS = JSON.parse(usuarioJSON);
-  let saludo = usuarioJS.nombre;
-
-
-  let saludar = document.querySelector("#saludo");
-  saludar.innerHTML = `
+  if(usuarioJSON) {
+    const usuarioJS = JSON.parse(usuarioJSON);
+    let saludo = usuarioJS.nombre;
+    let saludar = document.querySelector("#saludo");
+      saludar.innerHTML = `
       <h1>Hola <strong class="strong">${saludo}</strong></h1>
       `;
+  }  
 }
 
-console.log(obtenerNombre())
 
 //Elección tipo comida//
 
@@ -287,10 +278,4 @@ const resultadoReceta = (seleccionFinal) => {
   });
 };
 
-//Inicializar viendo si el usuario ya se logueó anteriormente//
-/*let nombreUsuarioLS;
-let nombreLS = JSON.parse(localStorage.getItem("datosUsuarios"));
-if (nombreLS) {
-  nombreUsuarioLS = nombreLS.nombre;
-  obtenerNombre();
-}*/
+

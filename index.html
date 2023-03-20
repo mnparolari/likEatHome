@@ -35,124 +35,79 @@
             </div>
         </div>
         <div class="encabezado-2 animate__animated animate__lightSpeedInLeft">
-            <button type="button" class="btn btn-outline-warning"><a href="#cuestionario">COMENZAR</a></button>
+            <button type="button" value="Cargar" id="btn-carga" data-bs-toggle="modal"
+            data-bs-target="#modal-primeravez" class="btn btn-outline-warning">COMENZAR</button>
         </div>
     </header>
     <main>
         <section class="datosPersonales" id="datos-personales">
-            <h5 class="titulo-1">Antes de pasar a tu búsqueda, por favor, indicanos:<br></h5>
-                <div class="primeraVez">
-                    <button type="button" value="Cargar" id="btn-carga" data-bs-toggle="modal"
-                        data-bs-target="#modal-primeravez" class="btn btn-outline-warning">INGRESO POR PRIMERA
-                        VEZ</button>
-                    <div class="modal fade" id="modal-primeravez" aria-hidden="true"
-                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content ">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalToggleLabel">Ingresá los siguientes datos:</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+            <div class="primeraVez">
+                <div class="modal fade" id="modal-primeravez" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">Ingresá los siguientes datos:</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <h6 class="subtitulo"><strong>IMPORTANTE:</strong> Ni tu mail ni tu teléfono quedarán
+                            </div>
+                            <div class="modal-body">
+                                <h6 class="subtitulo"><strong>IMPORTANTE:</strong> Ni tu mail ni tu teléfono quedarán
                                         guardados, sólo podrás
                                         utilizarlo vos mismo para enviarte tus resultado vía whatsapp y/o mail.</h6>
-                                    <form id="formulario">
+                                <form id="formulario">
+                                    <div class="inputs">
                                         <div class="nombre">
                                             <input type="text" class="form-control" id="nombre" placeholder="Nombre"
-                                                aria-label="First name">
+                                                    aria-label="First name">
                                         </div>
                                         <div class="pais">
                                             <input type="text" class="form-control" id="pais" placeholder="País"
-                                                aria-label="Country">
+                                                    aria-label="Country">
                                         </div>
                                         <div class="correoElectronico">
                                             <input type="email" class="form-control" id="email"
-                                                placeholder="Correo electrónico">
+                                                    placeholder="Correo electrónico">
                                         </div>
                                         <div class="telefono">
                                             <input type="number" class="form-control" id="telefono" placeholder="Teléfono"
-                                                aria-label="Phone">
+                                                    aria-label="Phone">
                                         </div>
+                                    </div>
+                                    <div class="botones">
                                         <button type="submit" value="Cargar" class="btn btn-outline-warning" id="btn-carga"
                                             data-bs-target="#modal-confirmacion" data-bs-toggle="modal"
                                             data-bs-dismiss="modal">ENVIAR</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="modal-confirmacion" aria-hidden="true"
-                        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" id="modal-confirmacion-cuerpo">
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" id="btn-volver" data-bs-target="#modal-primeravez"
-                                        data-bs-toggle="modal" data-bs-dismiss="modal">VOLVER A CARGAR</button>
-                                    <button type="submit" id="btn-aceptar" class="btn btn-outline-warning"
-                                        data-bs-dismiss="modal">ACEPTAR</button>
-                                </div>
+                                        <button type="button" class="btn btn-outline-warning" id="btn-relogueo" data-bs-toggle="modal"
+                                            data-bs-dismiss="modal">YA INGRESÉ ANTERIORMENTE</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="loguear">
-                    <button type="button" value="Cargar" id="btn-carga" data-bs-toggle="modal"
-                    data-bs-target="#modal-loguear" class="btn btn-outline-warning">LOGUEARME</button>
-                    <div class="modal fade" id="modal-loguear" aria-hidden="true"
-                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content ">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalToggleLabel">Ingresá el siguiente dato:</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="logueo">
-                                        <div class="correoElectronico">
-                                            <input type="email" class="form-control" id="email"
-                                                placeholder="Correo electrónico">
-                                        </div>
-                                        <button type="submit" value="Cargar" class="btn btn-outline-warning" id="btn-carga"
-                                            data-bs-target="#modal-confirmacion" data-bs-toggle="modal"
-                                            data-bs-dismiss="modal">ENVIAR</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="modal-confirmacion" aria-hidden="true"
+                <div class="modal fade" id="modal-confirmacion" aria-hidden="true"
                         aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" id="modal-logueo-cuerpo">
+                            </div>
+                            <div class="modal-body" id="modal-confirmacion-cuerpo">
 
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary" id="btn-volver" data-bs-target="#modal-primeravez"
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-outline-warning" id="btn-volver" data-bs-target="#modal-primeravez"
                                         data-bs-toggle="modal" data-bs-dismiss="modal">VOLVER A CARGAR</button>
-                                    <button type="submit" id="btn-aceptar" class="btn btn-outline-warning"
+                                <button type="submit" id="btn-aceptar" class="btn btn-outline-warning"
                                         data-bs-dismiss="modal">ACEPTAR</button>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
-        <hr class="hrDivisor">
         <section class="cuestionario" id="cuestionario">
             <div class="grillaPreguntas">
                 <div class="tipoComida">
