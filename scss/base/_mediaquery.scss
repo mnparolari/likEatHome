@@ -1,0 +1,25 @@
+@media screen and (max-width: 976px) {
+    main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    }
+}
+
+@media screen and (max-width: 860px) {
+    header .bajada {
+        height: 200px;
+    }
+    header .bajada p {
+        margin-bottom: 10px;
+    }
+    main .recomendaciones .tarjetasRecomendaciones .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+    main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+        display: flex;
+        flex-direction: row;
+        width: 0px;
+    }
+}

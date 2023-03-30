@@ -17,9 +17,16 @@ main {
                 font-family: $font-principal;
                 .modal-dialog {
                     .modal-content {
+                        background-color: nth($color-palette,6);
                         .modal-header {
                             display: flex;
                             flex-direction: column-reverse;
+                            .modal-title {
+                                color: nth($color-palette,1);
+                                font-weight: bold;
+                                text-align: center;
+                                font-size: nth($font-size,4);
+                            }
                         }
                         .modal-body {
                             .subtitulo {
@@ -141,30 +148,29 @@ main {
             #modal-confirmacion {
                 .modal-dialog {
                     .modal-content {
+                        background-color: nth($color-palette,6);
                         .modal-header {
                             font-family: $font-principal;
                             }
                         .modal-body {
                             h1 {
-                                font-family: $font-principal;
-                                font-size: nth($font-size,4);
                                 color: nth($color-palette,1);
                                 font-weight: bold;
-                                margin-top: 35px;
+                                text-align: center;
+                                font-size: nth($font-size,4);
 
                                 .strong {
                                     text-decoration:underline;
                                 }
                             }
 
-                            h2 {
-                                font-family: $font-principal;
-                                font-size: nth($font-size,5);
-                                color: nth($color-palette,2);
-                            
-                                .strong {
-                                    text-decoration:underline;
-                                }
+                            p {
+                                font-size: nth($font-size,6);
+                                font-weight: bold;
+
+                        strong {
+                            color: nth($color-palette,1);
+                        }
                             }
                         }
                         .modal-footer {
@@ -380,15 +386,13 @@ main {
                 }
             }
 
-        .btn {
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 10px;
-            padding-right: 10px;
+        #btn-final {
             background-color: nth($color-palette, 2);
             border-color: nth($color-palette, 2);
             text-align: center;
             font-weight: bold;
+            width: 150px;
+            height: 40px;
 
             &:hover {
                 background-color: nth($color-palette, 1);
@@ -408,7 +412,7 @@ main {
         }
     }
 
-    .modal{
+    #modal-receta {
         .modal-dialog {
             .modal-content {
                 font-family: $font-principal;
@@ -427,56 +431,136 @@ main {
                     }
                     p {
                         font-size: nth($font-size,6);
+                        font-weight: bold;
+
+                        strong {
+                            color: nth($color-palette,1);
+                        }
                     }
+                }
                 .modal-body {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                     font-family: $font-principal;
-                    article {
-                        .recetaFinal {
-                            h4 {
-                                text-align: center;
-                            }
-                            img {
-                                text-align: center;
-                            }
-                            p {
-                                text-align: center;
-                            }
-                            button {
-                                text-align: center;
+                    .recetaFinal {
+                        text-align: center;
+                        h4 {
+                            text-align: center;
+                            text-decoration: underline;
+                            font-weight: bold;
+                            color:nth($color-palette,1)
+                        }
+                        img {
+                            text-align: center;
+                            width: 300px;
+                            height: 320px;
+                        }
+                        p {
+                            text-align: center;
+                        }
+                        button {
+                            text-align: center;
+                            background-color: nth($color-palette,1);
+                            border-color: nth($color-palette,1);
+                            color: nth($color-palette,2);
+                            font-weight: bold;
+
+                            &:hover {
+                                background-color: nth($color-palette,2);
+                                border-color: nth($color-palette,2);
+                                color: nth($color-palette,1);
                             }
                         }
                     }
                 }
                 .modal-footer {
-                    .btn {
-                        padding-top: 20px;
-                        padding-bottom: 20px;
-                        padding-left: 10px;
-                        padding-right: 10px;
-                        background-color: nth($color-palette, 2);
-                        border-color: nth($color-palette, 2);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    #btn-cerrar {
+                        background-color: nth($color-palette,1);
+                        border-color: nth($color-palette,1);
+                        color: nth($color-palette,2);
+                        width: 110px;
+                        height: 40px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                        text-align: center;
+                        margin:15px;
+
+                        &:hover {
+                            background-color: nth($color-palette,2);
+                            border-color: nth($color-palette,2);
+                            color: nth($color-palette,1);
+                        }
+                    }
+                    #btn-whatsapp {
+                        background-color: nth($color-palette,1);
+                        border-color: nth($color-palette,1);
+                        color: nth($color-palette,2);
+                        width: 210px;
+                        height: 40px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                        text-align: center;
+                        margin:15px;
+
+                        &:hover {
+                            background-color: nth($color-palette,2);
+                            border-color: nth($color-palette,2);
+                            color: nth($color-palette,1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #modal-whatsapp {
+        .modal-dialog {
+            .modal-content {
+                font-family: $font-principal;
+                background-color: nth($color-palette, 6);
+                .modal-header {
+                    display: flex;
+                    flex-direction: column;
+                    .btn-close {
+                        color: nth($color-palette,1);
+                    }
+                    .modal-title {
+                        color: nth($color-palette,1);
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: nth($font-size,4);
+                    }
+                }
+                .modal-body {
+                    p {
+                        font-size: nth($font-size,6);
+                        font-weight: bold;
+                        text-align: center;
+
+                        strong {
+                            color: nth($color-palette,1);
+                        }
+                    }
+                }
+                .modal-footer {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    #btn-aceptar-wpp {
+                        background-color: nth($color-palette, 1);
+                        border-color: nth($color-palette, 1);
+                        color: nth($color-palette,2);
                         text-align: center;
                         font-weight: bold;
+                        width: 110px;
+                        height: 40px;
 
                         &:hover {
-                            background-color: nth($color-palette, 1);
-                            border-color: nth($color-palette, 1);
-                            }
-
-                        a {
-                            text-decoration: none;
-                            color: nth($color-palette, 1);
-                            font-weight: bold;
-                            text-align: center;
-                
-                        &:hover {
-                                color: nth($color-palette, 2);
-                                }
-                            }
+                            background-color: nth($color-palette, 2);
+                            border-color: nth($color-palette, 2);
+                            color: nth($color-palette,1);
                         }
                     }
                 }
