@@ -339,12 +339,36 @@ btnResultadoFinal.forEach((el) => {
   });
 });
 
+let nombres = "";
+let idReceta = "";
+
 //Función para concatenar arrays para búsqueda final + guardo array en LocalStorage//
 function concatenarArrays() {
-  let arrayFinal = depositoComida.concat(depositoIngredientes);
-  const resultadoFinal = JSON.stringify(arrayFinal);
-  localStorage.setItem("resultadoFinal", resultadoFinal);
-  resultadoReceta(recetas)
+  let arrayFinal = depositoComida.concat(depositoIngredientes); 
+  arrayFinal.forEach((ingrediente, index) => {
+	nombres += ingrediente.ingles;
+	if (index !== arrayFinal.length - 1) {
+		nombres += ",";
+	}
+  const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients="+nombres+"&number=1"
+  fetch(urlBusqueda)
+  .then(resp => resp.json())
+  .then(resultado => mostrarId(resultado));
+
+  function mostrarId(resultadoId) {
+    resultadoId.forEach((id) => {
+      idReceta += id.id
+      obtenerReceta(idReceta)
+    });
+    }
+  });
+}
+
+function obtenerReceta() {
+  const urlFinal = "https://api.spoonacular.com/recipes/"+idReceta+"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9"
+  fetch(urlFinal)
+  .then(resp => resp.json())
+  .then(resultadoFinal => resultadoReceta(resultadoFinal))
 }
 
 
@@ -352,16 +376,15 @@ function concatenarArrays() {
 const mySeleccionFinal = document.querySelector("#modal-body");
 
 const resultadoReceta = (seleccionFinal) => {
-  mySeleccionFinal.innerHTML = "";
+mySeleccionFinal.innerHTML = "";
   seleccionFinal.forEach((selectFinal) => {
     const devolverReceta = document.createElement("article");
     devolverReceta.innerHTML += `
         <div class="recetaFinal">
-          <h4>${selectFinal.titulo}</h4>  
-          <img src="${selectFinal.img}" alt="${selectFinal.titulo}">
-          <p>${selectFinal.descripcion}</p>
+          <h4>${selectFinal.title}</h4>  
+          <img src="${selectFinal.image}" alt="${selectFinal.title}">
+          <p> ${selectFinal.instructions} </br></br> También podés encontrar tu receta acá, con muchísima más información:${selectFinal.spoonacularSourceUrl}</p>
           <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal" id="${selectFinal.id}">Agregar a Recomendaciones</button>
-          
         </div>
 `;
     mySeleccionFinal.appendChild(devolverReceta);

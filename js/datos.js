@@ -80,7 +80,8 @@ const ingredientes = [
     {
         id: 16,
         nombre: "Manzana",
-        img: "./img/icons8-manzana-100.png"
+        img: "./img/icons8-manzana-100.png",
+        ingles: "apple"
     },
     {
         id: 17,
@@ -197,17 +198,4 @@ const ingredientes = [
         nombre: "Condimentos dulces",
         img: "./img/icons8-palitos-de-canela-100.png"
     }
-]
-
-const recetas = [
-    {
-        id: 1,
-        titulo: "Tallarines chinos",
-        contieneIdUno: 2,
-        contieneIdDos: 20,
-        contieneIdTres: 37,
-        img: "./img/fotor.jpg",
-        descripcion: "BlaBlaBla",
-    },
-    
 ]
