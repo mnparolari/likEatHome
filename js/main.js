@@ -261,35 +261,31 @@ btnResultadoFinal.forEach((el) => {
 let nombres = "";
 let idReceta = "";
 
-//Función para concatenar arrays para búsqueda final + guardo array en LocalStorage//
+//Función para obtener string de nombres para pasar a la URL por parámetro + fetch para obtener el primer resultado de la API//
 function iterarArrayFinal() {
   depositoIngredientes.forEach((ingrediente, index) => {
     nombres += ingrediente.busqueda;
     if (index !== depositoIngredientes.length - 1) {
       nombres += ",";
     }
-    const urlBusqueda =
-      "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +
-      nombres +
-      "&number=1";
-    fetch(urlBusqueda)
-      .then((resp) => resp.json())
-      .then((resultado) => mostrarId(resultado));
+    console.log(nombres)
+  });
+  const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +nombres +"&number=1";
+  fetch(urlBusqueda)
+    .then((resp) => resp.json())
+    .then((resultado) => mostrarId(resultado));
+}
 
-    function mostrarId(resultadoId) {
-      resultadoId.forEach((id) => {
-        idReceta = id.id;
-        obtenerReceta(idReceta);
-      });
-    }
+function mostrarId(resultadoId) {
+  resultadoId.forEach((id) => {
+    idReceta = id.id;
+    obtenerReceta(idReceta);
   });
 }
 
 function obtenerReceta() {
   const urlFinal =
-    "https://api.spoonacular.com/recipes/" +
-    idReceta +
-    "/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
+    "https://api.spoonacular.com/recipes/" +idReceta +"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
   fetch(urlFinal)
     .then((resp) => resp.json())
     .then((resultadoFinal) => resultadoReceta(resultadoFinal));
@@ -319,13 +315,12 @@ const resultadoReceta = (seleccionFinal) => {
 
 const cerrar = document.querySelector("#btn-cerrar");
 cerrar.addEventListener("click", () => {
-  mySeleccionFinal.innerHTML = "";
   mySeleccionI.innerHTML = "";
-  const indexIngredientes = depositoIngredientes.findIndex(
+  const ingredienteIndex = depositoIngredientes.findIndex(
     (ingredientes) => ingredientes.id === parseInt(ingredientes.id)
   );
-  if (indexIngredientes !== -1) {
-    depositoIngredientes.splice(indexIngredientes, 1);
+  if (ingredienteIndex !== -1) {
+    depositoIngredientes.splice(ingredienteIndex, 1);
   }
   console.log(depositoIngredientes);
 });
