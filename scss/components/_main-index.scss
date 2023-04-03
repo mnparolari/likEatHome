@@ -126,7 +126,7 @@ main {
                                             background-color: nth($color-palette,1);
                                             border-color: nth($color-palette,1);
                                             color: nth($color-palette,2);
-                                            width: 250px;
+                                            width: 290px;
                                             height: 40px;
                                             font-weight: bold;
                                             margin-bottom: 30px;
@@ -230,81 +230,8 @@ main {
         .grillaPreguntas {
             margin-bottom: 30px;
 
-            .tipoComida {
+            .saludo {
                 text-align: center;
-                color: nth($color-palette, 2);
-                margin-top: 15px;
-
-                .titulo-2 {
-                    text-align: center;
-                    color: nth($color-palette, 1);
-                    font-weight: bold;
-                    margin-top: 10px;
-                    padding-bottom: 20px;
-                }
-
-                .seleccion {
-                    border: nth($color-palette, 2) 2px solid;
-                    color: nth($color-palette, 1);
-                    border-radius: 10px;
-                    width: 100%;
-
-                    h6 {
-                        font-weight: bold;
-                        margin-top: 10px;
-                    }
-
-                    .seleccionComida {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: center;
-                        padding-left: 30px;
-                        padding-right: 30px;
-                    }
-
-                    .comidas {
-                        margin-top: 10px;
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                        grid-template-rows: 1fr 1fr 1fr;
-
-                        article {
-                            .contenedor {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                                padding-bottom: 20px;
-                                padding-top: 10px;
-
-                                img {
-                                    padding-left: 30px;
-                                    padding-right: 30px;
-                                    border: none;
-                                    background-color: transparent;
-                                    font-weight: bold;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                    }
-                                }
-
-                                button {
-                                    padding-left: 10px;
-                                    padding-right: 10px;
-                                    border: none;
-                                    background-color: transparent;
-                                    font-weight: bold;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
 
             .tipoIngredientes {
@@ -446,15 +373,22 @@ main {
                             text-align: center;
                             text-decoration: underline;
                             font-weight: bold;
-                            color:nth($color-palette,1)
+                            color:nth($color-palette,1);
+                            font-size: nth($font-size,5);
                         }
                         img {
                             text-align: center;
-                            width: 300px;
-                            height: 320px;
+                            width: 250px;
+                            height: 270px;
                         }
                         p {
-                            text-align: center;
+                            margin-top: 15px;
+
+                        }
+                        a {
+                            text-decoration: none;
+                            color: nth($color-palette,1);
+                            font-weight: bold;
                         }
                         button {
                             text-align: center;

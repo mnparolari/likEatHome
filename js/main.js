@@ -1,3 +1,10 @@
+/*document.addEventListener("DOMContentLoaded", function() {
+  let spinner = document.querySelector("#spinner");
+
+  spinner.style.display = "block";
+  spinner.style.opacity = "0";
+});*/
+
 //Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage//
 obtenerNombre();
 
@@ -33,65 +40,75 @@ formulario.addEventListener("submit", (e) => {
   let confirmacionDatos = document.querySelector("#modal-confirmacion-cuerpo");
 
   confirmacionDatos.innerHTML = `
-    <h1>Hola <strong class="strong">${persona.nombre}</strong></h1>
-    <p>Nos informaste que sos de <strong class="strong">${persona.pais}</strong>, que tu email es <strong class="strong">${persona.email}</strong>, y que tu teléfono es <strong class="strong">${persona.telefono}</strong>. <br>
-        ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! &#128170&#9996</p>
+    <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
+    <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
+    <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
     `;
-  if (persona.nombre === "" && persona.telefono === "" && persona.pais === "" && persona.email === "") {
+  if (
+    persona.nombre === "" &&
+    persona.telefono === "" &&
+    persona.pais === "" &&
+    persona.email === ""
+  ) {
     confirmacionDatos.innerHTML = `
-      <h1>Hola <strong class="strong">humano/a no identificado/a</strong> &#128518&#128540</h1>
-      <p>Nos informaste que sos de un lugar desconocido &#128518&#128540, que tu email es muy vergonzoso para informarlo &#128518&#128540, y que tu teléfono es muy reservado para informarlo &#128518&#128540. <br>
-          <br> Aun así... ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! (aunque no podrás enviarte el resultado a tus medios de contactos) &#128170&#9996</p>
+      <h1>Hello <strong class="strong">unidentified human</strong> &#128518&#128540</h1>
+      <p>You informed us that you are from an unknown place &#128518&#128540, that your email is too embarrassing to report it &#128518&#128540, and that your phone is too reserved to report it &#128518&#128540. <br>
+          <br> Even so... Now you can start searching for recipes with whatever you have in your fridge! (aunque no podrás enviarte el resultado a tus medios de contactos) &#128170&#9996</p>
       `;
   } else if (persona.nombre === "" || persona.nombre === null) {
     confirmacionDatos.innerHTML = `
-      <h1>Hola <strong class="strong">humano/a no identificado/a</strong> &#128518&#128540 </h1>
-      <p>Nos informaste que sos de <strong class="strong">${persona.pais}</strong>, que tu email es <strong class="strong">${persona.email}</strong>, y que tu teléfono es <strong class="strong">${persona.telefono}</strong>. <br>
-        <br> ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! &#128170&#9996</p>
+      <h1>Hello <strong class="strong">unidentified human</strong> &#128518&#128540 </h1>
+      <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
+        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   } else if (persona.pais === "" || persona.pais === null) {
     confirmacionDatos.innerHTML = `
-      <h1>Hola <strong class="strong">${persona.nombre}</strong></h1>
-      <p>Nos informaste que sos de un lugar desconocido &#128518&#128540, que tu email es <strong class="strong">${persona.email}</strong>, y que tu teléfono es <strong class="strong">${persona.telefono}</strong>. <br>
-        <br> ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! &#128170&#9996</p>
+      <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
+      <p>You informed us that you are from an unknown place &#128518&#128540, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
+        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   } else if (persona.email === "" || persona.email === null) {
     confirmacionDatos.innerHTML = `
-      <h1>Hola <strong class="strong">${persona.nombre}</strong></h1>
-      <p>Nos informaste que sos de <strong class="strong">${persona.pais}</strong>, que tu email es muy vergonzoso para informarlo &#128518&#128540, y que tu teléfono es <strong class="strong">${persona.telefono}</strong>. <br>
-        <br> ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! &#128170&#9996</p>
+      <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
+      <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is too embarrassing to report it &#128518&#128540, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
+        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   } else if (persona.telefono === "" || persona.telefono === null) {
     confirmacionDatos.innerHTML = `
-      <h1>Hola <strong class="strong">${persona.nombre}</strong></h1>
-      <p>Nos informaste que sos de <strong class="strong">${persona.pais}</strong>, que tu email es <strong class="strong">${persona.email}</strong>, y que tu teléfono es muy reservado para informarlo &#128518&#128540. <br>
-        <br> ¡Ya podes comenzar a realizar búsquedas de recetas con lo que tengas en tu heladera! &#128170&#9996</p>
+      <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
+      <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone is too reserved to report it &#128518&#128540. <br>
+        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   }
 
   const aceptar = document.querySelector("#btn-aceptar");
   aceptar.addEventListener("click", () => {
-    if (persona.nombre === "" && persona.telefono === "" && persona.pais === "" && persona.email === "") {
+    if (
+      persona.nombre === "" &&
+      persona.telefono === "" &&
+      persona.pais === "" &&
+      persona.email === ""
+    ) {
       Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: 'Tus datos no fueron guardados correctamente',
+        position: "center",
+        icon: "error",
+        title: "Your data was not saved correctly",
         showClass: {
-          popup: 'animate__animated animate__fadeInDown'
+          popup: "animate__animated animate__fadeInDown",
         },
         showConfirmButton: false,
-        timer: 2000
+        timer: 2000,
       });
     } else {
       Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Tus datos fueron guardados correctamente',
+        position: "center",
+        icon: "success",
+        title: "Your data was saved correctly",
         showClass: {
-          popup: 'animate__animated animate__fadeInDown'
+          popup: "animate__animated animate__fadeInDown",
         },
         showConfirmButton: false,
-        timer: 2000
+        timer: 2000,
       });
     }
   });
@@ -102,131 +119,33 @@ formulario.addEventListener("submit", (e) => {
 
 //Corroboro si hay datos cargados en el LocalStorage cuando declaran haberlo hecho//
 const relogueo = document.querySelector("#btn-relogueo");
-  relogueo.addEventListener("click", () => {
-    if (localStorage.getItem("datosUsuario") === null) {
-      Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: "¡Ups!",
-        text: 'No tenemos tus datos guardados. Por favor, ingresalos para poder continuar',
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        showConfirmButton: true,
-      });
-    }
-  })
-
+relogueo.addEventListener("click", () => {
+  if (localStorage.getItem("datosUsuario") === null) {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "¡Ups!",
+      text: "We do not have your data saved. Please, enter them to be able to continue",
+      showClass: {
+        popup: "animate__animated animate__fadeInDown",
+      },
+      showConfirmButton: true,
+    });
+  }
+});
 
 //Función para obtener el nombre del objeto del array del localStorage y saludar//
 function obtenerNombre() {
   const usuarioJSON = localStorage.getItem("datosUsuario");
-  if(usuarioJSON) {
+  if (usuarioJSON) {
     const usuarioJS = JSON.parse(usuarioJSON);
     let saludo = usuarioJS.nombre;
     let saludar = document.querySelector("#saludo");
-      saludar.innerHTML = `
-      <h1>Hola <strong class="strong">${saludo}</strong></h1>
+    saludar.innerHTML = `
+      <h1>Hello <strong class="strong">${saludo}</strong></h1>
       `;
-  }  
-}
-
-//Elección tipo comida//
-
-//Creo opciones previas sobre la receta en el HTML con DOM//
-const contenedorComida = document.querySelector("#comidas");
-
-const mostrarComida = (dataC) => {
-  dataC.forEach((comida) => {
-    const botonComida = document.createElement("article");
-    botonComida.innerHTML += `
-                            <div class="contenedor">
-                              <img src="${comida.img}" alt="${comida.nombre}">
-                              <button id='${comida.id}' class='btn-selector-c'>${comida.nombre}</button>
-                            </div>
-                              `;
-    contenedorComida.appendChild(botonComida);
-  });
-
-  //Le agrego evento click para seleccionar el elemento//
-  const btnSeleccionarComida = document.querySelectorAll(".btn-selector-c");
-  btnSeleccionarComida.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      Toastify({
-        text: "¡Añadiste una opción a tu selección!",
-        duration: 2000,
-        gravity: "bottom",
-        position: "right",
-        style: {
-          background: "#ee9b00ff",
-          color: '#001219ff',
-        },
-        }).showToast();
-      seleccionarComida(e.target.id);
-    });
-  });
-};
-
-//Muestro elementos en HTML//
-mostrarComida(comida);
-
-//Array de selección de usuario//
-const depositoComida = [];
-
-//Función para llenar el array con los datos seleccionados por el usuario sin repetición en la selección//
-function seleccionarComida(id) {
-  const existeC = depositoComida.some((comida) => comida.id === parseInt(id));
-  if (existeC) {
-    depositoComida.splice(0, 1);
-  } else {
-    let comidaEncontrado = comida.find((comida) => comida.id === parseInt(id));
-    depositoComida.push(comidaEncontrado);
-    const opcionesComidas = JSON.stringify(depositoComida);
-    localStorage.setItem("OpcionesComidas", opcionesComidas);
-    seleccionUsuarioC(depositoComida);
   }
 }
-
-//Creo opciones seleccionadas por usuario en HTML con DOM//
-const mySeleccionC = document.querySelector("#seleccionComidas");
-
-const seleccionUsuarioC = (seleccionC) => {
-  mySeleccionC.innerHTML = "";
-  seleccionC.forEach((selectC) => {
-    const replicarC = document.createElement("article");
-    replicarC.innerHTML += `
-                            <div class="contenedor">
-                              <img src="${selectC.img}" alt="${selectC.nombre}">
-                              <button type="button" class="btn-close" aria-label="Close" id="${selectC.id}"></button>
-                              <p>${selectC.nombre}</p>
-                            </div>
-                              `;
-    mySeleccionC.appendChild(replicarC);
-  });
-  //Le agrego evento click para eliminar lo seleccionado del HTML y del Array//
-  const btnEliminarComida = document.querySelectorAll(".btn-close");
-  btnEliminarComida.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      Toastify({
-        text: "¡Eliminaste una opción de tu selección!",
-        duration: 2000,
-        gravity: "bottom",
-        position: "right",
-        style: {
-          background: '#001219ff',
-          color: '#ee9b00ff',
-        },
-        }).showToast();
-      e.target.parentElement.remove();
-      const indexComida = depositoComida.findIndex(
-        (comida) => comida.id === parseInt(comida.id)
-      );
-      if (indexComida !== -1) {
-        depositoComida.splice(indexComida, 1);
-      }
-    });
-  });
-};
 
 //Elección ingredientes//
 
@@ -251,15 +170,15 @@ const mostrarIngredientes = (dataI) => {
   btnSeleccionarIngredientes.forEach((el) => {
     el.addEventListener("click", (e) => {
       Toastify({
-        text: "¡Añadiste un ingrediente a tu selección!",
+        text: "¡You added an ingredient to your selection!",
         duration: 2000,
         gravity: "bottom",
         position: "right",
         style: {
           background: "#ee9b00ff",
-          color: '#001219ff',
+          color: "#001219ff",
         },
-        }).showToast();
+      }).showToast();
       seleccionarIngredientes(e.target.id);
     });
   });
@@ -283,10 +202,9 @@ function seleccionarIngredientes(id) {
       (ingrediente) => ingrediente.id === parseInt(id)
     );
     depositoIngredientes.push(ingredienteEncontrado);
-    const opcionesIngredientes = JSON.stringify(depositoIngredientes);
-    localStorage.setItem("Ingredientes", opcionesIngredientes);
     seleccionUsuarioI(depositoIngredientes);
   }
+  console.log(depositoIngredientes);
 }
 
 //Creo ingredientes seleccionados por usuario en HTML con DOM//
@@ -311,15 +229,15 @@ const seleccionUsuarioI = (seleccionI) => {
   btnEliminarIngredientes.forEach((el) => {
     el.addEventListener("click", (e) => {
       Toastify({
-        text: "¡Eliminaste un ingrediente de tu selección!",
+        text: "¡You removed an ingredient from your selection!",
         duration: 2000,
         gravity: "bottom",
         position: "right",
         style: {
-          background: '#001219ff',
-          color: '#ee9b00ff',
+          background: "#001219ff",
+          color: "#ee9b00ff",
         },
-        }).showToast();
+      }).showToast();
       e.target.parentElement.remove();
       const indexIngredientes = depositoIngredientes.findIndex(
         (ingredientes) => ingredientes.id === parseInt(ingredientes.id)
@@ -327,6 +245,7 @@ const seleccionUsuarioI = (seleccionI) => {
       if (indexIngredientes !== -1) {
         depositoIngredientes.splice(indexIngredientes, 1);
       }
+      console.log(depositoIngredientes);
     });
   });
 };
@@ -335,7 +254,7 @@ const seleccionUsuarioI = (seleccionI) => {
 const btnResultadoFinal = document.querySelectorAll("#btn-final");
 btnResultadoFinal.forEach((el) => {
   el.addEventListener("click", () => {
-    concatenarArrays();
+    iterarArrayFinal();
   });
 });
 
@@ -343,95 +262,116 @@ let nombres = "";
 let idReceta = "";
 
 //Función para concatenar arrays para búsqueda final + guardo array en LocalStorage//
-function concatenarArrays() {
-  let arrayFinal = depositoComida.concat(depositoIngredientes); 
-  arrayFinal.forEach((ingrediente, index) => {
-	nombres += ingrediente.ingles;
-	if (index !== arrayFinal.length - 1) {
-		nombres += ",";
-	}
-  const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients="+nombres+"&number=1"
-  fetch(urlBusqueda)
-  .then(resp => resp.json())
-  .then(resultado => mostrarId(resultado));
+function iterarArrayFinal() {
+  depositoIngredientes.forEach((ingrediente, index) => {
+    nombres += ingrediente.busqueda;
+    if (index !== depositoIngredientes.length - 1) {
+      nombres += ",";
+    }
+    const urlBusqueda =
+      "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +
+      nombres +
+      "&number=1";
+    fetch(urlBusqueda)
+      .then((resp) => resp.json())
+      .then((resultado) => mostrarId(resultado));
 
-  function mostrarId(resultadoId) {
-    resultadoId.forEach((id) => {
-      idReceta += id.id
-      obtenerReceta(idReceta)
-    });
+    function mostrarId(resultadoId) {
+      resultadoId.forEach((id) => {
+        idReceta = id.id;
+        obtenerReceta(idReceta);
+      });
     }
   });
 }
 
 function obtenerReceta() {
-  const urlFinal = "https://api.spoonacular.com/recipes/"+idReceta+"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9"
+  const urlFinal =
+    "https://api.spoonacular.com/recipes/" +
+    idReceta +
+    "/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
   fetch(urlFinal)
-  .then(resp => resp.json())
-  .then(resultadoFinal => resultadoReceta(resultadoFinal))
+    .then((resp) => resp.json())
+    .then((resultadoFinal) => resultadoReceta(resultadoFinal));
 }
-
 
 //Creo la estructura interior del modal en HTML con DOM//
 const mySeleccionFinal = document.querySelector("#modal-body");
 
 const resultadoReceta = (seleccionFinal) => {
-mySeleccionFinal.innerHTML = "";
-  seleccionFinal.forEach((selectFinal) => {
-    const devolverReceta = document.createElement("article");
-    devolverReceta.innerHTML += `
-        <div class="recetaFinal">
-          <h4>${selectFinal.title}</h4>  
-          <img src="${selectFinal.image}" alt="${selectFinal.title}">
-          <p> ${selectFinal.instructions} </br></br> También podés encontrar tu receta acá, con muchísima más información:${selectFinal.spoonacularSourceUrl}</p>
-          <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal" id="${selectFinal.id}">Agregar a Recomendaciones</button>
-        </div>
+  mySeleccionFinal.innerHTML += `
+  <div class="recetaFinal">
+    <h4>${seleccionFinal.title}</h4>  
+    <img src="${seleccionFinal.image}" alt="${seleccionFinal.title}">
+    <p> ${seleccionFinal.instructions} </br></br> You can also find your recipe here, with more information: </p> <a href="${seleccionFinal.spoonacularSourceUrl}" target="_blank">View Recipe</a> <br> <br>
+    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal" id="${seleccionFinal.id}">Add to "Recommendations"</button>
+    <hr>
+    </div>
 `;
-    mySeleccionFinal.appendChild(devolverReceta);
-  });
+  if (seleccionFinal.title === null || seleccionFinal.title === "") {
+    mySeleccionFinal.innerHTML += `
+  <div class="noRecetaFinal">
+    <p> You have not declared any ingredients or we have not found a recipe according to what you selected. </p>
+  </div>
+  `;
+  }
 };
 
-const aceptar = document.querySelector("#btn-whatsapp");
-  aceptar.addEventListener("click", () => {
-    obtenerTelefono();
-  });
-
-  function obtenerTelefono() {
-    const telefonoJSON = localStorage.getItem("datosUsuario");
-    if(telefonoJSON) {
-      const telefonoJS = JSON.parse(telefonoJSON);
-      let telefono = telefonoJS.telefono;
-      let confirmarTelefono = document.querySelector("#modal-confirmacion-whatsapp");
-      confirmarTelefono.innerHTML = `
-      <p>El teléfono que declaraste es: <strong class="strong">${telefono}</strong>. <br><br> ¿Confirmás que querés recibir tu receta personalizada en el Whatsapp de este número?</p>
-      `;
-      if (telefono === "" || telefono === null) {
-        confirmarTelefono.innerHTML = `
-        <p>No declaraste ningún teléfono por lo que no podemos enviarte la receta al Whatsapp. Si querés poder realizar esta acción, volvé al comienzo, ingresá a "Comenzar" y declará tus datos.</p>
-        `;
-      }
-    }  
+const cerrar = document.querySelector("#btn-cerrar");
+cerrar.addEventListener("click", () => {
+  mySeleccionFinal.innerHTML = "";
+  mySeleccionI.innerHTML = "";
+  const indexIngredientes = depositoIngredientes.findIndex(
+    (ingredientes) => ingredientes.id === parseInt(ingredientes.id)
+  );
+  if (indexIngredientes !== -1) {
+    depositoIngredientes.splice(indexIngredientes, 1);
   }
+  console.log(depositoIngredientes);
+});
 
-  const enviarWpp = document.querySelector("#btn-aceptar-wpp");
-  enviarWpp.addEventListener("click", () => {
-    let timerInterval
-      Swal.fire({
-        title: 'Enviando receta...',
-        html: '',
-        timer: 2000,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading()
-        },
-        willClose: () => {
-          clearInterval(timerInterval)
-        }
-      })
+const aceptar = document.querySelector("#btn-whatsapp");
+aceptar.addEventListener("click", () => {
+  obtenerTelefono();
+});
+
+function obtenerTelefono() {
+  const telefonoJSON = localStorage.getItem("datosUsuario");
+  if (telefonoJSON) {
+    const telefonoJS = JSON.parse(telefonoJSON);
+    let telefono = telefonoJS.telefono;
+    let confirmarTelefono = document.querySelector(
+      "#modal-confirmacion-whatsapp"
+    );
+    confirmarTelefono.innerHTML = `
+      <p>The phone you declared is: <strong class="strong">${telefono}</strong>. <br><br> Can you confirm that you want to receive your personalized recipe on WhatsApp for this number?</p>
+      `;
+    if (telefono === "" || telefono === null) {
+      confirmarTelefono.innerHTML = `
+        <p>You did not declare any phone number so we cannot send you the recipe to Whatsapp. If you want to be able to carry out this action, go back to the beginning, enter "Start" and declare your data.</p>
+        `;
+    }
+    if (telefonoJSON === "" || telefonoJSON === null) {
+      confirmarTelefono.innerHTML = `
+        <p>You did not declare any phone number so we cannot send you the recipe to Whatsapp. If you want to be able to carry out this action, go back to the beginning, enter "Start" and declare your data.</p>
+        `;
+    }
+  }
+}
+
+const enviarWpp = document.querySelector("#btn-aceptar-wpp");
+enviarWpp.addEventListener("click", () => {
+  let timerInterval;
+  Swal.fire({
+    title: "Sending recipes...",
+    html: "",
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+    willClose: () => {
+      clearInterval(timerInterval);
+    },
   });
-
-
-
-/*fetch("https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=manzanas,+harina,+azúcar&número=1")
-.then(resp => resp.json())
-.then(resultado => console.log(resultado));*/
+});

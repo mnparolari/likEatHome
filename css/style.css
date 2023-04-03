@@ -3,11 +3,50 @@
   padding: 0;
   box-sizing: border-box; }
 
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  header .spinner {
+    display: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000; }
+    header .spinner .carga {
+      border: 15px solid #001219ff;
+      border-top-color: #ee9b00ff;
+      border-top-style: groove;
+      height: 100px;
+      width: 100px;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      -webkit-animation: girar 1.5s linear infinite;
+      -o-animation: girar 1.5s linear infinite;
+      animation: girar 1.5s linear infinite; }
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
   header .encabezado-1 {
     width: 100%;
     height: 150px;
@@ -178,7 +217,7 @@ main {
               background-color: #ee9b00ff;
               border-color: #ee9b00ff;
               color: #001219ff;
-              width: 250px;
+              width: 290px;
               height: 40px;
               font-weight: bold;
               margin-bottom: 30px;
@@ -245,59 +284,8 @@ main {
     justify-content: center; }
     main .cuestionario .grillaPreguntas {
       margin-bottom: 30px; }
-      main .cuestionario .grillaPreguntas .tipoComida {
-        text-align: center;
-        color: #001219ff;
-        margin-top: 15px; }
-        main .cuestionario .grillaPreguntas .tipoComida .titulo-2 {
-          text-align: center;
-          color: #ee9b00ff;
-          font-weight: bold;
-          margin-top: 10px;
-          padding-bottom: 20px; }
-        main .cuestionario .grillaPreguntas .tipoComida .seleccion {
-          border: #001219ff 2px solid;
-          color: #ee9b00ff;
-          border-radius: 10px;
-          width: 100%; }
-          main .cuestionario .grillaPreguntas .tipoComida .seleccion h6 {
-            font-weight: bold;
-            margin-top: 10px; }
-          main .cuestionario .grillaPreguntas .tipoComida .seleccion .seleccionComida {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding-left: 30px;
-            padding-right: 30px; }
-          main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas {
-            margin-top: 10px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr; }
-            main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              padding-bottom: 20px;
-              padding-top: 10px; }
-              main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor img {
-                padding-left: 30px;
-                padding-right: 30px;
-                border: none;
-                background-color: transparent;
-                font-weight: bold; }
-                main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor img:hover {
-                  transform: scale(1.1); }
-              main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor button {
-                padding-left: 10px;
-                padding-right: 10px;
-                border: none;
-                background-color: transparent;
-                font-weight: bold; }
-                main .cuestionario .grillaPreguntas .tipoComida .seleccion .comidas article .contenedor button:hover {
-                  transform: scale(1.1); }
+      main .cuestionario .grillaPreguntas .saludo {
+        text-align: center; }
       main .cuestionario .grillaPreguntas .tipoIngredientes {
         text-align: center;
         margin-top: 15px;
@@ -395,13 +383,18 @@ main {
           text-align: center;
           text-decoration: underline;
           font-weight: bold;
-          color: #ee9b00ff; }
+          color: #ee9b00ff;
+          font-size: 1.2rem; }
         main #modal-receta .modal-dialog .modal-content .modal-body .recetaFinal img {
           text-align: center;
-          width: 300px;
-          height: 320px; }
+          width: 250px;
+          height: 270px; }
         main #modal-receta .modal-dialog .modal-content .modal-body .recetaFinal p {
-          text-align: center; }
+          margin-top: 15px; }
+        main #modal-receta .modal-dialog .modal-content .modal-body .recetaFinal a {
+          text-decoration: none;
+          color: #ee9b00ff;
+          font-weight: bold; }
         main #modal-receta .modal-dialog .modal-content .modal-body .recetaFinal button {
           text-align: center;
           background-color: #ee9b00ff;
