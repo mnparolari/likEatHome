@@ -336,11 +336,6 @@ function obtenerTelefono() {
         <p>You did not declare any phone number so we cannot send you the recipe to Whatsapp. If you want to be able to carry out this action, go back to the beginning, enter "Start" and declare your data.</p>
         `;
     }
-    if (telefonoJSON === "" || telefonoJSON === null) {
-      confirmarTelefono.innerHTML = `
-        <p>You did not declare any phone number so we cannot send you the recipe to Whatsapp. If you want to be able to carry out this action, go back to the beginning, enter "Start" and declare your data.</p>
-        `;
-    }
   }
 }
 

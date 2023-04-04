@@ -259,7 +259,7 @@ const ingredientes = [
     },
     {
         id: 44,
-        nombre: "Seafood",
+        nombre: "Shellfish",
         img: "./img/icons8-mariscos-100.png",
         busqueda: "shellfish"
     },
