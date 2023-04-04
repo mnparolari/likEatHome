@@ -119,39 +119,35 @@ header {
         font-family: "Encode Sans", sans-serif; }
         header .encabezado-2 .btn a:hover {
           color: #001219ff; }
-
-main {
-  background-color: #e9d8a6ff; }
-  main .datosPersonales {
+  header .datosPersonales {
     font-family: "Encode Sans", sans-serif;
     text-align: center;
     color: #001219ff;
-    padding-top: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center; }
-    main .datosPersonales .primeraVez #modal-primeravez {
+    header .datosPersonales .primeraVez #modal-primeravez {
       font-family: "Encode Sans", sans-serif; }
-      main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content {
+      header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content {
         background-color: #e9d8a6ff; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-header {
+        header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-header {
           display: flex;
           flex-direction: column-reverse; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-header .modal-title {
+          header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-header .modal-title {
             color: #ee9b00ff;
             font-weight: bold;
             text-align: center;
             font-size: 1.5rem; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .subtitulo {
+        header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body .subtitulo {
           text-align: center;
           color: #001219ff;
           font-weight: bold;
           padding-top: 10px;
           margin-left: 30px;
           margin-right: 30px; }
-        main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form {
+        header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -159,47 +155,47 @@ main {
           margin-left: 70px;
           margin-right: 70px;
           margin-top: 20px; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs {
+          header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs {
             display: flex;
             flex-direction: row; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre {
+            header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre {
               padding: 10px;
               color: #001219ff; }
-              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre .form-control {
+              header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre .form-control {
                 border: 0; }
-                main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre .form-control:focus {
+                header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .nombre .form-control:focus {
                   box-shadow: none;
                   outline: none; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais {
+            header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais {
               padding: 10px;
               color: #001219ff; }
-              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais .form-control {
+              header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais .form-control {
                 border: 0; }
-                main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais .form-control:focus {
+                header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .pais .form-control:focus {
                   box-shadow: none;
                   outline: none; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono {
+            header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono {
               padding: 10px;
               color: #001219ff; }
-              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono .form-control {
+              header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono .form-control {
                 border: 0; }
-                main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono .form-control:focus {
+                header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .telefono .form-control:focus {
                   box-shadow: none;
                   outline: none; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico {
+            header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico {
               width: 250px;
               padding: 10px;
               color: #001219ff; }
-              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico .form-control {
+              header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico .form-control {
                 border: 0; }
-                main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico .form-control:focus {
+                header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs .correoElectronico .form-control:focus {
                   box-shadow: none;
                   outline: none; }
-          main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones {
+          header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones {
             display: flex;
             flex-direction: row;
             align-items: center; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-carga {
+            header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-carga {
               background-color: #ee9b00ff;
               border-color: #ee9b00ff;
               color: #001219ff;
@@ -209,11 +205,11 @@ main {
               margin-bottom: 30px;
               text-align: center;
               margin: 20px; }
-              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-carga:hover {
+              header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-carga:hover {
                 background-color: #001219ff;
                 border-color: #001219ff;
                 color: #ee9b00ff; }
-            main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-relogueo {
+            header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-relogueo {
               background-color: #ee9b00ff;
               border-color: #ee9b00ff;
               color: #001219ff;
@@ -222,32 +218,32 @@ main {
               font-weight: bold;
               margin-bottom: 30px;
               margin: 20px; }
-              main .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-relogueo:hover {
+              header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .botones #btn-relogueo:hover {
                 background-color: #001219ff;
                 border-color: #001219ff;
                 color: #ee9b00ff; }
-    main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content {
+    header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content {
       background-color: #e9d8a6ff; }
-      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-header {
+      header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-header {
         font-family: "Encode Sans", sans-serif; }
-      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 {
+      header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 {
         color: #ee9b00ff;
         font-weight: bold;
         text-align: center;
         font-size: 1.5rem; }
-        main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 .strong {
+        header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body h1 .strong {
           text-decoration: underline; }
-      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body p {
+      header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body p {
         font-size: 1rem;
         font-weight: bold; }
-        main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body p strong {
+        header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-body p strong {
           color: #ee9b00ff; }
-      main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer {
+      header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center; }
-        main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver {
+        header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver {
           background-color: #ee9b00ff;
           border-color: #ee9b00ff;
           color: #001219ff;
@@ -257,11 +253,11 @@ main {
           margin-bottom: 30px;
           text-align: center;
           margin: 15px; }
-          main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver:hover {
+          header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-volver:hover {
             background-color: #001219ff;
             border-color: #001219ff;
             color: #ee9b00ff; }
-        main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar {
+        header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar {
           background-color: #ee9b00ff;
           border-color: #ee9b00ff;
           color: #001219ff;
@@ -271,10 +267,16 @@ main {
           margin-bottom: 30px;
           text-align: center;
           margin: 15px; }
-          main .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar:hover {
+          header .datosPersonales .primeraVez #modal-confirmacion .modal-dialog .modal-content .modal-footer #btn-aceptar:hover {
             background-color: #001219ff;
             border-color: #001219ff;
             color: #ee9b00ff; }
+
+.hide {
+  display: none; }
+
+main {
+  background-color: #e9d8a6ff; }
   main .cuestionario {
     font-family: "Encode Sans", sans-serif;
     background-color: #e9d8a6ff;

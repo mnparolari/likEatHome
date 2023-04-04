@@ -5,6 +5,14 @@
   spinner.style.opacity = "0";
 });*/
 
+//Varibales globales//
+let nombres = "";
+let idReceta = "";
+
+//Arrays//
+const usuarios = [];
+const depositoIngredientes = [];
+
 //Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage//
 obtenerNombre();
 
@@ -17,9 +25,6 @@ class DatosPersonales {
     this.email = email;
   }
 }
-
-//Array de usuario//
-const usuarios = [];
 
 //Datos de usuario//
 const formulario = document.querySelector("#formulario");
@@ -44,12 +49,7 @@ formulario.addEventListener("submit", (e) => {
     <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
     <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
     `;
-  if (
-    persona.nombre === "" &&
-    persona.telefono === "" &&
-    persona.pais === "" &&
-    persona.email === ""
-  ) {
+  if (persona.nombre === "" && persona.telefono === "" && persona.pais === "" && persona.email === "") {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">unidentified human</strong> &#128518&#128540</h1>
       <p>You informed us that you are from an unknown place &#128518&#128540, that your email is too embarrassing to report it &#128518&#128540, and that your phone is too reserved to report it &#128518&#128540. <br>
@@ -82,13 +82,9 @@ formulario.addEventListener("submit", (e) => {
   }
 
   const aceptar = document.querySelector("#btn-aceptar");
+  const mostrarSitio = document.querySelector("#mostrar");
   aceptar.addEventListener("click", () => {
-    if (
-      persona.nombre === "" &&
-      persona.telefono === "" &&
-      persona.pais === "" &&
-      persona.email === ""
-    ) {
+    if (persona.nombre === "" && persona.telefono === "" && persona.pais === "" && persona.email === "") {
       Swal.fire({
         position: "center",
         icon: "error",
@@ -110,6 +106,7 @@ formulario.addEventListener("submit", (e) => {
         showConfirmButton: false,
         timer: 2000,
       });
+      mostrarSitio.classList.remove('hide');
     }
   });
 
@@ -119,6 +116,7 @@ formulario.addEventListener("submit", (e) => {
 
 //Corroboro si hay datos cargados en el LocalStorage cuando declaran haberlo hecho//
 const relogueo = document.querySelector("#btn-relogueo");
+const mostrarRelogueo = document.querySelector("#mostrar");
 relogueo.addEventListener("click", () => {
   if (localStorage.getItem("datosUsuario") === null) {
     Swal.fire({
@@ -131,6 +129,9 @@ relogueo.addEventListener("click", () => {
       },
       showConfirmButton: true,
     });
+    
+  }else {
+    mostrarRelogueo.classList.remove('hide');
   }
 });
 
@@ -186,9 +187,6 @@ const mostrarIngredientes = (dataI) => {
 
 //Muestro elementos en HTML//
 mostrarIngredientes(ingredientes);
-
-//Array de selección de usuario//
-const depositoIngredientes = [];
 
 //Función para llenar el array con los datos seleccionados por el usuario sin repetición en la selección//
 function seleccionarIngredientes(id) {
@@ -258,9 +256,6 @@ btnResultadoFinal.forEach((el) => {
   });
 });
 
-let nombres = "";
-let idReceta = "";
-
 //Función para obtener string de nombres para pasar a la URL por parámetro + fetch para obtener el primer resultado de la API//
 function iterarArrayFinal() {
   depositoIngredientes.forEach((ingrediente, index) => {
@@ -268,7 +263,6 @@ function iterarArrayFinal() {
     if (index !== depositoIngredientes.length - 1) {
       nombres += ",";
     }
-    console.log(nombres)
   });
   const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +nombres +"&number=1";
   fetch(urlBusqueda)
@@ -284,8 +278,7 @@ function mostrarId(resultadoId) {
 }
 
 function obtenerReceta() {
-  const urlFinal =
-    "https://api.spoonacular.com/recipes/" +idReceta +"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
+  const urlFinal = "https://api.spoonacular.com/recipes/" +idReceta +"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
   fetch(urlFinal)
     .then((resp) => resp.json())
     .then((resultadoFinal) => resultadoReceta(resultadoFinal));
@@ -316,12 +309,9 @@ const resultadoReceta = (seleccionFinal) => {
 const cerrar = document.querySelector("#btn-cerrar");
 cerrar.addEventListener("click", () => {
   mySeleccionI.innerHTML = "";
-  const ingredienteIndex = depositoIngredientes.findIndex(
-    (ingredientes) => ingredientes.id === parseInt(ingredientes.id)
-  );
-  if (ingredienteIndex !== -1) {
-    depositoIngredientes.splice(ingredienteIndex, 1);
-  }
+  mySeleccionFinal.innerHTML = "";
+  depositoIngredientes.length = 0;
+  nombres = "";
   console.log(depositoIngredientes);
 });
 
