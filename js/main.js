@@ -1,9 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-  let spinner = document.querySelector("#spinner");
-
-  spinner.style.display = "block";
-  spinner.style.opacity = "0";
-});*/
 
 //Varibales globales//
 let nombres = "";
@@ -23,6 +17,17 @@ class DatosPersonales {
     this.pais = pais;
     this.telefono = telefono;
     this.email = email;
+  }
+}
+
+//Objeto de recetas recomendadas//
+class Recetasrecomendadas {
+  constructor(titulo, comentario, img, link, nombreUsuario) {
+    this.titulo = titulo;
+    this.comentario = comentario;
+    this.img = img;
+    this.link = link;
+    this.nombreUsuario = nombreUsuario;
   }
 }
 
@@ -47,6 +52,7 @@ formulario.addEventListener("submit", (e) => {
   confirmacionDatos.innerHTML = `
     <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
     <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
+    <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>. <br>
     <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
     `;
   if (persona.nombre === "" && persona.telefono === "" && persona.pais === "" && persona.email === "") {
@@ -59,25 +65,29 @@ formulario.addEventListener("submit", (e) => {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">unidentified human</strong> &#128518&#128540 </h1>
       <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
-        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
+      <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>
+      <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   } else if (persona.pais === "" || persona.pais === null) {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
       <p>You informed us that you are from an unknown place &#128518&#128540, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
-        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
+      <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>
+      <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   } else if (persona.email === "" || persona.email === null) {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
       <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is too embarrassing to report it &#128518&#128540, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
-        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
+      <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>
+      <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   } else if (persona.telefono === "" || persona.telefono === null) {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
       <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone is too reserved to report it &#128518&#128540. <br>
-        <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
+      <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>
+      <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
   }
 
@@ -148,6 +158,33 @@ function obtenerNombre() {
   }
 }
 
+//Creo recetas recomendadas en el HTML con DOM//
+const contenedorRecomendados = document.querySelector("#card-group");
+
+const mostrarRecetas = (dataR) => {
+  contenedorRecomendados.innerHTML = "";
+  dataR.forEach((receta) => {
+    const botonRecetas = document.createElement("div");
+    botonRecetas.innerHTML += `
+    <div class="card">
+      <img src="${receta.img}" class="card-img-top" alt="${receta.titulo}">
+      <div class="card-body">
+        <h5 class="card-title">${receta.titulo}</h5>
+        <p class="card-text">
+        "${receta.comentario}"
+        </p>
+        <a href="${receta.link}" target="_blank">Review recipe</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Recommended by ${receta.nombreUsuario} 2 hours ago</small>
+      </div>
+    </div>
+                              `;
+    contenedorRecomendados.appendChild(botonRecetas);
+  });
+}
+
+mostrarRecetas(recetasRecomendados);
 //Elección ingredientes//
 
 //Creo ingredientes en el HTML con DOM//
@@ -166,8 +203,7 @@ const mostrarIngredientes = (dataI) => {
   });
 
   //Le agrego evento click para seleccionar el elemento//
-  const btnSeleccionarIngredientes =
-    document.querySelectorAll(".btn-selector-i");
+  const btnSeleccionarIngredientes = document.querySelectorAll(".btn-selector-i");
   btnSeleccionarIngredientes.forEach((el) => {
     el.addEventListener("click", (e) => {
       Toastify({
@@ -202,7 +238,6 @@ function seleccionarIngredientes(id) {
     depositoIngredientes.push(ingredienteEncontrado);
     seleccionUsuarioI(depositoIngredientes);
   }
-  console.log(depositoIngredientes);
 }
 
 //Creo ingredientes seleccionados por usuario en HTML con DOM//
@@ -248,11 +283,14 @@ const seleccionUsuarioI = (seleccionI) => {
   });
 };
 
+const loading = document.querySelector('#spinner');
+
 //Agrego evento click al botón de "buscar receta"//
 const btnResultadoFinal = document.querySelectorAll("#btn-final");
 btnResultadoFinal.forEach((el) => {
   el.addEventListener("click", () => {
     iterarArrayFinal();
+    loading.classList.remove('hide');
   });
 });
 
@@ -267,8 +305,19 @@ function iterarArrayFinal() {
   const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +nombres +"&number=1";
   fetch(urlBusqueda)
     .then((resp) => resp.json())
-    .then((resultado) => mostrarId(resultado));
-}
+    .then((resultado) => {
+      if (resultado.length > 0) {
+        mostrarId(resultado);
+      } else {
+        mySeleccionFinal.innerHTML += `
+          <div class="noRecetaFinal">
+            <p> ¡Upss! <br> <br> You have not declared any ingredients or we have not found a recipe according to what you selected. You can try again with other ingredients or other combinations.</p>
+          </div>
+          `;
+          loading.classList.add('hide');
+      }
+    }); 
+};
 
 function mostrarId(resultadoId) {
   resultadoId.forEach((id) => {
@@ -288,14 +337,15 @@ function obtenerReceta() {
 const mySeleccionFinal = document.querySelector("#modal-body");
 
 const resultadoReceta = (seleccionFinal) => {
+  loading.classList.add('hide');
   mySeleccionFinal.innerHTML += `
   <div class="recetaFinal">
     <h4>${seleccionFinal.title}</h4>  
     <img src="${seleccionFinal.image}" alt="${seleccionFinal.title}">
-    <p> ${seleccionFinal.instructions} </br></br> You can also find your recipe here, with more information: </p> <a href="${seleccionFinal.spoonacularSourceUrl}" target="_blank">View Recipe</a> <br> <br>
-    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal" id="${seleccionFinal.id}">Add to "Recommendations"</button>
+    <p> ${seleccionFinal.instructions} </br></br> You can also find your recipe here, with more information: </p><a href="${seleccionFinal.spoonacularSourceUrl}" target="_blank">View Recipe</a><br>
+    <br><button type="button" class="btn btn-outline-warning" id="btnRecomendacion" data-bs-target="#modal-recomendados" data-bs-toggle="modal" data-bs-dismiss="modal">Add to "Recommendations"</button>
     <hr>
-    </div>
+  </div>
 `;
   if (seleccionFinal.title === null || seleccionFinal.title === "") {
     mySeleccionFinal.innerHTML += `
@@ -303,16 +353,66 @@ const resultadoReceta = (seleccionFinal) => {
     <p> You have not declared any ingredients or we have not found a recipe according to what you selected. </p>
   </div>
   `;
-  }
+  };
+  const receta = JSON.stringify(seleccionFinal);
+  localStorage.setItem("recetaUsuario", receta);
 };
 
-const cerrar = document.querySelector("#btn-cerrar");
-cerrar.addEventListener("click", () => {
+function resetear() {
   mySeleccionI.innerHTML = "";
   mySeleccionFinal.innerHTML = "";
   depositoIngredientes.length = 0;
   nombres = "";
-  console.log(depositoIngredientes);
+};
+
+const recomendacion = document.querySelector("#comentario");
+  recomendacion.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+  let textarea = document.querySelector("#floatingTextarea").value;
+  console.log(textarea)
+
+  const guardarComentario = document.querySelector("#btn-aceptar-recomendados");
+  guardarComentario.addEventListener("click", () => {
+    const comentarioUsuario = JSON.stringify(textarea)
+    localStorage.setItem("comentario", comentarioUsuario);
+  });
+  recomendacion.reset();
+  resetear();
+});
+
+const enviarRecomendacion = document.querySelector("#btn-confirmar")
+enviarRecomendacion.addEventListener("click", () => {
+  obtenerDatosRecomendaciones();
+});
+
+function obtenerDatosRecomendaciones() {
+  const recetaJSON = localStorage.getItem("recetaUsuario");
+  const recetaJS = JSON.parse(recetaJSON);
+  let titulo = recetaJS.title;
+  let img = recetaJS.image;
+  let link = recetaJS.spoonacularSourceUrl;
+
+  const comentarioJSON = localStorage.getItem("comentario");
+  const comentarioJS = JSON.parse(comentarioJSON);
+  let comentario = comentarioJS
+
+  const usuarioJSON = localStorage.getItem("datosUsuario");
+  const usuarioJS = JSON.parse(usuarioJSON);
+  let nombreUsuario = usuarioJS.nombre
+  
+  recetasRecomendados.push(new Recetasrecomendadas(titulo,comentario,img,link,nombreUsuario));
+  mostrarRecetas(recetasRecomendados);
+  if (recetasRecomendados.length == 5) {
+    recetasRecomendados.shift();
+  }
+  recomendacion.reset();
+  resetear();
+};
+
+const cerrar = document.querySelector("#btn-cerrar");
+cerrar.addEventListener("click", () => {
+  resetear();
 });
 
 const aceptar = document.querySelector("#btn-whatsapp");
@@ -325,9 +425,7 @@ function obtenerTelefono() {
   if (telefonoJSON) {
     const telefonoJS = JSON.parse(telefonoJSON);
     let telefono = telefonoJS.telefono;
-    let confirmarTelefono = document.querySelector(
-      "#modal-confirmacion-whatsapp"
-    );
+    const confirmarTelefono = document.querySelector("#modal-confirmacion-whatsapp");
     confirmarTelefono.innerHTML = `
       <p>The phone you declared is: <strong class="strong">${telefono}</strong>. <br><br> Can you confirm that you want to receive your personalized recipe on WhatsApp for this number?</p>
       `;
@@ -354,4 +452,5 @@ enviarWpp.addEventListener("click", () => {
       clearInterval(timerInterval);
     },
   });
+  resetear();
 });

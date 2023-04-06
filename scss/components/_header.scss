@@ -5,15 +5,20 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.hide {
+    display: none;
+}
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .spinner{
-        display:none;
+    
+    .spinner {
         background-color: transparent;
+        opacity: 0.5;
         height: 100%;
         width: 100%;
         position: fixed;
@@ -137,17 +142,7 @@ header {
             &:hover {
                 background-color: nth($color-palette, 1);
                 border-color: nth($color-palette, 1);
-            }
-
-            a {
-                text-decoration: none;
-                color: nth($color-palette, 1);
                 font-weight: bold;
-                font-family: $font-principal;
-
-                &:hover {
-                    color: nth($color-palette, 2);
-                }
             }
         }
     }

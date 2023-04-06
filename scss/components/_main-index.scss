@@ -163,8 +163,8 @@ main {
                         }
                         img {
                             text-align: center;
-                            width: 250px;
-                            height: 270px;
+                            width: 100%;
+                            height: 100%;
                         }
                         p {
                             margin-top: 15px;
@@ -188,6 +188,12 @@ main {
                                 color: nth($color-palette,1);
                             }
                         }
+                    }
+                    .noRecetaFinal {
+                        text-align: center;
+                        font-weight: bold;
+                        color:nth($color-palette,2);
+                        font-size: nth($font-size,5);
                     }
                 }
                 .modal-footer {
@@ -285,7 +291,115 @@ main {
                 }
             }
         }
-    }    
+    }
+
+    #modal-recomendados {
+        .modal-dialog {
+            .modal-content {
+                font-family: $font-principal;
+                background-color: nth($color-palette, 6);
+                .modal-header {
+                    display: flex;
+                    flex-direction: column;
+                    .btn-close {
+                        color: nth($color-palette,1);
+                    }
+                    .modal-title {
+                        color: nth($color-palette,1);
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: nth($font-size,4);
+                    }
+                }
+                .modal-body {
+                    .form-floating {
+                        .form-control {
+                            height: 200px;
+                        }
+                    }
+                }
+                .modal-footer {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    #btn-aceptar-recomendados {
+                        background-color: nth($color-palette, 1);
+                        border-color: nth($color-palette, 1);
+                        color: nth($color-palette,2);
+                        text-align: center;
+                        font-weight: bold;
+                        width: 110px;
+                        height: 40px;
+
+                        &:hover {
+                            background-color: nth($color-palette, 2);
+                            border-color: nth($color-palette, 2);
+                            color: nth($color-palette,1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #modal-confirmacion-recomendacion {
+        .modal-dialog {
+            .modal-content {
+                font-family: $font-principal;
+                background-color: nth($color-palette, 6);
+                .modal-header {
+                    display: flex;
+                    flex-direction: column;
+                    .btn-close {
+                        color: nth($color-palette,1);
+                    }
+                }
+                .modal-body {
+                    .modal-title {
+                        color: nth($color-palette,1);
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: nth($font-size,4);
+                    }
+                }
+                .modal-footer {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    #btn-volver {
+                        background-color: nth($color-palette, 1);
+                        border-color: nth($color-palette, 1);
+                        color: nth($color-palette,2);
+                        text-align: center;
+                        font-weight: bold;
+                        width: 110px;
+                        height: 40px;
+
+                        &:hover {
+                            background-color: nth($color-palette, 2);
+                            border-color: nth($color-palette, 2);
+                            color: nth($color-palette,1);
+                        }
+                    }
+                    #btn-confirmar {
+                        background-color: nth($color-palette, 1);
+                        border-color: nth($color-palette, 1);
+                        color: nth($color-palette,2);
+                        text-align: center;
+                        font-weight: bold;
+                        width: 110px;
+                        height: 60px;
+
+                        &:hover {
+                            background-color: nth($color-palette, 2);
+                            border-color: nth($color-palette, 2);
+                            color: nth($color-palette,1);
+                        }
+                    }
+                }
+            }
+        }
+    } 
     
     .recomendaciones {
         margin-top: 30px;
@@ -315,11 +429,17 @@ main {
 
             .tarjetasRecomendaciones {
                 .card-group {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: center;
                     padding-bottom: 30px;
                     border-radius: 10%;
 
                     .card {
-                        width: 200px;
+                        display: flex;
+                        justify-content: center;
+                        width: 236px;
+                        height: 570px;
                         margin-left: 5px;
                         margin-right: 5px;
                         border-radius: 10px;
@@ -327,14 +447,12 @@ main {
                         border: nth($color-palette, 2) 1.5px solid;
 
                         img {
-                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            width: 234px;
+                            height: 256px;
                             text-align: center;
                             border-radius: 10px;
-                        }
-
-                        p {
-                            font-family: $font-principal;
-                            color: nth($color-palette, 2);
                         }
 
                         .card-body {
