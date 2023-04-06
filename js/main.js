@@ -3,6 +3,7 @@
 let nombres = "";
 let idReceta = "";
 
+
 //Arrays//
 const usuarios = [];
 const depositoIngredientes = [];
@@ -22,12 +23,13 @@ class DatosPersonales {
 
 //Objeto de recetas recomendadas//
 class Recetasrecomendadas {
-  constructor(titulo, comentario, img, link, nombreUsuario) {
+  constructor(titulo, comentario, img, link, nombreUsuario, diaHora) {
     this.titulo = titulo;
     this.comentario = comentario;
     this.img = img;
     this.link = link;
     this.nombreUsuario = nombreUsuario;
+    this.diaHora = diaHora;
   }
 }
 
@@ -176,7 +178,7 @@ const mostrarRecetas = (dataR) => {
         <a href="${receta.link}" target="_blank">Review recipe</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Recommended by ${receta.nombreUsuario} 2 hours ago</small>
+        <small class="text-muted">Recommended by ${receta.nombreUsuario} ${receta.diaHora}</small>
       </div>
     </div>
                               `;
@@ -185,6 +187,8 @@ const mostrarRecetas = (dataR) => {
 }
 
 mostrarRecetas(recetasRecomendados);
+
+
 //Elección ingredientes//
 
 //Creo ingredientes en el HTML con DOM//
@@ -195,8 +199,8 @@ const mostrarIngredientes = (dataI) => {
     const botonIngredientes = document.createElement("article");
     botonIngredientes.innerHTML += `
                             <div class="contenedor">
-                              <img src="${ingrediente.img}" alt="${ingrediente.nombre}">
-                              <button id='${ingrediente.id}' class='btn-selector-i'>${ingrediente.nombre}</button>
+                              <img type= "button" id='${ingrediente.id}' class='btn-selector-i' src="${ingrediente.img}" alt="${ingrediente.nombre}">
+                              <p>${ingrediente.nombre}</p>
                             </div>
                               `;
     contenedorIngredientes.appendChild(botonIngredientes);
@@ -249,9 +253,10 @@ const seleccionUsuarioI = (seleccionI) => {
     const replicarI = document.createElement("article");
     replicarI.innerHTML += `
                             <div class="contenedor">
-                              <img src="${selectI.img}" alt="${selectI.nombre}">
                               <button type="button" class="btn-close" aria-label="Close" id="${selectI.id}"></button>
+                              <img src="${selectI.img}" alt="${selectI.nombre}">
                               <p>${selectI.nombre}</p>
+                              
                             </div>
                               `;
     mySeleccionI.appendChild(replicarI);
@@ -370,7 +375,6 @@ const recomendacion = document.querySelector("#comentario");
     e.preventDefault();
 
   let textarea = document.querySelector("#floatingTextarea").value;
-  console.log(textarea)
 
   const guardarComentario = document.querySelector("#btn-aceptar-recomendados");
   guardarComentario.addEventListener("click", () => {
@@ -400,8 +404,15 @@ function obtenerDatosRecomendaciones() {
   const usuarioJSON = localStorage.getItem("datosUsuario");
   const usuarioJS = JSON.parse(usuarioJSON);
   let nombreUsuario = usuarioJS.nombre
+
+  const DateTime = luxon.DateTime;
+  const now = DateTime.now()
+  const dia = now.toLocaleString(DateTime.DATE_SHORT)
+  const hora = now.toLocaleString(DateTime.TIME_SIMPLE)
+  const diaHora = "on "+dia+", at "+hora+"."
+  console.log(diaHora)
   
-  recetasRecomendados.push(new Recetasrecomendadas(titulo,comentario,img,link,nombreUsuario));
+  recetasRecomendados.push(new Recetasrecomendadas(titulo,comentario,img,link,nombreUsuario,diaHora));
   mostrarRecetas(recetasRecomendados);
   if (recetasRecomendados.length == 5) {
     recetasRecomendados.shift();

@@ -53,8 +53,34 @@ main {
                         justify-content: center;
                         padding-left: 30px;
                         padding-right: 30px;
+
+                        article {
+                            .contenedor {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    border: none;
+                                    background-color: transparent;
+                                    color: nth($color-palette, 2);
+                                    font-weight: bold;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                    }
+                                }
+
+                                p {
+                                    font-weight: bold;
+                                    color: nth($color-palette, 1);
+                                }
+                            }
+                        }
                     }
-                }
 
                     .ingredientes {
                         margin-top: 10px;
@@ -82,21 +108,16 @@ main {
                                     }
                                 }
 
-                                button {
-                                    border: none;
-                                    background-color: transparent;
-                                    color: nth($color-palette, 2);
+                                p {
                                     font-weight: bold;
-
-                                    &:hover {
-                                        transform: scale(1.1);
-                                    }
+                                    color: nth($color-palette, 2);
                                 }
                             }
                         }
                     }
                 }
             }
+        }
 
         #btn-final {
             background-color: nth($color-palette, 2);
