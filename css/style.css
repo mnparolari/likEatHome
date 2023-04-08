@@ -503,21 +503,25 @@ main {
         font-weight: bold;
         text-align: center;
         font-size: 1.5rem; }
-    main #modal-recomendados .modal-dialog .modal-content .modal-body .form-floating .form-control {
-      height: 200px; }
-    main #modal-recomendados .modal-dialog .modal-content .modal-footer {
+    main #modal-recomendados .modal-dialog .modal-content .modal-body {
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: center; }
-      main #modal-recomendados .modal-dialog .modal-content .modal-footer #btn-aceptar-recomendados {
+      text-align: center; }
+      main #modal-recomendados .modal-dialog .modal-content .modal-body .form-floating .form-control {
+        height: 200px;
+        width: 400px;
+        text-align: start; }
+      main #modal-recomendados .modal-dialog .modal-content .modal-body #btn-aceptar-recomendados {
         background-color: #ee9b00ff;
         border-color: #ee9b00ff;
         color: #001219ff;
         text-align: center;
         font-weight: bold;
         width: 110px;
-        height: 40px; }
-        main #modal-recomendados .modal-dialog .modal-content .modal-footer #btn-aceptar-recomendados:hover {
+        height: 40px;
+        margin-top: 10px; }
+        main #modal-recomendados .modal-dialog .modal-content .modal-body #btn-aceptar-recomendados:hover {
           background-color: #001219ff;
           border-color: #001219ff;
           color: #ee9b00ff; }
@@ -545,7 +549,7 @@ main {
         text-align: center;
         font-weight: bold;
         width: 110px;
-        height: 40px; }
+        height: 60px; }
         main #modal-confirmacion-recomendacion .modal-dialog .modal-content .modal-footer #btn-volver:hover {
           background-color: #001219ff;
           border-color: #001219ff;
@@ -612,6 +616,10 @@ main {
         main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-text {
           font-family: "Encode Sans", sans-serif;
           color: #001219ff; }
+        main .recomendaciones .tarjetasRecomendaciones .card-group .card a {
+          font-family: "Encode Sans", sans-serif;
+          font-weight: bold;
+          color: #ee9b00ff; }
         main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-footer {
           font-family: "Encode Sans", sans-serif;
           color: #001219ff;
@@ -627,8 +635,12 @@ main {
 
 footer {
   width: 100%;
-  height: 150px;
-  background-color: #ee9b00ff; }
+  height: 25px;
+  background-color: #ee9b00ff;
+  text-align: center;
+  display: block; }
+  footer p {
+    font-weight: bold; }
 
 @media screen and (max-width: 976px) {
   main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes {

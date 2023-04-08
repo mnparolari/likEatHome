@@ -8,8 +8,10 @@ let idReceta = "";
 const usuarios = [];
 const depositoIngredientes = [];
 
+
 //Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage//
 obtenerNombre();
+
 
 //Objeto de usuario//
 class DatosPersonales {
@@ -18,8 +20,9 @@ class DatosPersonales {
     this.pais = pais;
     this.telefono = telefono;
     this.email = email;
-  }
-}
+  };
+};
+
 
 //Objeto de recetas recomendadas//
 class Recetasrecomendadas {
@@ -30,8 +33,21 @@ class Recetasrecomendadas {
     this.link = link;
     this.nombreUsuario = nombreUsuario;
     this.diaHora = diaHora;
-  }
-}
+  };
+};
+
+function resetear() {
+  mySeleccionI.innerHTML = "";
+  mySeleccionFinal.innerHTML = "";
+  depositoIngredientes.length = 0;
+  nombres = "";
+};
+
+//Corroboro si tengo el array guardado en el localStorage//
+const listaJS = localStorage.getItem("listaRecomendados");
+const lista = JSON.parse(listaJS);
+const listaRenovada = lista;
+
 
 //Datos de usuario//
 const formulario = document.querySelector("#formulario");
@@ -91,7 +107,7 @@ formulario.addEventListener("submit", (e) => {
       <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>
       <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
-  }
+  };
 
   const aceptar = document.querySelector("#btn-aceptar");
   const mostrarSitio = document.querySelector("#mostrar");
@@ -119,7 +135,7 @@ formulario.addEventListener("submit", (e) => {
         timer: 2000,
       });
       mostrarSitio.classList.remove('hide');
-    }
+    };
   });
 
   obtenerNombre();
@@ -144,7 +160,7 @@ relogueo.addEventListener("click", () => {
     
   }else {
     mostrarRelogueo.classList.remove('hide');
-  }
+  };
 });
 
 //Función para obtener el nombre del objeto del array del localStorage y saludar//
@@ -157,8 +173,8 @@ function obtenerNombre() {
     saludar.innerHTML = `
       <h1>Hello <strong class="strong">${saludo}</strong></h1>
       `;
-  }
-}
+  };
+};
 
 //Creo recetas recomendadas en el HTML con DOM//
 const contenedorRecomendados = document.querySelector("#card-group");
@@ -181,13 +197,17 @@ const mostrarRecetas = (dataR) => {
         <small class="text-muted">Recommended by ${receta.nombreUsuario} ${receta.diaHora}</small>
       </div>
     </div>
-                              `;
+    `;
     contenedorRecomendados.appendChild(botonRecetas);
   });
+};     
+
+if (listaRenovada === null) {
+  mostrarRecetas(recetasRecomendados);
+} else if (listaRenovada == 6) {
+  listaRenovada.shift();
+  mostrarRecetas(listaRenovada);
 }
-
-mostrarRecetas(recetasRecomendados);
-
 
 //Elección ingredientes//
 
@@ -230,19 +250,15 @@ mostrarIngredientes(ingredientes);
 
 //Función para llenar el array con los datos seleccionados por el usuario sin repetición en la selección//
 function seleccionarIngredientes(id) {
-  const existeI = depositoIngredientes.some(
-    (ingrediente) => ingrediente.id === parseInt(id)
-  );
+  const existeI = depositoIngredientes.some((ingrediente) => ingrediente.id === parseInt(id));
   if (existeI) {
     depositoIngredientes.splice(0, 1);
   } else {
-    let ingredienteEncontrado = ingredientes.find(
-      (ingrediente) => ingrediente.id === parseInt(id)
-    );
+    let ingredienteEncontrado = ingredientes.find((ingrediente) => ingrediente.id === parseInt(id));
     depositoIngredientes.push(ingredienteEncontrado);
     seleccionUsuarioI(depositoIngredientes);
-  }
-}
+  };
+};
 
 //Creo ingredientes seleccionados por usuario en HTML con DOM//
 const mySeleccionI = document.querySelector("#seleccionIngredientes");
@@ -256,7 +272,6 @@ const seleccionUsuarioI = (seleccionI) => {
                               <button type="button" class="btn-close" aria-label="Close" id="${selectI.id}"></button>
                               <img src="${selectI.img}" alt="${selectI.nombre}">
                               <p>${selectI.nombre}</p>
-                              
                             </div>
                               `;
     mySeleccionI.appendChild(replicarI);
@@ -283,7 +298,6 @@ const seleccionUsuarioI = (seleccionI) => {
       if (indexIngredientes !== -1) {
         depositoIngredientes.splice(indexIngredientes, 1);
       }
-      console.log(depositoIngredientes);
     });
   });
 };
@@ -304,7 +318,7 @@ function iterarArrayFinal() {
   depositoIngredientes.forEach((ingrediente, index) => {
     nombres += ingrediente.busqueda;
     if (index !== depositoIngredientes.length - 1) {
-      nombres += ",";
+      nombres += ","
     }
   });
   const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +nombres +"&number=1";
@@ -363,27 +377,19 @@ const resultadoReceta = (seleccionFinal) => {
   localStorage.setItem("recetaUsuario", receta);
 };
 
-function resetear() {
-  mySeleccionI.innerHTML = "";
-  mySeleccionFinal.innerHTML = "";
-  depositoIngredientes.length = 0;
-  nombres = "";
-};
+
 
 const recomendacion = document.querySelector("#comentario");
   recomendacion.addEventListener("submit", (e) => {
     e.preventDefault();
 
-  let textarea = document.querySelector("#floatingTextarea").value;
-
-  const guardarComentario = document.querySelector("#btn-aceptar-recomendados");
-  guardarComentario.addEventListener("click", () => {
-    const comentarioUsuario = JSON.stringify(textarea)
-    localStorage.setItem("comentario", comentarioUsuario);
-  });
+  let textarea = document.querySelector("#floatingTextarea").value
+  const comentarioUsuario = JSON.stringify(textarea);
+  localStorage.setItem("comentario", comentarioUsuario);
   recomendacion.reset();
   resetear();
 });
+
 
 const enviarRecomendacion = document.querySelector("#btn-confirmar")
 enviarRecomendacion.addEventListener("click", () => {
@@ -399,27 +405,32 @@ function obtenerDatosRecomendaciones() {
 
   const comentarioJSON = localStorage.getItem("comentario");
   const comentarioJS = JSON.parse(comentarioJSON);
-  let comentario = comentarioJS
+  let comentario = comentarioJS;
 
   const usuarioJSON = localStorage.getItem("datosUsuario");
   const usuarioJS = JSON.parse(usuarioJSON);
-  let nombreUsuario = usuarioJS.nombre
+  let nombreUsuario = usuarioJS.nombre;
 
   const DateTime = luxon.DateTime;
-  const now = DateTime.now()
-  const dia = now.toLocaleString(DateTime.DATE_SHORT)
-  const hora = now.toLocaleString(DateTime.TIME_SIMPLE)
+  const now = DateTime.now();
+  const dia = now.toLocaleString(DateTime.DATE_SHORT);
+  const hora = now.toLocaleString(DateTime.TIME_SIMPLE);
   const diaHora = "on "+dia+", at "+hora+"."
-  console.log(diaHora)
   
   recetasRecomendados.push(new Recetasrecomendadas(titulo,comentario,img,link,nombreUsuario,diaHora));
-  mostrarRecetas(recetasRecomendados);
-  if (recetasRecomendados.length == 5) {
-    recetasRecomendados.shift();
-  }
+
+  const listaJSON = JSON.stringify(recetasRecomendados);
+  localStorage.setItem("listaRecomendados", listaJSON);
+  const listaJS = localStorage.getItem("listaRecomendados");
+  const lista = JSON.parse(listaJS);
+  const listaRenovada = lista;
+  mostrarRecetas(listaRenovada);
+
   recomendacion.reset();
   resetear();
 };
+
+
 
 const cerrar = document.querySelector("#btn-cerrar");
 cerrar.addEventListener("click", () => {

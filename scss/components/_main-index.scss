@@ -333,16 +333,17 @@ main {
                     }
                 }
                 .modal-body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
                     .form-floating {
                         .form-control {
                             height: 200px;
+                            width: 400px; 
+                            text-align: start;
                         }
                     }
-                }
-                .modal-footer {
-                    display:flex;
-                    align-items: center;
-                    justify-content: center;
                     #btn-aceptar-recomendados {
                         background-color: nth($color-palette, 1);
                         border-color: nth($color-palette, 1);
@@ -351,6 +352,7 @@ main {
                         font-weight: bold;
                         width: 110px;
                         height: 40px;
+                        margin-top: 10px;
 
                         &:hover {
                             background-color: nth($color-palette, 2);
@@ -394,7 +396,7 @@ main {
                         text-align: center;
                         font-weight: bold;
                         width: 110px;
-                        height: 40px;
+                        height: 60px;
 
                         &:hover {
                             background-color: nth($color-palette, 2);
@@ -486,8 +488,14 @@ main {
 
                             .card-text {
                                 font-family: $font-principal;
-                                color: nth($color-palette, 2)
+                                color: nth($color-palette, 2);
                             }
+                        }
+
+                        a {
+                            font-family: $font-principal;
+                            font-weight: bold;
+                            color: nth($color-palette, 1);
                         }
 
                         .card-footer {
