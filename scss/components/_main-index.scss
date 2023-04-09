@@ -1,6 +1,7 @@
 .hide {
     display: none;
 }
+
 main {
     background-color: nth($color-palette, 6);
 
@@ -86,7 +87,6 @@ main {
                         margin-top: 10px;
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-                        grid-template-rows: 1fr 1fr 1fr 1fr;
 
                         article {
                             .contenedor {
@@ -150,110 +150,125 @@ main {
             .modal-content {
                 font-family: $font-principal;
                 background-color: nth($color-palette, 6);
+
                 .modal-header {
                     display: flex;
                     flex-direction: column;
+
                     .btn-close {
-                        color: nth($color-palette,1);
+                        color: nth($color-palette, 1);
                     }
+
                     .modal-title {
-                        color: nth($color-palette,1);
+                        color: nth($color-palette, 1);
                         font-weight: bold;
                         text-align: center;
-                        font-size: nth($font-size,4);
+                        font-size: nth($font-size, 4);
                     }
+
                     p {
-                        font-size: nth($font-size,6);
+                        font-size: nth($font-size, 6);
                         font-weight: bold;
 
                         strong {
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                         }
                     }
                 }
+
                 .modal-body {
                     font-family: $font-principal;
+
                     .recetaFinal {
                         text-align: center;
+
                         h4 {
                             text-align: center;
                             text-decoration: underline;
                             font-weight: bold;
-                            color:nth($color-palette,1);
-                            font-size: nth($font-size,5);
+                            color: nth($color-palette, 1);
+                            font-size: nth($font-size, 5);
                         }
+
                         img {
                             text-align: center;
                             width: 100%;
                             height: 100%;
                         }
+
                         p {
                             margin-top: 15px;
 
                         }
+
                         a {
                             text-decoration: none;
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                             font-weight: bold;
                         }
+
                         button {
                             text-align: center;
-                            background-color: nth($color-palette,1);
-                            border-color: nth($color-palette,1);
-                            color: nth($color-palette,2);
+                            background-color: nth($color-palette, 1);
+                            border-color: nth($color-palette, 1);
+                            color: nth($color-palette, 2);
                             font-weight: bold;
 
                             &:hover {
-                                background-color: nth($color-palette,2);
-                                border-color: nth($color-palette,2);
-                                color: nth($color-palette,1);
+                                background-color: nth($color-palette, 2);
+                                border-color: nth($color-palette, 2);
+                                color: nth($color-palette, 1);
                             }
                         }
                     }
+
                     .noRecetaFinal {
                         text-align: center;
                         font-weight: bold;
-                        color:nth($color-palette,2);
-                        font-size: nth($font-size,5);
+                        color: nth($color-palette, 2);
+                        font-size: nth($font-size, 5);
                     }
                 }
+
                 .modal-footer {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
+
                     #btn-cerrar {
-                        background-color: nth($color-palette,1);
-                        border-color: nth($color-palette,1);
-                        color: nth($color-palette,2);
+                        background-color: nth($color-palette, 1);
+                        border-color: nth($color-palette, 1);
+                        color: nth($color-palette, 2);
                         width: 110px;
                         height: 40px;
                         font-weight: bold;
                         margin-bottom: 30px;
                         text-align: center;
-                        margin:15px;
+                        margin: 15px;
 
                         &:hover {
-                            background-color: nth($color-palette,2);
-                            border-color: nth($color-palette,2);
-                            color: nth($color-palette,1);
+                            background-color: nth($color-palette, 2);
+                            border-color: nth($color-palette, 2);
+                            color: nth($color-palette, 1);
                         }
                     }
+
                     #btn-whatsapp {
-                        background-color: nth($color-palette,1);
-                        border-color: nth($color-palette,1);
-                        color: nth($color-palette,2);
+                        background-color: nth($color-palette, 1);
+                        border-color: nth($color-palette, 1);
+                        color: nth($color-palette, 2);
                         width: 210px;
                         height: 40px;
                         font-weight: bold;
                         margin-bottom: 30px;
                         text-align: center;
-                        margin:15px;
+                        margin: 15px;
 
                         &:hover {
-                            background-color: nth($color-palette,2);
-                            border-color: nth($color-palette,2);
-                            color: nth($color-palette,1);
+                            background-color: nth($color-palette, 2);
+                            border-color: nth($color-palette, 2);
+                            color: nth($color-palette, 1);
                         }
                     }
                 }
@@ -266,38 +281,40 @@ main {
             .modal-content {
                 font-family: $font-principal;
                 background-color: nth($color-palette, 6);
+
                 .modal-header {
                     display: flex;
                     flex-direction: column;
-                    .btn-close {
-                        color: nth($color-palette,1);
-                    }
+
                     .modal-title {
-                        color: nth($color-palette,1);
+                        color: nth($color-palette, 1);
                         font-weight: bold;
                         text-align: center;
-                        font-size: nth($font-size,4);
+                        font-size: nth($font-size, 4);
                     }
                 }
+
                 .modal-body {
                     p {
-                        font-size: nth($font-size,6);
+                        font-size: nth($font-size, 6);
                         font-weight: bold;
                         text-align: center;
 
                         strong {
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                         }
                     }
                 }
+
                 .modal-footer {
-                    display:flex;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
+
                     #btn-aceptar-wpp {
                         background-color: nth($color-palette, 1);
                         border-color: nth($color-palette, 1);
-                        color: nth($color-palette,2);
+                        color: nth($color-palette, 2);
                         text-align: center;
                         font-weight: bold;
                         width: 110px;
@@ -306,7 +323,7 @@ main {
                         &:hover {
                             background-color: nth($color-palette, 2);
                             border-color: nth($color-palette, 2);
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                         }
                     }
                 }
@@ -319,35 +336,37 @@ main {
             .modal-content {
                 font-family: $font-principal;
                 background-color: nth($color-palette, 6);
+
                 .modal-header {
                     display: flex;
                     flex-direction: column;
-                    .btn-close {
-                        color: nth($color-palette,1);
-                    }
+
                     .modal-title {
-                        color: nth($color-palette,1);
+                        color: nth($color-palette, 1);
                         font-weight: bold;
                         text-align: center;
-                        font-size: nth($font-size,4);
+                        font-size: nth($font-size, 4);
                     }
                 }
+
                 .modal-body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     text-align: center;
+
                     .form-floating {
                         .form-control {
                             height: 200px;
-                            width: 400px; 
+                            width: 400px;
                             text-align: start;
                         }
                     }
+
                     #btn-aceptar-recomendados {
                         background-color: nth($color-palette, 1);
                         border-color: nth($color-palette, 1);
-                        color: nth($color-palette,2);
+                        color: nth($color-palette, 2);
                         text-align: center;
                         font-weight: bold;
                         width: 110px;
@@ -357,42 +376,38 @@ main {
                         &:hover {
                             background-color: nth($color-palette, 2);
                             border-color: nth($color-palette, 2);
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                         }
                     }
                 }
             }
         }
     }
-    
+
     #modal-confirmacion-recomendacion {
         .modal-dialog {
             .modal-content {
                 font-family: $font-principal;
                 background-color: nth($color-palette, 6);
-                .modal-header {
-                    display: flex;
-                    flex-direction: column;
-                    .btn-close {
-                        color: nth($color-palette,1);
-                    }
-                }
+
                 .modal-body {
                     .modal-title {
-                        color: nth($color-palette,1);
+                        color: nth($color-palette, 1);
                         font-weight: bold;
                         text-align: center;
-                        font-size: nth($font-size,4);
+                        font-size: nth($font-size, 4);
                     }
                 }
+
                 .modal-footer {
-                    display:flex;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
+
                     #btn-volver {
                         background-color: nth($color-palette, 1);
                         border-color: nth($color-palette, 1);
-                        color: nth($color-palette,2);
+                        color: nth($color-palette, 2);
                         text-align: center;
                         font-weight: bold;
                         width: 110px;
@@ -401,13 +416,14 @@ main {
                         &:hover {
                             background-color: nth($color-palette, 2);
                             border-color: nth($color-palette, 2);
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                         }
                     }
+
                     #btn-confirmar {
                         background-color: nth($color-palette, 1);
                         border-color: nth($color-palette, 1);
-                        color: nth($color-palette,2);
+                        color: nth($color-palette, 2);
                         text-align: center;
                         font-weight: bold;
                         width: 110px;
@@ -416,14 +432,14 @@ main {
                         &:hover {
                             background-color: nth($color-palette, 2);
                             border-color: nth($color-palette, 2);
-                            color: nth($color-palette,1);
+                            color: nth($color-palette, 1);
                         }
                     }
                 }
             }
         }
-    } 
-    
+    }
+
     .recomendaciones {
         margin-top: 30px;
 
@@ -435,79 +451,79 @@ main {
             text-align: center;
             margin-top: 10px;
             margin-bottom: 20px;
+        }
+
+        .textRecomendaciones {
+            font-family: $font-principal;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-left: 180px;
+            margin-right: 180px;
+
+            strong {
+                color: nth($color-palette, 1);
             }
+        }
 
-            .textRecomendaciones {
-                font-family: $font-principal;
-                font-weight: bold;
-                text-align: center;
-                margin-bottom: 20px;
-                margin-left: 180px;
-                margin-right: 180px;
+        .tarjetasRecomendaciones {
+            .card-group {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                padding-bottom: 30px;
+                border-radius: 10%;
 
-                strong {
-                    color: nth($color-palette, 1);
-                }
-            }
-
-            .tarjetasRecomendaciones {
-                .card-group {
+                .card {
                     display: flex;
-                    flex-direction: row-reverse;
                     justify-content: center;
-                    padding-bottom: 30px;
-                    border-radius: 10%;
+                    width: 236px;
+                    height: 570px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    border-radius: 10px;
+                    border-color: nth($color-palette, 2);
+                    border: nth($color-palette, 2) 1.5px solid;
 
-                    .card {
+                    img {
                         display: flex;
                         justify-content: center;
-                        width: 236px;
-                        height: 570px;
-                        margin-left: 5px;
-                        margin-right: 5px;
+                        width: 234px;
+                        height: 256px;
+                        text-align: center;
                         border-radius: 10px;
-                        border-color: nth($color-palette, 2);
-                        border: nth($color-palette, 2) 1.5px solid;
+                    }
 
-                        img {
-                            display: flex;
-                            justify-content: center;
-                            width: 234px;
-                            height: 256px;
-                            text-align: center;
-                            border-radius: 10px;
-                        }
-
-                        .card-body {
-                            .card-title {
-                                font-family: $font-principal;
-                                font-size: nth($font-size, 5);
-                                font-weight: bold;
-                                color: nth($color-palette, 1)
-                            }
-
-                            .card-text {
-                                font-family: $font-principal;
-                                color: nth($color-palette, 2);
-                            }
-                        }
-
-                        a {
+                    .card-body {
+                        .card-title {
                             font-family: $font-principal;
+                            font-size: nth($font-size, 5);
                             font-weight: bold;
-                            color: nth($color-palette, 1);
+                            color: nth($color-palette, 1)
                         }
 
-                        .card-footer {
+                        .card-text {
                             font-family: $font-principal;
                             color: nth($color-palette, 2);
-                            font-weight: bold;
                         }
+                    }
+
+                    a {
+                        font-family: $font-principal;
+                        font-weight: bold;
+                        color: nth($color-palette, 1);
+                    }
+
+                    .card-footer {
+                        font-family: $font-principal;
+                        color: nth($color-palette, 2);
+                        font-weight: bold;
                     }
                 }
             }
         }
-    
+    }
+
 
     .hrDivisor {
         color: nth($color-palette, 1);

@@ -1,25 +1,111 @@
 @media screen and (max-width: 976px) {
-    main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes {
+    main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    }
+
+    main .cuestionario .grillaPreguntas .tipoIngredientes {
+        display: flex;
     }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 968px) {
+    header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs {
+        flex-direction: column;
+    }
+
+    main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 940px) {
     header .bajada {
         height: 200px;
     }
+}
+
+@media screen and (max-width: 810px) {
+    main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes article .contenedor img {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
     header .bajada p {
         margin-bottom: 10px;
     }
-    main .recomendaciones .tarjetasRecomendaciones .card-group {
-        display: flex;
-        flex-direction: column;
-    }
-    main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+
+
+
+    /*main .recomendaciones .tarjetasRecomendaciones .card-group .card {
         display: flex;
         flex-direction: row;
         width: 0px;
+    }*/
+}
+
+@media screen and (max-width: 798px) {
+    header .indexLogo a img {
+        width: 300px;
+        height: 170px;
+    }
+
+    header .bajada p {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main .recomendaciones .textRecomendaciones {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header .bajada {
+        height: 250px;
+    }
+
+    main .recomendaciones .tarjetasRecomendaciones .card-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    main #modal-recomendados .modal-dialog .modal-content .modal-body .form-floating .form-control {
+        height: 200px;
+        width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    header .bajada {
+        height: 270px;
     }
 }

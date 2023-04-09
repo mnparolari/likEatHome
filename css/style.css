@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -73,6 +75,7 @@ header {
     background-color: #ee9b00ff;
     font-family: "Encode Sans", sans-serif;
     height: 170px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -85,7 +88,7 @@ header {
     header .bajada p {
       font-family: "Encode Sans", sans-serif;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       margin-left: 180px;
       margin-right: 180px; }
   header .redes {
@@ -210,7 +213,7 @@ header {
               background-color: #ee9b00ff;
               border-color: #ee9b00ff;
               color: #001219ff;
-              width: 290px;
+              width: 130px;
               height: 40px;
               font-weight: bold;
               margin-bottom: 30px;
@@ -333,8 +336,7 @@ main {
           main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
             margin-top: 10px;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr; }
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
             main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes article .contenedor {
               display: flex;
               flex-direction: column;
@@ -461,8 +463,6 @@ main {
     main #modal-whatsapp .modal-dialog .modal-content .modal-header {
       display: flex;
       flex-direction: column; }
-      main #modal-whatsapp .modal-dialog .modal-content .modal-header .btn-close {
-        color: #ee9b00ff; }
       main #modal-whatsapp .modal-dialog .modal-content .modal-header .modal-title {
         color: #ee9b00ff;
         font-weight: bold;
@@ -496,8 +496,6 @@ main {
     main #modal-recomendados .modal-dialog .modal-content .modal-header {
       display: flex;
       flex-direction: column; }
-      main #modal-recomendados .modal-dialog .modal-content .modal-header .btn-close {
-        color: #ee9b00ff; }
       main #modal-recomendados .modal-dialog .modal-content .modal-header .modal-title {
         color: #ee9b00ff;
         font-weight: bold;
@@ -528,11 +526,6 @@ main {
   main #modal-confirmacion-recomendacion .modal-dialog .modal-content {
     font-family: "Encode Sans", sans-serif;
     background-color: #e9d8a6ff; }
-    main #modal-confirmacion-recomendacion .modal-dialog .modal-content .modal-header {
-      display: flex;
-      flex-direction: column; }
-      main #modal-confirmacion-recomendacion .modal-dialog .modal-content .modal-header .btn-close {
-        color: #ee9b00ff; }
     main #modal-confirmacion-recomendacion .modal-dialog .modal-content .modal-body .modal-title {
       color: #ee9b00ff;
       font-weight: bold;
@@ -643,20 +636,74 @@ footer {
     font-weight: bold; }
 
 @media screen and (max-width: 976px) {
-  main .cuestionario .grillaPreguntas .tipoIngredientes .ingredientes {
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+  main .cuestionario .grillaPreguntas .tipoIngredientes {
+    display: flex; } }
+
+@media screen and (max-width: 968px) {
+  header .datosPersonales .primeraVez #modal-primeravez .modal-dialog .modal-content .modal-body form .inputs {
+    flex-direction: column; }
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion {
+    width: 100%; } }
+
+@media screen and (max-width: 940px) {
+  header .bajada {
+    height: 200px; } }
+
+@media screen and (max-width: 810px) {
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes article .contenedor img {
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 @media screen and (max-width: 860px) {
-  header .bajada {
-    height: 200px; }
   header .bajada p {
     margin-bottom: 10px; }
+  /*main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+        display: flex;
+        flex-direction: row;
+        width: 0px;
+    }*/ }
+
+@media screen and (max-width: 798px) {
+  header .indexLogo a img {
+    width: 300px;
+    height: 170px; }
+  header .bajada p {
+    margin-left: 0px;
+    margin-right: 0px; } }
+
+@media screen and (max-width: 655px) {
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+  main .recomendaciones .textRecomendaciones {
+    margin-left: 10px;
+    margin-right: 10px; } }
+
+@media screen and (max-width: 575px) {
+  header .bajada {
+    height: 250px; }
   main .recomendaciones .tarjetasRecomendaciones .card-group {
     display: flex;
-    flex-direction: column; }
-  main .recomendaciones .tarjetasRecomendaciones .card-group .card {
-    display: flex;
-    flex-direction: row;
-    width: 0px; } }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (max-width: 490px) {
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 430px) {
+  main #modal-recomendados .modal-dialog .modal-content .modal-body .form-floating .form-control {
+    height: 200px;
+    width: 300px; } }
+
+@media screen and (max-width: 350px) {
+  header .bajada {
+    height: 270px; } }

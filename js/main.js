@@ -1,19 +1,19 @@
 
-//Varibales globales//
+///////////////////////Varibales globales///////////////////////
 let nombres = "";
 let idReceta = "";
 
+/*/Corroboro si tengo el array de recetas recomendadas guardado en el localStorage para render/*/
+const listaJS = localStorage.getItem("listaRecomendados");
+const lista = JSON.parse(listaJS);
+const listaRenovada = lista;
 
-//Arrays//
+///////////////////////Arrays///////////////////////
 const usuarios = [];
 const depositoIngredientes = [];
 
-
-//Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage//
-obtenerNombre();
-
-
-//Objeto de usuario//
+///////////////////////Objetos///////////////////////
+/*/Objeto de usuarios/*/
 class DatosPersonales {
   constructor(nombre, pais, telefono, email) {
     this.nombre = nombre;
@@ -23,8 +23,7 @@ class DatosPersonales {
   };
 };
 
-
-//Objeto de recetas recomendadas//
+/*/Objeto de recetas recomendadas/*/
 class Recetasrecomendadas {
   constructor(titulo, comentario, img, link, nombreUsuario, diaHora) {
     this.titulo = titulo;
@@ -36,6 +35,8 @@ class Recetasrecomendadas {
   };
 };
 
+///////////////////////Funciones///////////////////////
+/*/Función para resetear/*/
 function resetear() {
   mySeleccionI.innerHTML = "";
   mySeleccionFinal.innerHTML = "";
@@ -43,13 +44,10 @@ function resetear() {
   nombres = "";
 };
 
-//Corroboro si tengo el array guardado en el localStorage//
-const listaJS = localStorage.getItem("listaRecomendados");
-const lista = JSON.parse(listaJS);
-const listaRenovada = lista;
+/*/Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage/*/
+obtenerNombre();
 
-
-//Datos de usuario//
+/*/Obtener datos de usuario + respuestas/*/
 const formulario = document.querySelector("#formulario");
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -109,6 +107,7 @@ formulario.addEventListener("submit", (e) => {
       `;
   };
 
+/*/Mostrar sitio + respuestas por SweetAlert según los datos cargados en el inicio/*/
   const aceptar = document.querySelector("#btn-aceptar");
   const mostrarSitio = document.querySelector("#mostrar");
   aceptar.addEventListener("click", () => {
@@ -142,7 +141,7 @@ formulario.addEventListener("submit", (e) => {
   formulario.reset();
 });
 
-//Corroboro si hay datos cargados en el LocalStorage cuando declaran haberlo hecho//
+/*/Corroboro si hay datos cargados en el LocalStorage cuando declaran haberlo hecho + SweetAlert/*/
 const relogueo = document.querySelector("#btn-relogueo");
 const mostrarRelogueo = document.querySelector("#mostrar");
 relogueo.addEventListener("click", () => {
@@ -158,12 +157,12 @@ relogueo.addEventListener("click", () => {
       showConfirmButton: true,
     });
     
-  }else {
+  } else {
     mostrarRelogueo.classList.remove('hide');
   };
 });
 
-//Función para obtener el nombre del objeto del array del localStorage y saludar//
+/*/Función para obtener el nombre del objeto del array del localStorage y saludar/*/
 function obtenerNombre() {
   const usuarioJSON = localStorage.getItem("datosUsuario");
   if (usuarioJSON) {
@@ -176,7 +175,7 @@ function obtenerNombre() {
   };
 };
 
-//Creo recetas recomendadas en el HTML con DOM//
+/*/Creo recetas recomendadas en el DOM/*/
 const contenedorRecomendados = document.querySelector("#card-group");
 
 const mostrarRecetas = (dataR) => {
@@ -204,14 +203,12 @@ const mostrarRecetas = (dataR) => {
 
 if (listaRenovada === null) {
   mostrarRecetas(recetasRecomendados);
-} else if (listaRenovada == 6) {
-  listaRenovada.shift();
+} else {
   mostrarRecetas(listaRenovada);
-}
+};
 
-//Elección ingredientes//
 
-//Creo ingredientes en el HTML con DOM//
+/*/Creo ingredientes en el DOM/*/
 const contenedorIngredientes = document.querySelector("#ingredientes");
 
 const mostrarIngredientes = (dataI) => {
@@ -226,7 +223,7 @@ const mostrarIngredientes = (dataI) => {
     contenedorIngredientes.appendChild(botonIngredientes);
   });
 
-  //Le agrego evento click para seleccionar el elemento//
+  /*/Le agrego evento click para seleccionar el elemento + toastify de selección/*/
   const btnSeleccionarIngredientes = document.querySelectorAll(".btn-selector-i");
   btnSeleccionarIngredientes.forEach((el) => {
     el.addEventListener("click", (e) => {
@@ -245,10 +242,10 @@ const mostrarIngredientes = (dataI) => {
   });
 };
 
-//Muestro elementos en HTML//
+/*/Muestro elementos en HTML/*/
 mostrarIngredientes(ingredientes);
 
-//Función para llenar el array con los datos seleccionados por el usuario sin repetición en la selección//
+/*/Función para llenar el array con los datos seleccionados por el usuario sin repetición en la selección/*/
 function seleccionarIngredientes(id) {
   const existeI = depositoIngredientes.some((ingrediente) => ingrediente.id === parseInt(id));
   if (existeI) {
@@ -260,7 +257,7 @@ function seleccionarIngredientes(id) {
   };
 };
 
-//Creo ingredientes seleccionados por usuario en HTML con DOM//
+/*/Creo ingredientes seleccionados por usuario en DOM/*/
 const mySeleccionI = document.querySelector("#seleccionIngredientes");
 
 const seleccionUsuarioI = (seleccionI) => {
@@ -277,7 +274,7 @@ const seleccionUsuarioI = (seleccionI) => {
     mySeleccionI.appendChild(replicarI);
   });
 
-  //Le agrego evento click para eliminar lo seleccionado del HTML y del Array//
+  /*/Le agrego evento click para eliminar lo seleccionado del HTML y del Array + toastify de eliminación/*/
   const btnEliminarIngredientes = document.querySelectorAll(".btn-close");
   btnEliminarIngredientes.forEach((el) => {
     el.addEventListener("click", (e) => {
@@ -293,18 +290,18 @@ const seleccionUsuarioI = (seleccionI) => {
       }).showToast();
       e.target.parentElement.remove();
       const indexIngredientes = depositoIngredientes.findIndex(
-        (ingredientes) => ingredientes.id === parseInt(ingredientes.id)
-      );
+        (ingredientes) => ingredientes.id === parseInt(ingredientes.id));
       if (indexIngredientes !== -1) {
         depositoIngredientes.splice(indexIngredientes, 1);
-      }
+      };
     });
   });
 };
 
+/*/Spinner/*/
 const loading = document.querySelector('#spinner');
 
-//Agrego evento click al botón de "buscar receta"//
+/*/Agrego evento click al botón de "buscar receta"/*/
 const btnResultadoFinal = document.querySelectorAll("#btn-final");
 btnResultadoFinal.forEach((el) => {
   el.addEventListener("click", () => {
@@ -313,14 +310,15 @@ btnResultadoFinal.forEach((el) => {
   });
 });
 
-//Función para obtener string de nombres para pasar a la URL por parámetro + fetch para obtener el primer resultado de la API//
+/*/Función para obtener string de nombres para pasar a la URL por parámetro + fetch para obtener el primer resultado de la API/*/
 function iterarArrayFinal() {
   depositoIngredientes.forEach((ingrediente, index) => {
     nombres += ingrediente.busqueda;
     if (index !== depositoIngredientes.length - 1) {
-      nombres += ","
-    }
+      nombres += ",";
+    };
   });
+
   const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +nombres +"&number=1";
   fetch(urlBusqueda)
     .then((resp) => resp.json())
@@ -334,25 +332,27 @@ function iterarArrayFinal() {
           </div>
           `;
           loading.classList.add('hide');
-      }
+      };
     }); 
 };
 
+/*/Función para obtener ID de receta de la primera búsqueda en fetch/*/
 function mostrarId(resultadoId) {
   resultadoId.forEach((id) => {
     idReceta = id.id;
     obtenerReceta(idReceta);
   });
-}
+};
 
+/*/Función para obtener string con ID para pasar a la URL por parámetro + fetch para obtener la receta/*/
 function obtenerReceta() {
   const urlFinal = "https://api.spoonacular.com/recipes/" +idReceta +"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
   fetch(urlFinal)
     .then((resp) => resp.json())
     .then((resultadoFinal) => resultadoReceta(resultadoFinal));
-}
+};
 
-//Creo la estructura interior del modal en HTML con DOM//
+/*/Creo la estructura interior del modal en DOM con la receta devuelta por la API/*/
 const mySeleccionFinal = document.querySelector("#modal-body");
 
 const resultadoReceta = (seleccionFinal) => {
@@ -377,25 +377,25 @@ const resultadoReceta = (seleccionFinal) => {
   localStorage.setItem("recetaUsuario", receta);
 };
 
-
-
+/*/Obtengo valor del comentario del textarea, lo pusheo al localStorage para crear una receta recomendada por el usuario/*/
 const recomendacion = document.querySelector("#comentario");
   recomendacion.addEventListener("submit", (e) => {
     e.preventDefault();
 
-  let textarea = document.querySelector("#floatingTextarea").value
+  let textarea = document.querySelector("#floatingTextarea").value;
   const comentarioUsuario = JSON.stringify(textarea);
   localStorage.setItem("comentario", comentarioUsuario);
   recomendacion.reset();
   resetear();
 });
 
-
-const enviarRecomendacion = document.querySelector("#btn-confirmar")
+/*/Le aplico evento click al botón confirmar recomendación/*/
+const enviarRecomendacion = document.querySelector("#btn-confirmar");
 enviarRecomendacion.addEventListener("click", () => {
   obtenerDatosRecomendaciones();
 });
 
+/*/Renderizo receta recomendadas a partir de todos los datos obtenidos del LocalStorage + Luxon/*/
 function obtenerDatosRecomendaciones() {
   const recetaJSON = localStorage.getItem("recetaUsuario");
   const recetaJS = JSON.parse(recetaJSON);
@@ -415,7 +415,7 @@ function obtenerDatosRecomendaciones() {
   const now = DateTime.now();
   const dia = now.toLocaleString(DateTime.DATE_SHORT);
   const hora = now.toLocaleString(DateTime.TIME_SIMPLE);
-  const diaHora = "on "+dia+", at "+hora+"."
+  const diaHora = "on "+dia+", at "+hora+".";
   
   recetasRecomendados.push(new Recetasrecomendadas(titulo,comentario,img,link,nombreUsuario,diaHora));
 
@@ -430,18 +430,19 @@ function obtenerDatosRecomendaciones() {
   resetear();
 };
 
-
-
+/*/Le aplico evento click al botón cerrar/*/
 const cerrar = document.querySelector("#btn-cerrar");
 cerrar.addEventListener("click", () => {
   resetear();
 });
 
+/*/Le aplico evento click al botón de "Enviar Whatsapp"/*/
 const aceptar = document.querySelector("#btn-whatsapp");
 aceptar.addEventListener("click", () => {
   obtenerTelefono();
 });
 
+/*/Función para recuperar teléfono del localStorage para validar y confirmar envío de receta/*/
 function obtenerTelefono() {
   const telefonoJSON = localStorage.getItem("datosUsuario");
   if (telefonoJSON) {
@@ -455,10 +456,11 @@ function obtenerTelefono() {
       confirmarTelefono.innerHTML = `
         <p>You did not declare any phone number so we cannot send you the recipe to Whatsapp. If you want to be able to carry out this action, go back to the beginning, enter "Start" and declare your data.</p>
         `;
-    }
-  }
-}
+    };
+  };
+};
 
+/*/Evento click de "Enviar" + toastify de "enviando receta"/*/
 const enviarWpp = document.querySelector("#btn-aceptar-wpp");
 enviarWpp.addEventListener("click", () => {
   let timerInterval;
