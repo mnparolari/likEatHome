@@ -141,7 +141,7 @@ formulario.addEventListener("submit", (e) => {
   formulario.reset();
 });
 
-/*/Corroboro si hay datos cargados en el LocalStorage cuando declaran haberlo hecho + SweetAlert/*/
+/*/Corroboro si hay datos cargados en el LocalStorage cuando declaran "Relog"" + SweetAlert/*/
 const relogueo = document.querySelector("#btn-relogueo");
 const mostrarRelogueo = document.querySelector("#mostrar");
 relogueo.addEventListener("click", () => {
@@ -175,7 +175,7 @@ function obtenerNombre() {
   };
 };
 
-/*/Creo recetas recomendadas en el DOM/*/
+/*/Renderizo recetas recomendadas en el DOM/*/
 const contenedorRecomendados = document.querySelector("#card-group");
 
 const mostrarRecetas = (dataR) => {
@@ -208,7 +208,7 @@ if (listaRenovada === null) {
 };
 
 
-/*/Creo ingredientes en el DOM/*/
+/*/Renderizo ingredientes en el DOM/*/
 const contenedorIngredientes = document.querySelector("#ingredientes");
 
 const mostrarIngredientes = (dataI) => {
@@ -257,7 +257,7 @@ function seleccionarIngredientes(id) {
   };
 };
 
-/*/Creo ingredientes seleccionados por usuario en DOM/*/
+/*/Renderizo ingredientes seleccionados por usuario en DOM/*/
 const mySeleccionI = document.querySelector("#seleccionIngredientes");
 
 const seleccionUsuarioI = (seleccionI) => {
@@ -424,6 +424,9 @@ function obtenerDatosRecomendaciones() {
   const listaJS = localStorage.getItem("listaRecomendados");
   const lista = JSON.parse(listaJS);
   const listaRenovada = lista;
+  if (listaRenovada === 5) {
+    listaRenovada.splice(0,1)
+  }
   mostrarRecetas(listaRenovada);
 
   recomendacion.reset();
