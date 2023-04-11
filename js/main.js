@@ -3,11 +3,6 @@
 let nombres = "";
 let idReceta = "";
 
-/*/Corroboro si tengo el array de recetas recomendadas guardado en el localStorage para render/*/
-const listaJS = localStorage.getItem("listaRecomendados");
-const lista = JSON.parse(listaJS);
-const listaRenovada = lista;
-
 ///////////////////////Arrays///////////////////////
 const usuarios = [];
 const depositoIngredientes = [];
@@ -35,13 +30,25 @@ class Recetasrecomendadas {
   };
 };
 
-///////////////////////Funciones///////////////////////
+
 /*/Función para resetear/*/
 function resetear() {
   mySeleccionI.innerHTML = "";
   mySeleccionFinal.innerHTML = "";
   depositoIngredientes.length = 0;
   nombres = "";
+};
+
+/*/Spinner/*/
+const loading = document.querySelector('#spinner');
+
+/*/Corroboro si tengo el array de recetas recomendadas guardado en el localStorage para render/*/
+const listaJS = localStorage.getItem("listaRecomendados");
+const lista = JSON.parse(listaJS);
+const listaRenovada = lista;
+if (listaRenovada === null) {
+  const listaJSON = JSON.stringify(recetasRecomendados);
+  localStorage.setItem("listaRecomendados", listaJSON);
 };
 
 /*/Corroboro si el usuario ya ingresó alguna vez y hay datos guardados en localStorage/*/
@@ -75,15 +82,18 @@ formulario.addEventListener("submit", (e) => {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">unidentified human</strong> &#128518&#128540</h1>
       <p>You informed us that you are from an unknown place &#128518&#128540, that your email is too embarrassing to report it &#128518&#128540, and that your phone is too reserved to report it &#128518&#128540. <br>
-          <br> Even so... Now you can start searching for recipes with whatever you have in your fridge! (aunque no podrás enviarte el resultado a tus medios de contactos) &#128170&#9996</p>
+          <br> If you do not upload some of the requested data, you will not be able to operate on the site. &#128170&#9996</p>
       `;
   } else if (persona.nombre === "" || persona.nombre === null) {
     confirmacionDatos.innerHTML = `
-      <h1>Hello <strong class="strong">unidentified human</strong> &#128518&#128540 </h1>
+      <h1>Hello <strong class="strong">Unidentified human</strong> &#128518&#128540 </h1>
       <p>You informed us that your country is <strong class="strong">${persona.pais}</strong>, that your email is <strong class="strong">${persona.email}</strong>, and that your phone number is <strong class="strong">${persona.telefono}</strong>. <br>
       <br> Click on <strong class="strong">"LOAD AGAIN"</strong> if you want to reload the data, otherwise, press <strong class="strong">"ACCEPT"</strong>
       <br> Now you can start searching for recipes with whatever you have in your fridge! &#128170&#9996</p>
       `;
+    const usuarioDesconocido = JSON.stringify("Unidentified human");
+    localStorage.setItem("usuarioNoIdentificado", usuarioDesconocido);
+
   } else if (persona.pais === "" || persona.pais === null) {
     confirmacionDatos.innerHTML = `
       <h1>Hello <strong class="strong">${persona.nombre}</strong></h1>
@@ -107,7 +117,7 @@ formulario.addEventListener("submit", (e) => {
       `;
   };
 
-/*/Mostrar sitio + respuestas por SweetAlert según los datos cargados en el inicio/*/
+  /*/Mostrar sitio + respuestas por SweetAlert según los datos cargados en el inicio/*/
   const aceptar = document.querySelector("#btn-aceptar");
   const mostrarSitio = document.querySelector("#mostrar");
   aceptar.addEventListener("click", () => {
@@ -115,12 +125,12 @@ formulario.addEventListener("submit", (e) => {
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Your data was not saved correctly",
+        title: "¡Ups!",
+        text: "Your data was not saved correctly. You must enter the required data to be able to operate on the site.",
         showClass: {
           popup: "animate__animated animate__fadeInDown",
         },
-        showConfirmButton: false,
-        timer: 2000,
+        showConfirmButton: true,
       });
     } else {
       Swal.fire({
@@ -145,7 +155,9 @@ formulario.addEventListener("submit", (e) => {
 const relogueo = document.querySelector("#btn-relogueo");
 const mostrarRelogueo = document.querySelector("#mostrar");
 relogueo.addEventListener("click", () => {
-  if (localStorage.getItem("datosUsuario") === null) {
+  const usuarioJSON = localStorage.getItem("datosUsuario");
+  const usuarioJS = JSON.parse(usuarioJSON);
+  if (usuarioJS === null || (usuarioJS.nombre === "" && usuarioJS.pais === "" && usuarioJS.email === "" && usuarioJS.telefono === "")) {
     Swal.fire({
       position: "center",
       icon: "error",
@@ -156,7 +168,6 @@ relogueo.addEventListener("click", () => {
       },
       showConfirmButton: true,
     });
-    
   } else {
     mostrarRelogueo.classList.remove('hide');
   };
@@ -167,11 +178,21 @@ function obtenerNombre() {
   const usuarioJSON = localStorage.getItem("datosUsuario");
   if (usuarioJSON) {
     const usuarioJS = JSON.parse(usuarioJSON);
-    let saludo = usuarioJS.nombre;
-    let saludar = document.querySelector("#saludo");
-    saludar.innerHTML = `
-      <h1>Hello <strong class="strong">${saludo}</strong></h1>
+    if (usuarioJS.nombre === "") {
+      const desconocidoJSON = localStorage.getItem("usuarioNoIdentificado");
+      const desconocidoJS = JSON.parse(desconocidoJSON);
+      let saludo = desconocidoJS
+      let saludar = document.querySelector("#saludo");
+      saludar.innerHTML = `
+      <h1>Hello <strong class="strong">${saludo}</strong>&#128518</h1>
       `;
+    } else {
+      let saludo = usuarioJS.nombre;
+      let saludar = document.querySelector("#saludo");
+      saludar.innerHTML = `
+      <h1>Hello <strong class="strong">${saludo}</strong>&#128512</h1>
+      `;
+    };
   };
 };
 
@@ -199,10 +220,13 @@ const mostrarRecetas = (dataR) => {
     `;
     contenedorRecomendados.appendChild(botonRecetas);
   });
-};     
+};
 
 if (listaRenovada === null) {
-  mostrarRecetas(recetasRecomendados);
+  const listaJS = localStorage.getItem("listaRecomendados");
+  const lista = JSON.parse(listaJS);
+  const listaRenovada = lista;
+  mostrarRecetas(listaRenovada);
 } else {
   mostrarRecetas(listaRenovada);
 };
@@ -237,7 +261,7 @@ const mostrarIngredientes = (dataI) => {
           color: "#001219ff",
         },
       }).showToast();
-      seleccionarIngredientes(e.target.id);
+      seleccionarIngrediente(e.target.id);
     });
   });
 };
@@ -246,7 +270,7 @@ const mostrarIngredientes = (dataI) => {
 mostrarIngredientes(ingredientes);
 
 /*/Función para llenar el array con los datos seleccionados por el usuario sin repetición en la selección/*/
-function seleccionarIngredientes(id) {
+function seleccionarIngrediente(id) {
   const existeI = depositoIngredientes.some((ingrediente) => ingrediente.id === parseInt(id));
   if (existeI) {
     depositoIngredientes.splice(0, 1);
@@ -274,6 +298,14 @@ const seleccionUsuarioI = (seleccionI) => {
     mySeleccionI.appendChild(replicarI);
   });
 
+  /*/Función para eliminar del array los datos seleccionados por el usuario/*/
+  function eliminarIngrediente(id) {
+    const indexIngredientes = depositoIngredientes.findIndex((ingrediente) => ingrediente.id === parseInt(id));
+    if (indexIngredientes !== -1) {
+      depositoIngredientes.splice(indexIngredientes, 1);
+    };
+  }
+
   /*/Le agrego evento click para eliminar lo seleccionado del HTML y del Array + toastify de eliminación/*/
   const btnEliminarIngredientes = document.querySelectorAll(".btn-close");
   btnEliminarIngredientes.forEach((el) => {
@@ -289,17 +321,10 @@ const seleccionUsuarioI = (seleccionI) => {
         },
       }).showToast();
       e.target.parentElement.remove();
-      const indexIngredientes = depositoIngredientes.findIndex(
-        (ingredientes) => ingredientes.id === parseInt(ingredientes.id));
-      if (indexIngredientes !== -1) {
-        depositoIngredientes.splice(indexIngredientes, 1);
-      };
+      eliminarIngrediente(e.target.id);
     });
   });
 };
-
-/*/Spinner/*/
-const loading = document.querySelector('#spinner');
 
 /*/Agrego evento click al botón de "buscar receta"/*/
 const btnResultadoFinal = document.querySelectorAll("#btn-final");
@@ -319,7 +344,7 @@ function iterarArrayFinal() {
     };
   });
 
-  const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" +nombres +"&number=1";
+  const urlBusqueda = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9&ingredients=" + nombres + "&number=1";
   fetch(urlBusqueda)
     .then((resp) => resp.json())
     .then((resultado) => {
@@ -331,9 +356,9 @@ function iterarArrayFinal() {
             <p> ¡Upss! <br> <br> You have not declared any ingredients or we have not found a recipe according to what you selected. You can try again with other ingredients or other combinations.</p>
           </div>
           `;
-          loading.classList.add('hide');
+        loading.classList.add('hide');
       };
-    }); 
+    });
 };
 
 /*/Función para obtener ID de receta de la primera búsqueda en fetch/*/
@@ -346,7 +371,7 @@ function mostrarId(resultadoId) {
 
 /*/Función para obtener string con ID para pasar a la URL por parámetro + fetch para obtener la receta/*/
 function obtenerReceta() {
-  const urlFinal = "https://api.spoonacular.com/recipes/" +idReceta +"/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
+  const urlFinal = "https://api.spoonacular.com/recipes/" + idReceta + "/information?apiKey=4a53bc3bdcad430e8ac05888d46ed5a9";
   fetch(urlFinal)
     .then((resp) => resp.json())
     .then((resultadoFinal) => resultadoReceta(resultadoFinal));
@@ -379,8 +404,8 @@ const resultadoReceta = (seleccionFinal) => {
 
 /*/Obtengo valor del comentario del textarea, lo pusheo al localStorage para crear una receta recomendada por el usuario/*/
 const recomendacion = document.querySelector("#comentario");
-  recomendacion.addEventListener("submit", (e) => {
-    e.preventDefault();
+recomendacion.addEventListener("submit", (e) => {
+  e.preventDefault();
 
   let textarea = document.querySelector("#floatingTextarea").value;
   const comentarioUsuario = JSON.stringify(textarea);
@@ -394,6 +419,7 @@ const enviarRecomendacion = document.querySelector("#btn-confirmar");
 enviarRecomendacion.addEventListener("click", () => {
   obtenerDatosRecomendaciones();
 });
+
 
 /*/Renderizo receta recomendadas a partir de todos los datos obtenidos del LocalStorage + Luxon/*/
 function obtenerDatosRecomendaciones() {
@@ -410,24 +436,37 @@ function obtenerDatosRecomendaciones() {
   const usuarioJSON = localStorage.getItem("datosUsuario");
   const usuarioJS = JSON.parse(usuarioJSON);
   let nombreUsuario = usuarioJS.nombre;
+  if (nombreUsuario === "" || nombreUsuario === null) {
+    const desconocidoJSON = localStorage.getItem("usuarioNoIdentificado");
+    const desconocidoJS = JSON.parse(desconocidoJSON);
+    nombreUsuario = desconocidoJS;
+  } else {
+    nombreUsuario = usuarioJS.nombre;
+  };
 
   const DateTime = luxon.DateTime;
   const now = DateTime.now();
   const dia = now.toLocaleString(DateTime.DATE_SHORT);
   const hora = now.toLocaleString(DateTime.TIME_SIMPLE);
-  const diaHora = "on "+dia+", at "+hora+".";
-  
-  recetasRecomendados.push(new Recetasrecomendadas(titulo,comentario,img,link,nombreUsuario,diaHora));
+  const diaHora = "on " + dia + ", at " + hora + ".";
 
-  const listaJSON = JSON.stringify(recetasRecomendados);
-  localStorage.setItem("listaRecomendados", listaJSON);
   const listaJS = localStorage.getItem("listaRecomendados");
   const lista = JSON.parse(listaJS);
   const listaRenovada = lista;
-  if (listaRenovada === 5) {
-    listaRenovada.splice(0,1)
+
+  if (listaRenovada.length === 5) {
+    listaRenovada.shift();
+    listaRenovada.push(new Recetasrecomendadas(titulo, comentario, img, link, nombreUsuario, diaHora));
+  } else {
+    listaRenovada.push(new Recetasrecomendadas(titulo, comentario, img, link, nombreUsuario, diaHora));
   }
-  mostrarRecetas(listaRenovada);
+
+  const listaJSON = JSON.stringify(listaRenovada);
+  localStorage.setItem("listaRecomendados", listaJSON);
+  const listaRecomendados = localStorage.getItem("listaRecomendados");
+  const listaFinal = JSON.parse(listaRecomendados);
+
+  mostrarRecetas(listaFinal);
 
   recomendacion.reset();
   resetear();
@@ -455,6 +494,7 @@ function obtenerTelefono() {
     confirmarTelefono.innerHTML = `
       <p>The phone you declared is: <strong class="strong">${telefono}</strong>. <br><br> Can you confirm that you want to receive your personalized recipe on WhatsApp for this number?</p>
       `;
+
     if (telefono === "" || telefono === null) {
       confirmarTelefono.innerHTML = `
         <p>You did not declare any phone number so we cannot send you the recipe to Whatsapp. If you want to be able to carry out this action, go back to the beginning, enter "Start" and declare your data.</p>
@@ -465,19 +505,26 @@ function obtenerTelefono() {
 
 /*/Evento click de "Enviar" + toastify de "enviando receta"/*/
 const enviarWpp = document.querySelector("#btn-aceptar-wpp");
-enviarWpp.addEventListener("click", () => {
-  let timerInterval;
-  Swal.fire({
-    title: "Sending recipes...",
-    html: "",
-    timer: 2000,
-    timerProgressBar: true,
-    didOpen: () => {
-      Swal.showLoading();
-    },
-    willClose: () => {
-      clearInterval(timerInterval);
-    },
-  });
+enviarWpp.addEventListener("click", (e) => {
+  const telefonoJSON = localStorage.getItem("datosUsuario");
+  const telefonoJS = JSON.parse(telefonoJSON);
+  let telefono = telefonoJS.telefono;
+  if (telefono) {
+    let timerInterval;
+    Swal.fire({
+      title: "Sending recipes...",
+      html: "",
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    });
+  } else {
+    e.preventDefault()
+  }
   resetear();
 });

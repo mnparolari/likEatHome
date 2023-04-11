@@ -430,5 +430,119 @@ const ingredientes = [
         nombre: "Nut",
         img: "./img/icons8-nuez-100.png",
         busqueda: "nut"
+    }, 
+    {
+        id: 73,
+        nombre: "Lemon",
+        img: "./img/icons8-lemon-100.png",
+        busqueda: "lemon"
     },
+    {
+        id: 74,
+        nombre: "Salmon",
+        img: "./img/icons8-salmon-100.png",
+        busqueda: "salmon"
+    },
+    {
+        id: 75,
+        nombre: "Basil",
+        img: "./img/icons8-basil-100.png",
+        busqueda: "basil"
+    }, 
+    {
+        id: 76,
+        nombre: "Sauce",
+        img: "./img/icons8-soy-sauce-100.png",
+        busqueda: "sauce"
+    }, 
+    {
+        id: 77,
+        nombre: "Beans",
+        img: "./img/icons8-white-beans-100.png",
+        busqueda: "sauce"
+    },
+    {
+        id: 78,
+        nombre: "Liver",
+        img: "./img/icons8-higado-100.png",
+        busqueda: "liver"
+    }, 
+    {
+        id: 79,
+        nombre: "Chocolate",
+        img: "./img/icons8-chocolatina-100.png",
+        busqueda: "chocolate"
+    }, 
+    {
+        id: 80,
+        nombre: "Cauliflower",
+        img: "./img/icons8-coliflor-100.png",
+        busqueda: "cauliflower"
+    },
+    {
+        id: 81,
+        nombre: "Shrimp",
+        img: "./img/icons8-langostino-100.png",
+        busqueda: "shrimp"
+    },
+    {
+        id: 82,
+        nombre: "Broccoli",
+        img: "./img/icons8-brócoli-100.png",
+        busqueda: "broccoli"
+    }, 
+    {
+        id: 83,
+        nombre: "Raspberry",
+        img: "./img/icons8-frambuesa-100.png",
+        busqueda: "raspberry"
+    }, 
+    {
+        id: 84,
+        nombre: "Wine",
+        img: "./img/icons8-botella-de-vino-100.png",
+        busqueda: "sauce"
+    },
+    {
+        id: 85,
+        nombre: "Asparagus",
+        img: "./img/icons8-espárragos-100.png",
+        busqueda: "asparagus"
+    }, 
+    {
+        id: 86,
+        nombre: "Jelly",
+        img: "./img/icons8-gelatina-100.png",
+        busqueda: "jelly"
+    }, 
+    {
+        id: 87,
+        nombre: "Jam",
+        img: "./img/icons8-mermelada-100.png",
+        busqueda: "jam"
+    }, 
+    {
+        id: 88,
+        nombre: "Coconut milk",
+        img: "./img/icons8-coconut-milk-100.png",
+        busqueda: "coconut%milk"
+    }, 
+    {
+        id: 89,
+        nombre: "Lamb",
+        img: "./img/icons8-costillas-de-cordero-100.png",
+        busqueda: "lamb"
+    }, 
+    {
+        id: 89,
+        nombre: "Pork",
+        img: "./img/icons8-paleo-dieta-100.png",
+        busqueda: "pork"
+    }, 
+    {
+        id: 90,
+        nombre: "Sugar",
+        img: "./img/icons8-azúcar-100.png",
+        busqueda: "sugar"
+    }, 
 ]

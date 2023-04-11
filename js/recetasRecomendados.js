@@ -1,35 +1,43 @@
 const recetasRecomendados = [
     {
-        titulo: "Rice Pudding",
+        titulo: "Herbivoracious' White Bean and Kale Soup",
         comentario:  "The best rice pudding recipe I've followed. I loved. Thank you LikEat Home.",
-        img: "./img/platos-once.jpg",
-        link: "https://spoonacular.com/recipes/rice-pudding-658276",
+        img: "./img/receta-1.jpg",
+        link: "https://spoonacular.com/recipes/herbivoracious-white-bean-and-kale-soup-646738",
         nombreUsuario: "Anna Karenina",
-        diaHora: "on 05/04/2023, at 7:42 p.m."
+        diaHora: "on 01/04/2023, at 7:42 p.m."
         
     },
     {
-        titulo: "Spinach in bechamel sauce",
+        titulo: "Ratatouille Pasta",
         comentario: "Fascinating. I have no more words.",
-        img: "./img/platos-diez.jpg",
-        link: "https://simply-delicious-food.com/creamy-spinach-gratin/",
+        img: "./img/receta-2.jpg",
+        link: "https://spoonacular.com/recipes/ratatouille-pasta-657933",
         nombreUsuario: "Pierre Bezújov",
-        diaHora: "on 06/04/2023, at 1:07 p.m."
+        diaHora: "on 02/04/2023, at 1:07 p.m."
     },
     {
-        titulo: "Chinese Noodles",
+        titulo: "Salmon with roasted vegetables",
         comentario: "This recipe transported me to China. 10 points.",
-        img: "./img/platos-catorce.jpg",
-        link: "https://spoonacular.com/recipes/asian-noodles-632854",
+        img: "./img/receta-3.jpg",
+        link: "https://spoonacular.com/recipes/salmon-with-roasted-vegetables-659135",
         nombreUsuario: "Nikolai Stavroguin",
-        diaHora: "on 06/04/2023, at 3:45 p.m."
+        diaHora: "on 05/04/2023, at 3:45 p.m."
     },
     {
-        titulo: "Chicken in ketchup sauce",
+        titulo: "Brown Butter Twice Baked Sweet Potatoes",
         comentario: "I really liked the recipe that you recommended. The service seemed super necessary today.",
-        img: "./img/platos-quince.jpg   ",
-        link: "https://spoonacular.com/recipes/sweet-sour-chicken-1498261",
+        img: "./img/receta-4.jpg",
+        link: "https://spoonacular.com/recipes/brown-butter-twice-baked-sweet-potatoes-715544",
         nombreUsuario: "Nastasya Filippovn",
-        diaHora: "on 02/04/2023, at 9:15 a.m."
+        diaHora: "on 06/04/2023, at 9:15 a.m."
+    },
+    {
+        titulo: "Bobby Flay's Meatball & Sauce",
+        comentario: "One of the richest recipes I've tried. I loved LikEat Home",
+        img: "./img/receta-5.jpg",
+        link: "https://spoonacular.com/recipes/bobby-flays-meatball-sauce-635578",
+        nombreUsuario: "Parfyon Rogozhin",
+        diaHora: "on 06/04/2023, at 7:39 p.m."
     },
 ]

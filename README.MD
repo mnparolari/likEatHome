@@ -20,4 +20,4 @@ Bibliotecas utilizadas:
 Repositorio de GitHub: https://github.com/mnparolari/comoencasa
 Link a GitHub Pages: https://mnparolari.github.io/comoencasa/
 
-Realizado por Martín Parolari para Trabajo Final de Javascript-Comisión 51475 || CoderHouse.
+Realizado por Martín Parolari para Trabajo Final de Javascript-Comisión 51475 || CoderHouse. 

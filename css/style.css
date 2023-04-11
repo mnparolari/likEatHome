@@ -336,7 +336,7 @@ main {
           main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
             margin-top: 10px;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
             main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes article .contenedor {
               display: flex;
               flex-direction: column;
@@ -588,7 +588,7 @@ main {
         display: flex;
         justify-content: center;
         width: 236px;
-        height: 570px;
+        height: 100%;
         margin-left: 5px;
         margin-right: 5px;
         border-radius: 10px;
@@ -597,8 +597,6 @@ main {
         main .recomendaciones .tarjetasRecomendaciones .card-group .card img {
           display: flex;
           justify-content: center;
-          width: 234px;
-          height: 256px;
           text-align: center;
           border-radius: 10px; }
         main .recomendaciones .tarjetasRecomendaciones .card-group .card .card-body .card-title {
@@ -635,6 +633,17 @@ footer {
   footer p {
     font-weight: bold; }
 
+@media screen and (max-width: 1100px) {
+  main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+  main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+    width: 200px; } }
+
+@media screen and (max-width: 1018px) {
+  main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+    width: 190px; } }
+
 @media screen and (max-width: 976px) {
   main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {
     display: grid;
@@ -662,12 +671,7 @@ footer {
 
 @media screen and (max-width: 860px) {
   header .bajada p {
-    margin-bottom: 10px; }
-  /*main .recomendaciones .tarjetasRecomendaciones .card-group .card {
-        display: flex;
-        flex-direction: row;
-        width: 0px;
-    }*/ }
+    margin-bottom: 10px; } }
 
 @media screen and (max-width: 798px) {
   header .indexLogo a img {
