@@ -26,6 +26,7 @@ En cuanto a JS, LikEat Home cuenta con 3 archivos.JS: main.js donde se desarroll
 
 ##### Repositorio público de [GitHub](https://github.com/mnparolari/likEatHome).
 [Github Pages](https://mnparolari.github.io/comoencasa/).
+
 Intrucciones para clonar proyecto [aquí](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ##### DEMO: 
@@ -77,6 +78,7 @@ As for JS, LikEat Home has 3 .JS files: main.js where everything related to the 
 
 ##### Public [GitHub](https://github.com/mnparolari/likEatHome) Repository.
 [Github Pages](https://mnparolari.github.io/comoencasa/).
+
 Instructions for cloning a project [here](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 ##### DEMO: 
