@@ -12,6 +12,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body.modal-open {
+  padding-right: 0 !important; }
+
 .hide {
   display: none; }
 
@@ -626,7 +629,7 @@ main {
 
 footer {
   width: 100%;
-  height: 25px;
+  height: 100%;
   background-color: #ee9b00ff;
   text-align: center;
   display: block; }
@@ -696,7 +699,9 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; } }
+    align-items: center; }
+  main .recomendaciones .tarjetasRecomendaciones .card-group .card {
+    width: 300px; } }
 
 @media screen and (max-width: 490px) {
   main .cuestionario .grillaPreguntas .tipoIngredientes .seleccion .ingredientes {

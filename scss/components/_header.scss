@@ -8,12 +8,12 @@
     box-sizing: border-box;
 }
 
-.hide {
-    display: none;
+body.modal-open {
+    padding-right: 0 !important;
 }
 
-body {
-    padding: 0px;
+.hide {
+    display: none;
 }
 
 header {
@@ -395,4 +395,4 @@ header {
             }
         }
     }
-} 
+}
