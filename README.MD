@@ -1,5 +1,5 @@
 # LikEat Home
-## _El buscador de recetas personalizadas_ The    personalized    recipe    search    engine
+## _El buscador de recetas personalizadas_
 
 [![N|Solid](https://firebasestorage.googleapis.com/v0/b/likeathome-e3935.appspot.com/o/likeat%20home.png?alt=media&token=ba43912c-7a77-4257-8dbd-4817fcd8d9a3&_gl=1*1ud3i0e*_ga*MTczMTk5NTc2MC4xNjg0OTcyNTUw*_ga_CW55HF8NVT*MTY4NjAwNTA3NC4xNi4xLjE2ODYwMDUzNTUuMC4wLjA.)](https://lik-eat-home.vercel.app/)
 
@@ -50,7 +50,7 @@ const **Martín** = (**Nicolás**) => {
 
 -------------------------------------------------------------------------------------
 # LikEat Home
-## _The    personalized    recipe    search    engine_ 
+## _The personalized recipe search engine_ 
 
 [![N|Solid](https://firebasestorage.googleapis.com/v0/b/likeathome-e3935.appspot.com/o/likeat%20home.png?alt=media&token=ba43912c-7a77-4257-8dbd-4817fcd8d9a3&_gl=1*1ud3i0e*_ga*MTczMTk5NTc2MC4xNjg0OTcyNTUw*_ga_CW55HF8NVT*MTY4NjAwNTA3NC4xNi4xLjE2ODYwMDUzNTUuMC4wLjA.)](https://lik-eat-home.vercel.app/)
 
