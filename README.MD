@@ -19,6 +19,8 @@ En cuanto a JS, LikEat Home cuenta con 3 archivos.JS: main.js donde se desarroll
 
 #### _**LikEatHome**_ utiliza las siguientes tecnologías:
 - [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - v5.0.2
+- [Node.js](https://nodejs.org/es) - ^18.13.0
+- [SASS](https://sass-lang.com/) - ^1.63.3
 - [Animate.css](https://animate.style/)
 - [Toastify](https://apvarun.github.io/toastify-js/)
 - [SweetAlert](https://sweetalert2.github.io/)
